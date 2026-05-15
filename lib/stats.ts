@@ -85,6 +85,11 @@ export const activity: ActivityEntry[] = [
   },
   {
     when: "2024",
+    title: "Nokkomo Mints — built and managed an 8-person UCLA intern team across creative, content, and Amazon ops",
+    meta: "CMO / Co-founder",
+  },
+  {
+    when: "2024",
     title: "Nokkomo Mints — Amazon ACOS 81% → 38%, 913% YoY revenue growth, 3× spend scale",
     meta: "CMO / Co-founder",
   },
