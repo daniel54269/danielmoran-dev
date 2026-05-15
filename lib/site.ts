@@ -1,7 +1,7 @@
 export const site = {
   name: "Daniel Moran",
   title: "Daniel Moran — Marketing Engineer",
-  headline: "Engineer turned marketer · Growth · AI Automation",
+  headline: "Engineer turned marketer · Senior IC · Head of Marketing",
   positioning:
     "Engineer turned marketer. I build the systems, write the copy, run the ads, and read the data.",
   positioningShort:

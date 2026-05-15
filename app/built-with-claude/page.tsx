@@ -34,6 +34,14 @@ export default function BuiltWithClaudePage() {
           <li><strong>Puppeteer</strong> for the résumé PDF pipeline (separate repo).</li>
         </ul>
 
+        <h2>On the MCP server</h2>
+        <p>
+          There are now official marketing-stack MCP servers — HubSpot just shipped one. I built my own{" "}
+          <a href="https://github.com/daniel54269/hubspot-mcp">hubspot-mcp</a>{" "}
+          before that, to learn the protocol from the ground up and to demonstrate the architecture I'd build
+          inside a marketing org.
+        </p>
+
         <h2>The build partner: Claude Code</h2>
         <p>
           Claude Code is Anthropic's CLI for Claude — agentic, file-system-aware, runs tools, takes a brief and

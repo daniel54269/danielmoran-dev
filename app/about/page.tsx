@@ -45,9 +45,8 @@ export default function AboutPage() {
           brand on Amazon + Shopify, where I took ACOS from 81% to 38% and revenue from $4K to $40K trailing).
         </p>
         <p>
-          On the side I'm growing <strong>HAZE</strong> — a registered trademark for my long-running art, music,
-          and clothing project. It keeps me sharp on the brand and creator side of marketing in a way no agency
-          role would.
+          On the side I run <strong>HAZE</strong> (registered TM) — creative brand work that keeps me sharp on
+          the consumer side.
         </p>
 
         <h2>How I think</h2>
@@ -66,7 +65,7 @@ export default function AboutPage() {
 
         <h2>What I'm looking for</h2>
         <ul>
-          <li><strong>Senior marketing manager or first head-of-marketing</strong> at a Series A / B B2B SaaS company.</li>
+          <li><strong>Senior IC marketer or first head of marketing</strong> at a Series A / B B2B SaaS company.</li>
           <li>Teams that value <strong>building</strong>, not just managing — Linear / Ramp / Vercel-style cultures fit best.</li>
           <li>Real budget and real autonomy. I don't need a big team; I need room to ship.</li>
           <li>Remote-friendly or San Diego / Oceanside.</li>

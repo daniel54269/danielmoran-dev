@@ -146,7 +146,7 @@ export default async function HomePage() {
           <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h2 className="text-2xl font-semibold tracking-tight text-ink-50">
-                Hiring for a marketing-engineer-shaped role?
+                Hiring a senior IC marketer or first Head of Marketing?
               </h2>
               <p className="mt-2 text-ink-300">Senior IC or first head-of marketing hires — let's talk.</p>
             </div>
