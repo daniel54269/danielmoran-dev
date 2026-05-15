@@ -38,7 +38,7 @@ export default function OG() {
             maxWidth: 980,
           }}
         >
-          I build the systems, write the copy, run the ads, and read the data. CS from USD, 5 yrs at Cubic, now across B2B SaaS · DTC · brand.
+          I build the systems, write the copy, run the ads, and read the data. CS from the University of San Diego, 5 yrs at Cubic, now across B2B SaaS · DTC · brand.
         </div>
         <div
           style={{
