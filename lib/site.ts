@@ -1,17 +1,17 @@
 export const site = {
   name: "Daniel Moran",
   title: "Daniel Moran — Marketing Engineer",
-  headline: "Engineer turned marketer · Senior IC · Head of Marketing",
+  headline: "Head of Marketing for early-stage B2B SaaS",
   positioning:
-    "Engineer turned marketer. I build the systems, write the copy, run the ads, and read the data.",
+    "I run marketing like a product team. Build the systems, hire the team, write the copy, run the ads, read the data — and report a number to the board on Monday.",
   positioningShort:
-    "CS from USD, 5 years at Cubic, now operating across B2B SaaS, DTC, and brand.",
+    "Engineer first (5 yrs at Cubic, CS from USD), now leading marketing across B2B SaaS, DTC, and brand.",
   location: "Oceanside, CA",
   email: "daniel54269@gmail.com",
   linkedin: "https://www.linkedin.com/in/danieljosephmoran",
   github: "https://github.com/daniel54269",
   url: "https://danielmoran.dev",
-  resumeHref: "/resume/Daniel-Moran-General.pdf",
+  resumeHref: "/resume/Daniel-Moran-Head-of-Marketing.pdf",
   resumeEngineerHref: "/resume/Daniel-Moran-Marketing-Engineer.pdf",
 };
 

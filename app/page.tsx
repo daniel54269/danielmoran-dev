@@ -31,13 +31,13 @@ export default async function OverviewPage() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
                 </span>
-                Available — Senior IC / Head of Marketing
+                Available — Head of Marketing · Series A / B
               </div>
               <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.05] text-ink-50">
-                Engineer turned marketer.
+                Head of Marketing for<br className="hidden sm:block" /> early-stage B2B SaaS.
               </h1>
               <p className="mt-4 max-w-2xl text-base sm:text-lg text-ink-300 leading-relaxed">
-                I build the systems, write the copy, run the ads, and read the data.{" "}
+                I run marketing like a product team. Build the systems, hire the team, write the copy, run the ads, read the data — and report a number to the board on Monday.{" "}
                 <span className="text-ink-100">{site.positioningShort}</span>
               </p>
               <div className="mt-6 flex flex-wrap gap-2.5">
@@ -151,9 +151,9 @@ export default async function OverviewPage() {
         <section className="flex flex-col items-start gap-4 rounded-xl border border-ink-800 bg-ink-900/40 p-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 className="text-base sm:text-lg font-semibold text-ink-50">
-              Hiring a senior IC marketer or first Head of Marketing?
+              Hiring your first Head of Marketing?
             </h2>
-            <p className="mt-1 text-sm text-ink-400">Series A / B B2B SaaS, remote-friendly. Reply within 24 hours.</p>
+            <p className="mt-1 text-sm text-ink-400">Series A / B B2B SaaS. Remote-friendly. Reply within 24 hours.</p>
           </div>
           <div className="flex gap-2">
             <a
