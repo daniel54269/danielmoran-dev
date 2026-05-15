@@ -1,5 +1,3 @@
-"use client";
-
 import { CountUp } from "@/components/CountUp";
 import { Sparkline } from "@/components/Sparkline";
 import { IconTrendUp, IconDot } from "./Icons";

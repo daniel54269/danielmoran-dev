@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <Container size="prose" className="py-16 sm:py-24">
+    <Container size="prose" className="py-10 sm:py-14">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
         <Image
           src="/headshot.png"

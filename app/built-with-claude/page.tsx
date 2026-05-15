@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function BuiltWithClaudePage() {
   return (
-    <Container size="prose" className="py-16 sm:py-24">
+    <Container size="prose" className="py-10 sm:py-14">
       <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">Meta</div>
       <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50">
         How this site was built.
