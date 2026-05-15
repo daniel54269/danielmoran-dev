@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { site } from "@/lib/site";
@@ -11,10 +12,22 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <Container size="prose" className="py-16 sm:py-24">
-      <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">About</div>
-      <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50">
-        Engineer first. Marketer second. Builder always.
-      </h1>
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
+        <Image
+          src="/headshot.png"
+          alt="Daniel Moran"
+          width={160}
+          height={160}
+          priority
+          className="h-32 w-32 sm:h-36 sm:w-36 rounded-2xl border border-ink-800 object-cover shadow-[0_0_0_4px_rgba(124,92,255,0.08)]"
+        />
+        <div>
+          <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">About</div>
+          <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50">
+            Engineer first. Marketer second. Builder always.
+          </h1>
+        </div>
+      </div>
       <div className="prose-custom mt-8">
         <p>
           I'm Daniel — 26, based in Oceanside, CA. CS from USD (2018–2022), then five years writing Java,
