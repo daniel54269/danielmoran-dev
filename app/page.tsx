@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { CaseCard } from "@/components/CaseCard";
@@ -15,37 +16,55 @@ export default async function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(124,92,255,0.18),transparent_70%)]" />
-        <Container className="py-20 sm:py-28">
-          <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-ink-400 mb-6">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-            <span>Senior IC + head-of-marketing roles · Series A/B B2B SaaS · {site.location}</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-ink-50 max-w-3xl">
-            Engineer turned marketer.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg sm:text-xl text-ink-300 leading-relaxed">
-            I build the systems, write the copy, run the ads, and read the data.{" "}
-            <span className="text-ink-100">{site.positioningShort}</span>
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <Link
-              href="/work"
-              className="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent-soft transition-colors"
-            >
-              See selected work →
-            </Link>
-            <a
-              href={site.resumeHref}
-              className="rounded-md border border-ink-700 px-4 py-2.5 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
-            >
-              Download résumé
-            </a>
-            <Link
-              href="/built-with-claude"
-              className="rounded-md px-4 py-2.5 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
-            >
-              How this site was built →
-            </Link>
+        <Container className="py-16 sm:py-24">
+          <div className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr]">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-xs uppercase tracking-widest text-ink-300 mb-6">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                <span>Available — Senior IC / Head of Marketing</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-ink-50">
+                Engineer turned marketer.
+              </h1>
+              <p className="mt-6 max-w-xl text-lg sm:text-xl text-ink-300 leading-relaxed">
+                I build the systems, write the copy, run the ads, and read the data.{" "}
+                <span className="text-ink-100">{site.positioningShort}</span>
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="/work"
+                  className="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent-soft transition-colors"
+                >
+                  See selected work →
+                </Link>
+                <a
+                  href={site.resumeHref}
+                  className="rounded-md border border-ink-700 px-4 py-2.5 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
+                >
+                  Download résumé
+                </a>
+                <Link
+                  href="/built-with-claude"
+                  className="rounded-md px-4 py-2.5 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
+                >
+                  How this site was built →
+                </Link>
+              </div>
+              <div className="mt-6 text-xs uppercase tracking-widest text-ink-500">
+                Series A/B B2B SaaS · {site.location} · Remote-friendly
+              </div>
+            </div>
+            <div className="relative justify-self-center md:justify-self-end">
+              <div className="absolute -inset-6 -z-10 rounded-full bg-[radial-gradient(closest-side,rgba(124,92,255,0.35),transparent_75%)] blur-2xl" />
+              <Image
+                src="/headshot.png"
+                alt="Daniel Moran"
+                width={420}
+                height={420}
+                priority
+                className="h-56 w-56 sm:h-72 sm:w-72 md:h-80 md:w-80 rounded-full object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-800 shadow-[0_30px_60px_-20px_rgba(124,92,255,0.45)]"
+              />
+            </div>
           </div>
         </Container>
       </section>
