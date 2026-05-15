@@ -17,7 +17,7 @@ import { site } from "@/lib/site";
 const items = [
   { href: "/", label: "Overview", icon: IconOverview, exact: true },
   { href: "/work", label: "Pipeline", icon: IconPipeline },
-  { href: "/playbook", label: "Playbook", icon: IconPlaybook },
+  { href: "/playbook", label: "Approach", icon: IconPlaybook },
   { href: "/stack", label: "Stack", icon: IconStack },
   { href: "/about", label: "About", icon: IconAbout },
   { href: "/built-with-claude", label: "Built with Claude", icon: IconCode },
@@ -88,8 +88,8 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
             </span>
             Available
           </div>
-          <div className="mt-1 text-xs text-ink-200">Head of Marketing</div>
-          <div className="mt-0.5 text-[11px] text-ink-500">Series A/B B2B SaaS · Remote</div>
+          <div className="mt-1 text-xs text-ink-200">Marketing Engineer</div>
+          <div className="mt-0.5 text-[11px] text-ink-500">Open to new roles · Remote</div>
         </div>
         <a
           href={site.resumeHref}

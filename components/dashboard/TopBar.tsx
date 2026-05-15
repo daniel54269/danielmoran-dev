@@ -14,7 +14,7 @@ import { site } from "@/lib/site";
 const labelMap: Record<string, string> = {
   "": "Overview",
   work: "Pipeline",
-  playbook: "Playbook",
+  playbook: "Approach",
   stack: "Stack",
   about: "About",
   contact: "Documents",

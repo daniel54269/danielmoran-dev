@@ -4,8 +4,8 @@ client: "Open source"
 domain: "AI Tooling / Marketing Ops"
 role: "Author"
 year: "2026"
-headline: "An MCP server that lets Claude read and write your HubSpot — the marketing-engineer artifact, open-sourced."
-description: "TypeScript, 13 tools, write-gated by default. Built because the data lives in HubSpot but the decisions need to happen in chat."
+headline: "An open-source Model Context Protocol server that allows Claude to read and write HubSpot CRM data."
+description: "TypeScript, 13 tools, write operations gated by default. Built to demonstrate the architecture I'd build inside any marketing organization."
 metric:
   - { label: "Tools exposed", value: "13" }
   - { label: "Lines of TS", value: "~900" }
@@ -16,11 +16,11 @@ order: 5
 featured: true
 ---
 
-> **Note:** HubSpot now ships an official MCP connector. This repo predated it and shows the protocol + tool design from scratch — the receipt that I can build marketing-stack infrastructure, not just configure it.
+> **Note:** HubSpot now ships an official MCP connector. This repository predated it and demonstrates the protocol and tool design from first principles. The intent is to show that I can build marketing-stack infrastructure, not only configure existing tools.
 
 ## The context
 
-Most marketing tools have great APIs and terrible chat interfaces. The data lives in HubSpot, but every "what's our pipeline coverage" question still ends in a 14-tab spreadsheet.
+Marketing platforms expose extensive APIs, but they are typically accessed through dashboards or spreadsheets rather than conversational interfaces. The result is that routine analytical questions &mdash; pipeline coverage, contact segmentation, owner workload &mdash; require navigating through several screens or asking an analyst to assemble a spreadsheet.
 
 [MCP](https://modelcontextprotocol.io) — the Model Context Protocol Anthropic shipped in late 2024 — is the protocol that closes that loop: it standardizes how AI assistants (Claude, Cursor, others) call external tools. If you write an MCP server for HubSpot, suddenly Claude can answer "what's the total amount in Sales Qualified, sorted by owner" against your real data.
 
@@ -54,11 +54,9 @@ So I wrote one. It's on GitHub: [daniel54269/hubspot-mcp](https://github.com/dan
 
 **Pure stdio transport.** The Claude Desktop / Cursor standard. No web server, no auth proxy, no Docker. `npx -y hubspot-mcp` and it works.
 
-## Why this is the receipt
+## Why this engagement matters
 
-If you're hiring a Head of Marketing and a candidate hands you an open-source MCP server for a major marketing stack — that's a different conversation than "I use HubSpot daily." It's the same difference as "I've read about React" vs. shipping a React app.
-
-The README on GitHub is the demo. The 13 tools are the product surface. The 900 lines of TypeScript are the receipts.
+The clearest demonstration of marketing engineering capability is a working artifact. An open-source MCP server against a major marketing platform is a more substantive proof of skill than a list of platforms used in past roles. The README documents the install path; the 13 tools form the product surface; the codebase is available for review on GitHub.
 
 ## Try it
 

@@ -1,18 +1,17 @@
 export const site = {
   name: "Daniel Moran",
   title: "Daniel Moran — Marketing Engineer",
-  headline: "Head of Marketing for early-stage B2B SaaS",
+  headline: "Marketing Engineer · AI Automation & Marketing Systems",
   positioning:
-    "I run marketing like a product team. Build the systems, hire the team, write the copy, run the ads, read the data — and report a number to the board on Monday.",
+    "I help marketing teams apply current AI tooling and automation to operate at greater scale with less overhead — better measurement, faster output, lower per-unit cost.",
   positioningShort:
-    "Engineer first (5 yrs at Cubic, CS from USD), now leading marketing across B2B SaaS, DTC, and brand.",
+    "Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.",
   location: "Oceanside, CA",
   email: "daniel54269@gmail.com",
   linkedin: "https://www.linkedin.com/in/danieljosephmoran",
   github: "https://github.com/daniel54269",
   url: "https://danielmoran.dev",
-  resumeHref: "/resume/Daniel-Moran-Head-of-Marketing.pdf",
-  resumeEngineerHref: "/resume/Daniel-Moran-Marketing-Engineer.pdf",
+  resumeHref: "/resume/Daniel-Moran-Resume.pdf",
 };
 
 export type SkillGroup = { label: string; items: string[] };

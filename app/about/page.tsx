@@ -24,58 +24,60 @@ export default function AboutPage() {
         <div>
           <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">About</div>
           <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50">
-            Engineer first. Marketer second. Builder always.
+            Software engineering rigor, applied to modern marketing.
           </h1>
         </div>
       </div>
       <div className="prose-custom mt-8">
         <p>
-          I'm Daniel — 26, based in Oceanside, CA. CS from USD (2018–2022), then five years writing Java,
-          Python, and C++ at <strong>Cubic Transportation</strong> on transit fare systems. I moved into
-          marketing leadership because the leverage was bigger and most marketing orgs are bottlenecked on
-          operations they can't build themselves.
+          I&rsquo;m Daniel Moran, a marketing engineer based in Oceanside, California. My background combines a
+          Bachelor of Science in Computer Science from the University of San Diego (2018&ndash;2022) with five
+          years of systems engineering at Cubic Transportation Systems, writing Java, Python, and C++ across
+          transit-fare programs. I now apply that engineering background to marketing operations: building
+          AI-augmented systems for attribution, content production, and CRM automation that help teams ship
+          faster and spend less.
         </p>
 
-        <h2>What I run today</h2>
+        <h2>Current and recent roles</h2>
         <p>
-          <strong>Wealth Enhancement Group</strong> — six-figure monthly ad budget, a 4-person team running
-          paid + lifecycle + webinars, attribution and weekly reporting the C-suite actually reads.{" "}
-          <strong>Director of Marketing at Novadontics</strong> (May 2025 – Jan 2026) — owned marketing across
-          three brands (Novadontics, Care Pulse, California Implant Institute), rebuilt the HubSpot lifecycle and
-          GTM attribution in 90 days, reported into the CEO.{" "}
-          <strong>Co-founder and CMO at Nokkomo Mints</strong> — built an Amazon DTC brand to 913% YoY revenue
-          growth (10× trailing), ACOS 81% → 38%, own the marketing P&L line.
+          At <strong>Wealth Enhancement Group</strong> I lead a four-person team across paid media, lifecycle
+          email, and webinars, and I built the attribution and weekly reporting system the executive team uses
+          to allocate budget. I recently completed a tenure as <strong>Director of Marketing at Novadontics</strong>{" "}
+          (May 2025 &ndash; January 2026), where I owned marketing across three brands, reported into the CEO,
+          and rebuilt the HubSpot lifecycle and Google Tag Manager attribution in ninety days. I am also
+          co-founder and CMO of <strong>Nokkomo Mints</strong>, where I built the marketing function from
+          inception and reduced Amazon Advertising ACOS from 81% to 38% while delivering 913% year-over-year
+          revenue growth.
         </p>
         <p>
-          On the side I run <strong>HAZE</strong> (registered TM) — creative brand work that keeps me sharp on
-          the consumer side.
-        </p>
-
-        <h2>How I run marketing</h2>
-        <p>
-          <strong>I treat marketing like a product team.</strong> Hire the org around a thesis, instrument the
-          funnel before scaling spend, automate the dull bits so the team's hours go to judgment calls. Every
-          paid dollar gets tied to a CRM stage; every content asset gets tied to an audience pillar; every
-          weekly leadership review opens with one number.
-        </p>
-        <p>
-          <strong>The engineering background isn't decorative.</strong> It's why I can rebuild an Amazon ad
-          account from first principles, ship a pipeline in a week that replaces six analyst hours, and write{" "}
-          <a href="https://github.com/daniel54269/hubspot-mcp">open-source infrastructure</a>{" "}
-          (Claude can now read and write HubSpot via my MCP server). Most marketing leaders configure tools;
-          I build them when the off-the-shelf one isn't right.
-        </p>
-        <p>
-          For a written version of how I'd run the function in the first 90 days at a Series A/B SaaS, see the{" "}
-          <Link href="/playbook">playbook</Link>.
+          Separately I run <strong>HAZE</strong>, a registered trademark covering creative brand work in art,
+          music, and apparel, which keeps me current on consumer-side marketing.
         </p>
 
-        <h2>What I'm looking for</h2>
+        <h2>How I think about the work</h2>
+        <p>
+          Most marketing teams I have worked with are bottlenecked not on strategy but on operations: manual
+          reporting, fragmented attribution, content production that does not scale, and stacks of point tools
+          that no one fully connects. My approach is to treat the marketing function the way a product team
+          treats a product surface &mdash; measure it carefully, automate what is repeatable, document what is
+          not, and review performance on a consistent operating cadence.
+        </p>
+        <p>
+          I focus particularly on the application of current AI tooling to marketing operations. That includes
+          large language models for content generation and quality review, Model Context Protocol servers for
+          first-party data access from within agents (I authored an{" "}
+          <a href="https://github.com/daniel54269/hubspot-mcp">open-source MCP server</a> for HubSpot CRM),
+          automated content production pipelines, and AI-assisted attribution and reporting. Used well, these
+          tools materially reduce the cost and time required to operate a modern marketing function while
+          improving measurement.
+        </p>
+
+        <h2>What I&rsquo;m looking for</h2>
         <ul>
-          <li><strong>First Head of Marketing</strong> at a Series A / B B2B SaaS company.</li>
-          <li>A CEO who treats marketing like a product surface — not a cost center.</li>
-          <li>Real budget, real autonomy, room to hire 2–4 people in year one.</li>
-          <li>Remote-friendly. I'm in Oceanside, CA.</li>
+          <li>Marketing engineering, senior individual contributor, or marketing-leadership roles with real autonomy and budget.</li>
+          <li>Companies that value measurement and automation as first-class parts of marketing &mdash; not afterthoughts.</li>
+          <li>Industries: B2B SaaS, B2C software, DTC e-commerce, and other modern, data-rich businesses.</li>
+          <li>Remote, hybrid, or in person around San Diego / Oceanside, California.</li>
         </ul>
 
         <h2>How to reach me</h2>
