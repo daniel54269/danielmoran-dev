@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { Sparkline } from "@/components/Sparkline";
 import { CountUp } from "@/components/CountUp";
-import { BrandStrip } from "@/components/BrandStrip";
 import { KpiCard } from "@/components/dashboard/KpiCard";
 import { CampaignTable } from "@/components/dashboard/CampaignTable";
 import { ActivityFeed } from "@/components/dashboard/ActivityFeed";
@@ -75,11 +74,6 @@ export default async function OverviewPage() {
             </div>
           </div>
         </section>
-      </Reveal>
-
-      {/* Brand strip */}
-      <Reveal delay={0.03}>
-        <BrandStrip />
       </Reveal>
 
       {/* KPI row */}
