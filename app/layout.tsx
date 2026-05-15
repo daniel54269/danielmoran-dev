@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { site } from "@/lib/site";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
+import { Shell } from "@/components/dashboard/Shell";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -30,9 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="dark">
       <body className="font-sans antialiased">
-        <Nav />
-        <main className="min-h-[70vh]">{children}</main>
-        <Footer />
+        <Shell>{children}</Shell>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
