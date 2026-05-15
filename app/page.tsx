@@ -1,172 +1,176 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container } from "@/components/Container";
-import { CaseCard } from "@/components/CaseCard";
-import { StackGrid } from "@/components/StackGrid";
-import { getFeaturedWork } from "@/lib/work";
+import { Reveal } from "@/components/Reveal";
+import { Sparkline } from "@/components/Sparkline";
+import { CountUp } from "@/components/CountUp";
+import { KpiCard } from "@/components/dashboard/KpiCard";
+import { CampaignTable } from "@/components/dashboard/CampaignTable";
+import { ActivityFeed } from "@/components/dashboard/ActivityFeed";
+import { IconArrowUpRight, IconTrendUp } from "@/components/dashboard/Icons";
+import { getAllWork, getFeaturedWork } from "@/lib/work";
+import { kpis, nokkomoRevenue } from "@/lib/stats";
 import { site } from "@/lib/site";
 
 export const revalidate = false;
 
-export default async function HomePage() {
+export default async function OverviewPage() {
   const featured = await getFeaturedWork();
+  const all = await getAllWork();
+  const campaigns = featured.length ? featured : all;
 
   return (
-    <>
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(124,92,255,0.18),transparent_70%)]" />
-        <Container className="py-16 sm:py-24">
-          <div className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr]">
+    <div className="space-y-8 px-4 py-6 sm:px-6 sm:py-8">
+      {/* Top hero strip */}
+      <Reveal>
+        <section className="relative overflow-hidden rounded-2xl border border-ink-800 bg-gradient-to-br from-ink-900 to-ink-900/40 p-6 sm:p-8">
+          <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
+          <div className="grid items-center gap-8 md:grid-cols-[1.5fr_auto]">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-xs uppercase tracking-widest text-ink-300 mb-6">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                <span>Available — Senior IC / Head of Marketing</span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-[11px] uppercase tracking-widest text-ink-300">
+                <span className="relative inline-flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+                </span>
+                Available — Senior IC / Head of Marketing
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-ink-50">
+              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.05] text-ink-50">
                 Engineer turned marketer.
               </h1>
-              <p className="mt-6 max-w-xl text-lg sm:text-xl text-ink-300 leading-relaxed">
+              <p className="mt-4 max-w-2xl text-base sm:text-lg text-ink-300 leading-relaxed">
                 I build the systems, write the copy, run the ads, and read the data.{" "}
                 <span className="text-ink-100">{site.positioningShort}</span>
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-6 flex flex-wrap gap-2.5">
                 <Link
                   href="/work"
-                  className="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent-soft transition-colors"
+                  className="inline-flex items-center gap-1.5 rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-white hover:bg-accent-soft transition-colors"
                 >
-                  See selected work →
+                  See pipeline <IconArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
                 <a
                   href={site.resumeHref}
-                  className="rounded-md border border-ink-700 px-4 py-2.5 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
+                  className="rounded-md border border-ink-700 px-3.5 py-2 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
                 >
                   Download résumé
                 </a>
                 <Link
                   href="/built-with-claude"
-                  className="rounded-md px-4 py-2.5 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
+                  className="rounded-md px-3.5 py-2 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
                 >
-                  How this site was built →
+                  How this was built →
                 </Link>
-              </div>
-              <div className="mt-6 text-xs uppercase tracking-widest text-ink-500">
-                Series A/B B2B SaaS · {site.location} · Remote-friendly
               </div>
             </div>
             <div className="relative justify-self-center md:justify-self-end">
-              <div className="absolute -inset-6 -z-10 rounded-full bg-[radial-gradient(closest-side,rgba(124,92,255,0.35),transparent_75%)] blur-2xl" />
+              <div className="absolute -inset-4 -z-10 rounded-full bg-[radial-gradient(closest-side,rgba(124,92,255,0.35),transparent_75%)] blur-2xl" />
               <Image
                 src="/headshot.png"
                 alt="Daniel Moran"
-                width={420}
-                height={420}
+                width={240}
+                height={240}
                 priority
-                className="h-56 w-56 sm:h-72 sm:w-72 md:h-80 md:w-80 rounded-full object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-800 shadow-[0_30px_60px_-20px_rgba(124,92,255,0.45)]"
+                className="h-32 w-32 sm:h-40 sm:w-40 rounded-2xl object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-700 shadow-[0_20px_40px_-15px_rgba(124,92,255,0.45)]"
               />
             </div>
           </div>
-        </Container>
-      </section>
+        </section>
+      </Reveal>
 
-      {/* Featured work */}
-      <section id="work">
-        <Container className="py-14 sm:py-20">
-          <div className="flex items-end justify-between mb-8">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">Selected work</div>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-ink-50">
-                Systems that moved numbers.
-              </h2>
+      {/* KPI row */}
+      <Reveal delay={0.05}>
+        <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {kpis.map((k) => (
+            <KpiCard key={k.id} kpi={k} />
+          ))}
+        </section>
+      </Reveal>
+
+      {/* Chart + Activity row */}
+      <div className="grid gap-3 lg:grid-cols-[1.6fr_1fr]">
+        <Reveal delay={0.1}>
+          <section className="rounded-xl border border-ink-800 bg-ink-900/40 p-5">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <div className="text-[10px] font-semibold uppercase tracking-widest text-ink-400">
+                  Nokkomo Mints
+                </div>
+                <div className="mt-0.5 text-sm text-ink-100">Trailing revenue · last 12 months</div>
+              </div>
+              <div className="text-right">
+                <div className="text-2xl font-semibold tabular-nums text-ink-50">
+                  <CountUp to={40} prefix="$" suffix="K" />
+                </div>
+                <div className="inline-flex items-center gap-1 text-xs text-emerald-400">
+                  <IconTrendUp className="h-3 w-3" />
+                  <CountUp to={913} suffix="% YoY" />
+                </div>
+              </div>
             </div>
-            <Link href="/work" className="text-sm text-ink-300 hover:text-accent-soft">
-              All work →
+            <div className="mt-4 h-40 sm:h-48">
+              <Sparkline data={nokkomoRevenue} width={800} height={200} className="h-full w-full" showDots />
+            </div>
+            <div className="mt-4 grid grid-cols-3 gap-3 text-center text-xs text-ink-400 sm:text-left">
+              <div>
+                <div className="text-ink-500 uppercase tracking-widest text-[10px]">Start</div>
+                <div className="mt-0.5 text-ink-100 tabular-nums">$4K</div>
+              </div>
+              <div>
+                <div className="text-ink-500 uppercase tracking-widest text-[10px]">Now</div>
+                <div className="mt-0.5 text-ink-100 tabular-nums">$40K</div>
+              </div>
+              <div>
+                <div className="text-ink-500 uppercase tracking-widest text-[10px]">ACOS</div>
+                <div className="mt-0.5 text-ink-100 tabular-nums">81% → 38%</div>
+              </div>
+            </div>
+          </section>
+        </Reveal>
+        <Reveal delay={0.15}>
+          <ActivityFeed />
+        </Reveal>
+      </div>
+
+      {/* Campaigns / Pipeline */}
+      <Reveal delay={0.1}>
+        <section>
+          <div className="mb-3 flex items-end justify-between px-1">
+            <div>
+              <div className="text-[10px] font-semibold uppercase tracking-widest text-ink-400">Pipeline</div>
+              <h2 className="text-lg font-semibold tracking-tight text-ink-50">Top campaigns</h2>
+            </div>
+            <Link href="/work" className="text-xs text-ink-300 hover:text-accent-soft">
+              View all →
             </Link>
           </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            {featured.map((w) => (
-              <CaseCard key={w.slug} entry={w} />
-            ))}
-          </div>
-        </Container>
-      </section>
+          <CampaignTable entries={campaigns.slice(0, 5)} />
+        </section>
+      </Reveal>
 
-      {/* About strip */}
-      <section className="border-t border-ink-800 bg-ink-900/40">
-        <Container className="py-14 sm:py-20">
-          <div className="grid gap-10 md:grid-cols-3">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">About</div>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight text-ink-50">
-                Engineer first. Marketer second. Builder always.
-              </h2>
-            </div>
-            <div className="md:col-span-2 space-y-4 text-ink-300 leading-relaxed">
-              <p>
-                I started in systems engineering at <strong className="text-ink-50">Cubic Transportation</strong>{" "}
-                — five years writing Java, Python, and C++ across transit fare programs. Then I moved
-                full-time into marketing because the leverage was bigger and almost nobody on the
-                marketing side could ship the systems behind the funnel.
-              </p>
-              <p>
-                Today I run paid + lifecycle + automation at{" "}
-                <strong className="text-ink-50">Wealth Enhancement Group</strong>,
-                ran <strong className="text-ink-50">multi-brand marketing as Director at Novadontics</strong>{" "}
-                through January 2026, and am{" "}
-                <strong className="text-ink-50">CMO / Co-founder at Nokkomo Mints</strong> (Amazon DTC).
-              </p>
-              <p>
-                I treat marketing like software: instrument everything, automate the dull bits, and
-                let the team spend their time on judgment calls instead of copy-pasting.
-              </p>
-              <Link href="/about" className="inline-block text-accent-soft hover:text-accent">
-                More about how I work →
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Stack */}
-      <section>
-        <Container className="py-14 sm:py-20">
-          <div className="mb-8">
-            <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">Stack</div>
-            <h2 className="mt-2 text-2xl sm:text-3xl font-semibold tracking-tight text-ink-50">
-              What I build with.
+      {/* CTA strip */}
+      <Reveal delay={0.05}>
+        <section className="flex flex-col items-start gap-4 rounded-xl border border-ink-800 bg-ink-900/40 p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-base sm:text-lg font-semibold text-ink-50">
+              Hiring a senior IC marketer or first Head of Marketing?
             </h2>
+            <p className="mt-1 text-sm text-ink-400">Series A / B B2B SaaS, remote-friendly. Reply within 24 hours.</p>
           </div>
-          <StackGrid />
-        </Container>
-      </section>
-
-      {/* CTA */}
-      <section className="border-t border-ink-800">
-        <Container className="py-16">
-          <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <h2 className="text-2xl font-semibold tracking-tight text-ink-50">
-                Hiring a senior IC marketer or first Head of Marketing?
-              </h2>
-              <p className="mt-2 text-ink-300">Senior IC or first head-of marketing hires — let's talk.</p>
-            </div>
-            <div className="flex gap-3">
-              <a
-                href={`mailto:${site.email}`}
-                className="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:bg-accent-soft transition-colors"
-              >
-                {site.email}
-              </a>
-              <Link
-                href="/contact"
-                className="rounded-md border border-ink-700 px-4 py-2.5 text-sm font-medium text-ink-100 hover:border-accent transition-colors"
-              >
-                Contact
-              </Link>
-            </div>
+          <div className="flex gap-2">
+            <a
+              href={`mailto:${site.email}`}
+              className="rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-white hover:bg-accent-soft"
+            >
+              {site.email}
+            </a>
+            <Link
+              href="/contact"
+              className="rounded-md border border-ink-700 px-3.5 py-2 text-sm font-medium text-ink-100 hover:border-accent"
+            >
+              Contact
+            </Link>
           </div>
-        </Container>
-      </section>
-    </>
+        </section>
+      </Reveal>
+    </div>
   );
 }
