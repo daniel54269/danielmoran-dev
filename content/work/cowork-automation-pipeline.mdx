@@ -1,0 +1,72 @@
+---
+title: "Cowork Content Automation Pipeline"
+client: "HAZE → Wealth Enhancement Group"
+domain: "Content Ops / AI"
+role: "Architect"
+year: "2024 – Present"
+headline: "30+ posts/month per brand, zero manual queueing — Cowork + Claude + MCPs orchestrating the whole pipeline."
+description: "End-to-end content pipeline that takes a brand brief and ships finished posts to social. Built at HAZE for multi-brand agency throughput, now deployed at WEG with Hugging Face MCP for asset generation."
+metric:
+  - { label: "Posts / month", value: "30+ per brand" }
+  - { label: "Manual steps", value: "0" }
+  - { label: "Time saved", value: "~20 hrs / brand / mo" }
+  - { label: "Brands shipped", value: "12+" }
+stack: ["Cowork", "Claude", "Hugging Face MCP", "Make.com", "Zapier", "Buffer", "Google Drive"]
+order: 2
+featured: true
+---
+
+## The context
+
+At HAZE I was hand-producing content for a dozen brands a month and the bottleneck was always the same — not strategy, not creative direction, but the **operational tax** of getting an idea from brain → asset → scheduler → live. Hours of copy-paste per brand per week.
+
+When Cowork + Claude + the MCP ecosystem matured to the point where agents could actually hold context across a multi-step workflow, I rebuilt the pipeline as software. It now ships at WEG too, with Hugging Face MCP plugged in for on-demand asset generation.
+
+## The pipeline
+
+```
+Brand brief (Drive doc)
+        │
+        ▼
+   Cowork / Claude   ──► generates post copy variants + image/video prompts
+        │                 + selects format (carousel, reel, single)
+        ▼
+   Hugging Face MCP  ──► on-demand asset generation when a prompt
+        │                 wants imagery the library doesn't have
+        ▼
+   Google Drive      ──► assets land in brand folder with metadata
+        │
+        ▼
+   Make.com / Zapier ──► validates against brand guidelines,
+        │                 pushes to scheduler with caption + hashtag set
+        ▼
+   Buffer            ──► queues posts on the brand's content calendar
+        │
+        ▼
+   IG / TikTok       ──► publishes; engagement metrics flow back into reporting
+```
+
+## What's in each step
+
+- **Brand brief**: structured doc per client — voice, audience, pillars, no-go list, current campaigns. The prompt template reads it on every run.
+- **Cowork / Claude generation**: variants generated under a strict format spec. Multiple concept options per post, ranked by adherence to the brand's pillars.
+- **Hugging Face MCP**: lets the agent call image generation directly when it needs a specific asset, rather than waiting for a human to source it. Critical unlock — moved the pipeline from "human + AI" to "agent end-to-end."
+- **Drive landing**: filenames include brand + pillar + date. Make.com watches the folder.
+- **Validation**: regex + LLM check against the brand's no-go list (banned phrases, competitor names, off-brand voice). Failed items get flagged for human review instead of silently shipping.
+- **Buffer scheduling**: cadence rules per brand. Calendar self-fills.
+- **Reporting loop**: engagement data flows back to the brand brief so the next generation cycle weights formats that worked.
+
+## At WEG
+
+Same architecture, different inputs. Brand brief becomes the firm's voice + compliance constraints; outputs feed lifecycle email + webinar promotion + organic social. The pipeline doesn't care whether it's a DTC brand or a financial-services firm — the brief is the swap point.
+
+## Outcome
+
+- **30+ posts/month per brand** with zero manual queueing
+- **~20 hours/month saved per brand** — redirected to strategy + paid
+- Pipeline serves **12+ brands** across HAZE + WEG; new brand onboarding ≈ 90 min (just the brief doc + Buffer auth)
+- Multiple **seven-figure-view** TikTok campaigns from the same framework
+
+## Why it matters for the next role
+
+Marketing teams hire agencies for execution because in-house ops are slow. Build the ops, and the team gets fast. This is exactly the kind of system I'd build inside a B2B SaaS marketing org — and unlike most "we use AI for marketing" claims, I've already shipped it twice in production and have the MCP-server scars (and [open-source artifacts](https://github.com/daniel54269/hubspot-mcp)) to prove it.

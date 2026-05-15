@@ -1,0 +1,68 @@
+---
+title: "hubspot-mcp — Claude × HubSpot"
+client: "Open source"
+domain: "AI Tooling / Marketing Ops"
+role: "Author"
+year: "2026"
+headline: "An MCP server that lets Claude read and write your HubSpot — the marketing-engineer artifact, open-sourced."
+description: "TypeScript, 13 tools, write-gated by default. Built because the data lives in HubSpot but the decisions need to happen in chat."
+metric:
+  - { label: "Tools exposed", value: "13" }
+  - { label: "Lines of TS", value: "~900" }
+  - { label: "Auth", value: "1 env var" }
+  - { label: "License", value: "MIT" }
+stack: ["TypeScript", "Model Context Protocol", "HubSpot API", "Zod", "Node.js"]
+order: 0
+featured: true
+---
+
+## The context
+
+Most marketing tools have great APIs and terrible chat interfaces. The data lives in HubSpot, but every "what's our pipeline coverage" question still ends in a 14-tab spreadsheet.
+
+[MCP](https://modelcontextprotocol.io) — the Model Context Protocol Anthropic shipped in late 2024 — is the protocol that closes that loop: it standardizes how AI assistants (Claude, Cursor, others) call external tools. If you write an MCP server for HubSpot, suddenly Claude can answer "what's the total amount in Sales Qualified, sorted by owner" against your real data.
+
+So I wrote one. It's on GitHub: [daniel54269/hubspot-mcp](https://github.com/daniel54269/hubspot-mcp).
+
+## What it does
+
+**Read tools** (always on):
+
+- `search_contacts`, `get_contact` — search + fetch with property filters and lifecycle-stage matches
+- `list_deals`, `get_deal`, `list_pipelines`, `pipeline_summary` — pipeline-grade deal queries with stage roll-ups
+- `search_companies`, `get_company` — same shape for companies
+- `recent_engagements` — notes / calls / meetings / emails / tasks
+- `list_owners` — so Claude can map owner IDs back to humans
+- `list_email_campaigns` — open / click stats for Marketing Hub Pro+ portals
+
+**Write tools** (opt-in via `HUBSPOT_MCP_ALLOW_WRITES=true`):
+
+- `update_contact` — patch one or many properties (great for moving lifecycle stages)
+- `create_note` — drop a note on a contact, deal, or company with auto-association
+
+## Architecture decisions
+
+**Typed HubSpot client, no SDK.** HubSpot's first-party Node SDK is 1.5 MB and pulls in a lot. I wrote a 70-line wrapper around `fetch` that types only the fields these tools actually use. Smaller install, less surface, clearer code.
+
+**One file per tool family.** `tools/contacts.ts`, `tools/deals.ts`, etc. Each file exports `registerXTools(server, hs)`. Adding a tool is "drop a function and import it" — same pattern as adding a route in a small Express app. Easy to fork and extend.
+
+**Writes are off by default.** The env var has to be flipped explicitly. Lets a marketer install the server for read-only "ask my pipeline" use without worrying about Claude updating records.
+
+**Zod schemas for every tool input.** MCP clients see clean JSON schemas; Claude gets actually-validated inputs at the boundary; bad calls fail loud, not silent.
+
+**Pure stdio transport.** The Claude Desktop / Cursor standard. No web server, no auth proxy, no Docker. `npx -y hubspot-mcp` and it works.
+
+## Why this is the receipt
+
+If you're hiring for a marketing-engineer-shaped role and a candidate hands you an open-source MCP server for a major marketing stack — that's a different conversation than "I use HubSpot daily." It's the same difference as "I've read about React" vs. shipping a React app.
+
+The README on GitHub is the demo. The 13 tools are the product surface. The 900 lines of TypeScript are the receipts.
+
+## Try it
+
+```bash
+npm install -g hubspot-mcp
+# then add to claude_desktop_config.json — instructions in the repo README
+```
+
+→ [github.com/daniel54269/hubspot-mcp](https://github.com/daniel54269/hubspot-mcp)
