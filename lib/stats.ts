@@ -17,22 +17,20 @@ export type Kpi = {
 export const kpis: Kpi[] = [
   {
     id: "nokkomo-yoy",
-    label: "Nokkomo YoY",
+    label: "Nokkomo YoY growth",
     value: 913,
     suffix: "%",
     trend: "up",
-    context: "Amazon revenue, $4K → $40K",
+    context: "Amazon revenue · 10× trailing",
     spark: [4, 6, 7, 10, 14, 18, 22, 28, 33, 36, 39, 40],
   },
   {
-    id: "weg-budget",
-    label: "Monthly ad budget",
-    value: 80,
-    prefix: "$",
-    suffix: "K",
+    id: "weg-team",
+    label: "Direct reports",
+    value: 4,
     trend: "flat",
-    context: "WEG · Meta + Google",
-    spark: [60, 65, 68, 72, 75, 78, 80, 80, 80, 80, 80, 80],
+    context: "WEG · paid + lifecycle + webinars",
+    spark: [1, 2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4],
   },
   {
     id: "posts-automated",
@@ -87,7 +85,7 @@ export const activity: ActivityEntry[] = [
   },
   {
     when: "2024",
-    title: "Nokkomo Mints — Amazon ACOS 81% → 38%, revenue $4K → $40K trailing (913% YoY)",
+    title: "Nokkomo Mints — Amazon ACOS 81% → 38%, 913% YoY revenue growth, 3× spend scale",
     meta: "CMO / Co-founder",
   },
 ];

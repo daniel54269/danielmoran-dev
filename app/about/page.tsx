@@ -43,8 +43,8 @@ export default function AboutPage() {
           <strong>Director of Marketing at Novadontics</strong> (May 2025 – Jan 2026) — owned marketing across
           three brands (Novadontics, Care Pulse, California Implant Institute), rebuilt the HubSpot lifecycle and
           GTM attribution in 90 days, reported into the CEO.{" "}
-          <strong>Co-founder and CMO at Nokkomo Mints</strong> — built an Amazon DTC brand from $4K → $40K
-          trailing revenue (913% YoY), ACOS 81% → 38%, own the marketing P&L line.
+          <strong>Co-founder and CMO at Nokkomo Mints</strong> — built an Amazon DTC brand to 913% YoY revenue
+          growth (10× trailing), ACOS 81% → 38%, own the marketing P&L line.
         </p>
         <p>
           On the side I run <strong>HAZE</strong> (registered TM) — creative brand work that keeps me sharp on

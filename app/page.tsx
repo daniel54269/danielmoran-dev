@@ -94,15 +94,15 @@ export default async function OverviewPage() {
                 <div className="text-[10px] font-semibold uppercase tracking-widest text-ink-400">
                   Nokkomo Mints
                 </div>
-                <div className="mt-0.5 text-sm text-ink-100">Trailing revenue · last 12 months</div>
+                <div className="mt-0.5 text-sm text-ink-100">Trailing revenue · indexed · last 12 months</div>
               </div>
               <div className="text-right">
                 <div className="text-2xl font-semibold tabular-nums text-ink-50">
-                  <CountUp to={40} prefix="$" suffix="K" />
+                  <CountUp to={913} suffix="% YoY" />
                 </div>
                 <div className="inline-flex items-center gap-1 text-xs text-emerald-400">
                   <IconTrendUp className="h-3 w-3" />
-                  <CountUp to={913} suffix="% YoY" />
+                  10× trailing revenue
                 </div>
               </div>
             </div>
@@ -111,16 +111,16 @@ export default async function OverviewPage() {
             </div>
             <div className="mt-4 grid grid-cols-3 gap-3 text-center text-xs text-ink-400 sm:text-left">
               <div>
-                <div className="text-ink-500 uppercase tracking-widest text-[10px]">Start</div>
-                <div className="mt-0.5 text-ink-100 tabular-nums">$4K</div>
-              </div>
-              <div>
-                <div className="text-ink-500 uppercase tracking-widest text-[10px]">Now</div>
-                <div className="mt-0.5 text-ink-100 tabular-nums">$40K</div>
+                <div className="text-ink-500 uppercase tracking-widest text-[10px]">YoY growth</div>
+                <div className="mt-0.5 text-ink-100 tabular-nums">913%</div>
               </div>
               <div>
                 <div className="text-ink-500 uppercase tracking-widest text-[10px]">ACOS</div>
                 <div className="mt-0.5 text-ink-100 tabular-nums">81% → 38%</div>
+              </div>
+              <div>
+                <div className="text-ink-500 uppercase tracking-widest text-[10px]">Spend scale</div>
+                <div className="mt-0.5 text-ink-100 tabular-nums">3×</div>
               </div>
             </div>
           </section>
