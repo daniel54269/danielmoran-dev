@@ -61,9 +61,8 @@ export function Sparkline({
         d={areaPath}
         fill={`url(#grad-${id})`}
         className={fillClassName}
-        initial={reduce ? { opacity: 1 } : { opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-40px" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: duration * 0.8, delay: duration * 0.4, ease: [0.23, 1, 0.32, 1] }}
       />
       <motion.path
@@ -74,8 +73,7 @@ export function Sparkline({
         strokeLinejoin="round"
         className={strokeClassName}
         initial={reduce ? { pathLength: 1 } : { pathLength: 0 }}
-        whileInView={{ pathLength: 1 }}
-        viewport={{ once: true, margin: "-40px" }}
+        animate={{ pathLength: 1 }}
         transition={{ duration, ease: [0.77, 0, 0.175, 1] }}
       />
       {showDots &&
@@ -87,8 +85,7 @@ export function Sparkline({
             r={2}
             className={strokeClassName}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-40px" }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.2, delay: duration * 0.4 + (i / pts.length) * duration * 0.6 }}
           />
         ))}

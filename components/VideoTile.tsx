@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 type VideoTileProps = {
   src: string;
@@ -9,8 +9,9 @@ type VideoTileProps = {
   /** Aspect ratio class. Default "aspect-[3/4]" — compact portrait. */
   aspect?: string;
   /**
-   * If true, preload="metadata" immediately (first row).
-   * If false, start with preload="none" and upgrade to "metadata" when within 200px of viewport.
+   * Reserved for future fine-grained loading control. All tiles use
+   * preload="metadata" so iOS Safari shows the first frame as a thumbnail
+   * (it does not honor preload="none" with later upgrades reliably).
    */
   priority?: boolean;
 };
@@ -20,32 +21,8 @@ export function VideoTile({
   label,
   badge,
   aspect = "aspect-[3/4]",
-  priority = false,
 }: VideoTileProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const figureRef = useRef<HTMLElement>(null);
-  const [preload, setPreload] = useState<"none" | "metadata">(
-    priority ? "metadata" : "none"
-  );
-
-  // Non-priority tiles: lazy-upgrade preload as they near the viewport.
-  useEffect(() => {
-    if (priority) return;
-    const el = figureRef.current;
-    if (!el) return;
-
-    const obs = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setPreload("metadata");
-          obs.disconnect();
-        }
-      },
-      { rootMargin: "200px" }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [priority]);
 
   function play() {
     const v = videoRef.current;
@@ -70,7 +47,6 @@ export function VideoTile({
 
   return (
     <figure
-      ref={figureRef}
       className="group relative overflow-hidden rounded-xl border border-ink-800 bg-ink-900 transition-[transform,border-color,box-shadow] duration-300 ease-emil hover:scale-[1.03] hover:border-ink-700 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.6)] active:scale-[0.97]"
       onMouseEnter={play}
       onMouseLeave={pauseReset}
@@ -81,18 +57,21 @@ export function VideoTile({
           ref={videoRef}
           src={src}
           className="absolute inset-0 h-full w-full object-cover"
-          preload={preload}
+          preload="metadata"
           muted
           playsInline
           loop
         />
+        {/* Subtle gradient so the play button stays legible even on bright frames */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-900/60 via-transparent to-transparent" />
         {badge && (
           <span className="absolute left-2 top-2 rounded-md border border-ink-700 bg-ink-900/80 px-1.5 py-0.5 text-[10px] uppercase tracking-widest text-ink-300 backdrop-blur">
             {badge}
           </span>
         )}
-        <span className="pointer-events-none absolute right-2 bottom-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-ink-900/70 text-ink-50 backdrop-blur opacity-0 transition-opacity duration-200 ease-emil group-hover:opacity-100">
-          <svg viewBox="0 0 24 24" className="h-3 w-3 translate-x-[1px]" fill="currentColor">
+        {/* Play affordance — always visible (touch devices have no hover) */}
+        <span className="pointer-events-none absolute right-2 bottom-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-ink-900/80 text-ink-50 backdrop-blur opacity-85 transition-all duration-200 ease-emil group-hover:opacity-100 group-hover:scale-110">
+          <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 translate-x-[1px]" fill="currentColor">
             <path d="M8 5v14l11-7z" />
           </svg>
         </span>
