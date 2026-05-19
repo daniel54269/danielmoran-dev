@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type VideoTileProps = {
   src: string;
@@ -8,33 +8,61 @@ type VideoTileProps = {
   badge?: string;
   /** Aspect ratio class. Default "aspect-[3/4]" — compact portrait. */
   aspect?: string;
+  /**
+   * If true, preload="metadata" immediately (first row).
+   * If false, start with preload="none" and upgrade to "metadata" when within 200px of viewport.
+   */
+  priority?: boolean;
 };
 
-/**
- * Hover-to-play video tile.
- * - Desktop: mouseenter starts muted loop, mouseleave pauses + rewinds.
- * - Mobile / touch (no hover): tap toggles play/pause.
- * Lightweight: preload="metadata" so the home page doesn't pull the bytes until interaction.
- */
-export function VideoTile({ src, label, badge, aspect = "aspect-[3/4]" }: VideoTileProps) {
-  const ref = useRef<HTMLVideoElement>(null);
+export function VideoTile({
+  src,
+  label,
+  badge,
+  aspect = "aspect-[3/4]",
+  priority = false,
+}: VideoTileProps) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const figureRef = useRef<HTMLElement>(null);
+  const [preload, setPreload] = useState<"none" | "metadata">(
+    priority ? "metadata" : "none"
+  );
+
+  // Non-priority tiles: lazy-upgrade preload as they near the viewport.
+  useEffect(() => {
+    if (priority) return;
+    const el = figureRef.current;
+    if (!el) return;
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setPreload("metadata");
+          obs.disconnect();
+        }
+      },
+      { rootMargin: "200px" }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [priority]);
 
   function play() {
-    const v = ref.current;
+    const v = videoRef.current;
     if (!v) return;
     v.muted = true;
     v.play().catch(() => {});
   }
 
   function pauseReset() {
-    const v = ref.current;
+    const v = videoRef.current;
     if (!v) return;
     v.pause();
     v.currentTime = 0;
   }
 
   function toggle() {
-    const v = ref.current;
+    const v = videoRef.current;
     if (!v) return;
     if (v.paused) play();
     else v.pause();
@@ -42,6 +70,7 @@ export function VideoTile({ src, label, badge, aspect = "aspect-[3/4]" }: VideoT
 
   return (
     <figure
+      ref={figureRef}
       className="group relative overflow-hidden rounded-xl border border-ink-800 bg-ink-900 transition-all duration-300 ease-out hover:scale-[1.03] hover:border-ink-700 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.6)]"
       onMouseEnter={play}
       onMouseLeave={pauseReset}
@@ -49,10 +78,10 @@ export function VideoTile({ src, label, badge, aspect = "aspect-[3/4]" }: VideoT
     >
       <div className={`relative ${aspect}`}>
         <video
-          ref={ref}
+          ref={videoRef}
           src={src}
           className="absolute inset-0 h-full w-full object-cover"
-          preload="metadata"
+          preload={preload}
           muted
           playsInline
           loop

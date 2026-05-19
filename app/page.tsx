@@ -187,7 +187,7 @@ export default async function HomePage() {
                 badge: "Directed",
                 videos: ["/videos/ucla1.mp4", "/videos/ucla2.mov", "/videos/ucla3.mp4"],
               },
-            ].map((cat) => (
+            ].map((cat, catIdx) => (
               <div key={cat.label}>
                 <div className="mb-3 flex items-end justify-between gap-3">
                   <div>
@@ -198,7 +198,7 @@ export default async function HomePage() {
                 </div>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
                   {cat.videos.map((src) => (
-                    <VideoTile key={src} src={src} badge={cat.badge} />
+                    <VideoTile key={src} src={src} badge={cat.badge} priority={catIdx === 0} />
                   ))}
                 </div>
               </div>
