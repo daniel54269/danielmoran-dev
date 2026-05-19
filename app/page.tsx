@@ -173,7 +173,7 @@ export default async function HomePage() {
                     { value: 31, label: "750%" },
                     { value: 40, label: "900%" },
                   ]}
-                  tooltipForIndex={(i, value) => {
+                  tooltips={(() => {
                     const months = [
                       "May 2025",
                       "Jun 2025",
@@ -189,9 +189,11 @@ export default async function HomePage() {
                       "Apr 2026",
                     ];
                     const baseline = nokkomoRevenue[0] ?? 1;
-                    const growth = Math.round(((value - baseline) / baseline) * 100);
-                    return `${months[i]} · +${growth}%`;
-                  }}
+                    return nokkomoRevenue.map((value, i) => {
+                      const growth = Math.round(((value - baseline) / baseline) * 100);
+                      return `${months[i]} · +${growth}%`;
+                    });
+                  })()}
                 />
               </div>
               <div className="mt-2 flex justify-between px-1 text-[10px] uppercase tracking-widest text-ink-500">

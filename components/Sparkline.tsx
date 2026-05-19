@@ -20,10 +20,11 @@ type SparklineProps = {
    */
   yAxisTicks?: AxisTick[];
   /**
-   * Optional tooltip text shown on hover over each dot. Receives the data
-   * index and value. Return null to suppress the tooltip.
+   * Optional precomputed tooltip text shown on hover, one per data point.
+   * (Function props can't cross the server→client component boundary in
+   * Next.js App Router, so we pass an array of strings instead.)
    */
-  tooltipForIndex?: (i: number, value: number) => string | null;
+  tooltips?: string[];
 };
 
 export function Sparkline({
@@ -36,7 +37,7 @@ export function Sparkline({
   showDots = false,
   duration = 1.2,
   yAxisTicks,
-  tooltipForIndex,
+  tooltips,
 }: SparklineProps) {
   const id = useId();
   const reduce = useReducedMotion();
@@ -144,7 +145,7 @@ export function Sparkline({
             return (
               <g key={i}>
                 {/* Larger transparent hit area for hover */}
-                {tooltipForIndex && (
+                {tooltips && (
                   <circle
                     cx={x}
                     cy={y}
@@ -174,8 +175,8 @@ export function Sparkline({
       </svg>
 
       {/* Hover tooltip overlay (HTML, positioned with %) */}
-      {tooltipForIndex && hover !== null && pts[hover] && (() => {
-        const tipText = tooltipForIndex(hover, data[hover]!);
+      {tooltips && hover !== null && pts[hover] && (() => {
+        const tipText = tooltips[hover];
         if (!tipText) return null;
         const xPct = (pts[hover]![0] / width) * 100;
         const yPct = (pts[hover]![1] / height) * 100;
