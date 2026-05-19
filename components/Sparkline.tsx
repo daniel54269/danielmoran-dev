@@ -64,7 +64,7 @@ export function Sparkline({
         initial={reduce ? { opacity: 1 } : { opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: duration * 0.8, delay: duration * 0.4 }}
+        transition={{ duration: duration * 0.8, delay: duration * 0.4, ease: [0.23, 1, 0.32, 1] }}
       />
       <motion.path
         d={linePath}
@@ -76,7 +76,7 @@ export function Sparkline({
         initial={reduce ? { pathLength: 1 } : { pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration, ease: "easeOut" }}
+        transition={{ duration, ease: [0.77, 0, 0.175, 1] }}
       />
       {showDots &&
         pts.map(([x, y], i) => (

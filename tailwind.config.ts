@@ -34,6 +34,12 @@ const config: Config = {
         serif: ["var(--font-instrument-serif)", "Newsreader", "Iowan Old Style", "Georgia", "serif"],
       },
       maxWidth: { content: "68rem", prose: "44rem" },
+      transitionTimingFunction: {
+        // Emil Kowalski's custom curves — punchier than Tailwind defaults
+        emil: "cubic-bezier(0.23, 1, 0.32, 1)",
+        "emil-in-out": "cubic-bezier(0.77, 0, 0.175, 1)",
+        drawer: "cubic-bezier(0.32, 0.72, 0, 1)",
+      },
     },
   },
   plugins: [],

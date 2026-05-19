@@ -5,7 +5,7 @@ export function CaseCard({ entry }: { entry: WorkEntry }) {
   return (
     <Link
       href={`/work/${entry.slug}`}
-      className="group relative flex flex-col gap-3 rounded-xl border border-ink-800 bg-ink-900 p-6 transition-all hover:border-accent/60 hover:bg-ink-800/40"
+      className="group relative flex flex-col gap-3 rounded-xl border border-ink-800 bg-ink-900 p-6 transition-[border-color,background-color,transform,box-shadow] duration-200 ease-emil hover:border-accent/60 hover:bg-ink-800/40 hover:-translate-y-0.5 active:scale-[0.995]"
     >
       <div className="flex items-center justify-between text-xs uppercase tracking-wider text-ink-400">
         <span>{entry.client}</span>

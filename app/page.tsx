@@ -84,14 +84,14 @@ export default async function HomePage() {
           </div>
         </Reveal>
 
-        {/* KPI row */}
-        <Reveal delay={0.05}>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {kpis.map((k) => (
-              <KpiCard key={k.id} kpi={k} />
-            ))}
-          </div>
-        </Reveal>
+        {/* KPI row — staggered entrance, 50ms between tiles */}
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {kpis.map((k, i) => (
+            <Reveal key={k.id} delay={0.05 + i * 0.05}>
+              <KpiCard kpi={k} />
+            </Reveal>
+          ))}
+        </div>
 
         {/* Chart + Activity */}
         <div className="mt-8 grid gap-3 lg:grid-cols-[1.6fr_1fr]">

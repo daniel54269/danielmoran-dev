@@ -5,6 +5,10 @@
 :root {
   color-scheme: dark;
   --shell-topbar-h: 56px;
+  /* Emil Kowalski's custom curves — Tailwind's default ease-out is too weak */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 html {
@@ -38,6 +42,27 @@ p {
 }
 
 a { text-underline-offset: 3px; }
+
+/* Press feedback on every clickable element — Emil: "buttons must feel responsive to press" */
+button:active,
+a[href]:active,
+[role="button"]:active {
+  transform: scale(0.98);
+}
+@media (prefers-reduced-motion: reduce) {
+  button:active,
+  a[href]:active,
+  [role="button"]:active {
+    transform: none;
+  }
+}
+
+/* Touch devices: disable hover-driven transforms (false-positive hovers on tap) */
+@media (hover: none), (pointer: coarse) {
+  .group:hover {
+    transform: none !important;
+  }
+}
 
 .prose-custom {
   max-width: 44rem;

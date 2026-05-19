@@ -48,7 +48,7 @@ export function CountUp({
     }
     const controls = animate(from, to, {
       duration,
-      ease: "easeOut",
+      ease: [0.23, 1, 0.32, 1],
       onUpdate: (v) => setDisplay(v),
     });
     return () => controls.stop();

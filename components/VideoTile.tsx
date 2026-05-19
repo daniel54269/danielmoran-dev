@@ -71,7 +71,7 @@ export function VideoTile({
   return (
     <figure
       ref={figureRef}
-      className="group relative overflow-hidden rounded-xl border border-ink-800 bg-ink-900 transition-all duration-300 ease-out hover:scale-[1.03] hover:border-ink-700 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.6)]"
+      className="group relative overflow-hidden rounded-xl border border-ink-800 bg-ink-900 transition-[transform,border-color,box-shadow] duration-300 ease-emil hover:scale-[1.03] hover:border-ink-700 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.6)] active:scale-[0.97]"
       onMouseEnter={play}
       onMouseLeave={pauseReset}
       onClick={toggle}
@@ -91,7 +91,7 @@ export function VideoTile({
             {badge}
           </span>
         )}
-        <span className="pointer-events-none absolute right-2 bottom-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-ink-900/70 text-ink-50 backdrop-blur opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+        <span className="pointer-events-none absolute right-2 bottom-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-ink-900/70 text-ink-50 backdrop-blur opacity-0 transition-opacity duration-200 ease-emil group-hover:opacity-100">
           <svg viewBox="0 0 24 24" className="h-3 w-3 translate-x-[1px]" fill="currentColor">
             <path d="M8 5v14l11-7z" />
           </svg>
