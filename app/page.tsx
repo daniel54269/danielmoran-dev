@@ -31,54 +31,42 @@ export default async function HomePage() {
       {/* ─────────────────────────  OVERVIEW  ───────────────────────── */}
       <section id="overview" className={sectionWrap}>
         <Reveal>
-          <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10">
+          <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10 md:p-14">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
-            <div className="grid items-center gap-8 md:grid-cols-[1.5fr_auto]">
-              <div>
-                <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-[11px] uppercase tracking-widest text-ink-300">
-                  <span className="relative inline-flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-                  </span>
-                  Available for marketing engineering roles
-                </div>
-                <h1 className="mt-4 font-serif italic font-normal text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1] text-ink-50">
-                  Marketing Engineer.
-                </h1>
-                <p className="mt-5 max-w-2xl text-base sm:text-lg text-ink-300 leading-relaxed">
-                  I help marketing teams adopt current AI tooling and automation to scale operations with less overhead — better measurement, faster output, lower per-unit cost.{" "}
-                  <span className="text-ink-100">Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.</span>
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2.5">
-                  <Link
-                    href="#pipeline"
-                    className="inline-flex items-center gap-1.5 rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-ink-900 hover:bg-accent-soft transition-colors"
-                  >
-                    See pipeline <IconArrowUpRight className="h-3.5 w-3.5" />
-                  </Link>
-                  <a
-                    href={site.resumeHref}
-                    className="rounded-md border border-ink-700 px-3.5 py-2 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
-                  >
-                    Download résumé
-                  </a>
-                  <Link
-                    href="#built-with-claude"
-                    className="rounded-md px-3.5 py-2 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
-                  >
-                    How this was built →
-                  </Link>
-                </div>
+            <div className="max-w-4xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-[11px] uppercase tracking-widest text-ink-300">
+                <span className="relative inline-flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+                </span>
+                Available for marketing engineering roles
               </div>
-              <div className="relative justify-self-center md:justify-self-end">
-                <Image
-                  src="/headshot.png"
-                  alt="Daniel Moran"
-                  width={240}
-                  height={240}
-                  priority
-                  className="h-32 w-32 sm:h-40 sm:w-40 rounded-2xl object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-700 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
-                />
+              <h1 className="mt-5 font-serif italic font-normal text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-ink-50">
+                Marketing Engineer.
+              </h1>
+              <p className="mt-6 max-w-3xl text-base sm:text-lg lg:text-xl text-ink-300 leading-relaxed">
+                I help marketing teams adopt current AI tooling and automation to scale operations with less overhead — better measurement, faster output, lower per-unit cost.{" "}
+                <span className="text-ink-100">Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.</span>
+              </p>
+              <div className="mt-8 flex flex-wrap gap-2.5">
+                <Link
+                  href="#pipeline"
+                  className="inline-flex items-center gap-1.5 rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-ink-900 hover:bg-accent-soft transition-colors"
+                >
+                  See pipeline <IconArrowUpRight className="h-3.5 w-3.5" />
+                </Link>
+                <a
+                  href={site.resumeHref}
+                  className="rounded-md border border-ink-700 px-4 py-2.5 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
+                >
+                  Download résumé
+                </a>
+                <Link
+                  href="#built-with-claude"
+                  className="rounded-md px-4 py-2.5 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
+                >
+                  How this was built →
+                </Link>
               </div>
             </div>
           </div>
