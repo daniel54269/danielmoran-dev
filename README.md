@@ -1,6 +1,6 @@
 # daniel-moran-site
 
-Personal site for Daniel Moran — Marketing Engineer · Growth & AI Automation.
+Personal site for Daniel Moran | Marketing Engineer · Growth & AI Automation.
 
 ## Local dev
 

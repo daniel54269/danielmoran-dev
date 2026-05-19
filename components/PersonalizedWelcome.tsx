@@ -26,7 +26,7 @@ function detectSource(): WelcomeMessage | null {
   if (name) {
     return {
       eyebrow: "Personal invite",
-      greeting: `Hi ${name} — selected work below, résumé is one click away.`,
+      greeting: `Hi ${name}, selected work below. The résumé is one click away.`,
       ctaLabel: "Pipeline",
       ctaHref: "#pipeline",
     };
@@ -34,7 +34,7 @@ function detectSource(): WelcomeMessage | null {
   if (role === "hom" || role === "head-of-marketing") {
     return {
       eyebrow: "For: Head of Marketing search",
-      greeting: "Start with the Approach — it's the fastest read.",
+      greeting: "Start with the Approach. It is the fastest read.",
       ctaLabel: "Approach",
       ctaHref: "#approach",
     };
@@ -52,7 +52,7 @@ function detectSource(): WelcomeMessage | null {
   if (ref.includes("linkedin.com") || utmSource.includes("linkedin")) {
     return {
       eyebrow: "From LinkedIn",
-      greeting: "Welcome — start with the Pipeline, résumé download in the sidebar.",
+      greeting: "Welcome. Start with the Pipeline; résumé download in the sidebar.",
       ctaLabel: "Pipeline",
       ctaHref: "#pipeline",
     };
@@ -60,7 +60,7 @@ function detectSource(): WelcomeMessage | null {
   if (ref.includes("github.com") || utmSource.includes("github")) {
     return {
       eyebrow: "From GitHub",
-      greeting: "Check out the open-source MCP server and how this site was built.",
+      greeting: "Start with the open-source MCP server and how this site was built.",
       ctaLabel: "Built with Claude",
       ctaHref: "#built-with-claude",
     };
@@ -68,7 +68,7 @@ function detectSource(): WelcomeMessage | null {
   if (ref.includes("twitter.com") || ref.includes("x.com") || utmSource.includes("twitter") || utmSource.includes("x")) {
     return {
       eyebrow: "From X",
-      greeting: "The Creative section is the most fun place to start.",
+      greeting: "The Creative section is a strong starting point.",
       ctaLabel: "Creative",
       ctaHref: "#creative",
     };

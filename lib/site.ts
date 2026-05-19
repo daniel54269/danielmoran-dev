@@ -1,9 +1,9 @@
 export const site = {
   name: "Daniel Moran",
-  title: "Daniel Moran — Marketing Engineer",
+  title: "Daniel Moran | Marketing Engineer",
   headline: "Marketing Engineer · AI Automation & Marketing Systems",
   positioning:
-    "I help marketing teams apply current AI tooling and automation to operate at greater scale with less overhead — better measurement, faster output, lower per-unit cost.",
+    "I help marketing teams apply current AI tooling and automation to operate at greater scale with less overhead. The result: better measurement, faster output, lower per-unit cost.",
   positioningShort:
     "Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.",
   location: "North County San Diego, CA",

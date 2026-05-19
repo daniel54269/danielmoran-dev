@@ -4,7 +4,7 @@ client: "HAZE → Wealth Enhancement Group"
 domain: "Content Ops / AI"
 role: "Architect"
 year: "2024 – Present"
-headline: "30+ posts/month per brand, zero manual queueing — Cowork + Claude + MCPs orchestrating the whole pipeline."
+headline: "30+ posts/month per brand, zero manual queueing. Cowork + Claude + MCPs orchestrate the whole pipeline."
 description: "End-to-end content pipeline that takes a brand brief and ships finished posts to social. Built at HAZE for multi-brand agency throughput, now deployed at WEG with Hugging Face MCP for asset generation."
 metric:
   - { label: "Posts / month", value: "30+ per brand" }
@@ -48,9 +48,9 @@ Brand brief (Drive doc)
 
 ## What's in each step
 
-- **Brand brief**: structured doc per client — voice, audience, pillars, no-go list, current campaigns. The prompt template reads it on every run.
+- **Brand brief**: structured doc per client covering voice, audience, pillars, no-go list, and current campaigns. The prompt template reads it on every run.
 - **Cowork / Claude generation**: variants generated under a strict format spec. Multiple concept options per post, ranked by adherence to the brand's pillars.
-- **Hugging Face MCP**: lets the agent call image generation directly when it needs a specific asset, rather than waiting for a human to source it. Critical unlock — moved the pipeline from "human + AI" to "agent end-to-end."
+- **Hugging Face MCP**: lets the agent call image generation directly when it needs a specific asset, rather than waiting for a human to source it. A critical unlock that moved the pipeline from "human + AI" to "agent end-to-end."
 - **Drive landing**: filenames include brand + pillar + date. Make.com watches the folder.
 - **Validation**: regex + LLM check against the brand's no-go list (banned phrases, competitor names, off-brand voice). Failed items get flagged for human review instead of silently shipping.
 - **Buffer scheduling**: cadence rules per brand. Calendar self-fills.
@@ -58,13 +58,13 @@ Brand brief (Drive doc)
 
 ## At WEG
 
-Same architecture, different inputs. Brand brief becomes the firm's voice + compliance constraints; outputs feed lifecycle email + webinar promotion + organic social. The pipeline doesn't care whether it's a DTC brand or a financial-services firm — the brief is the swap point.
+Same architecture, different inputs. The brand brief becomes the firm's voice and compliance constraints; outputs feed lifecycle email, webinar promotion, and organic social. The pipeline does not care whether it is a DTC brand or a financial-services firm. The brief is the swap point.
 
 ## Outcome
 
 - **30+ posts/month per brand** with zero manual queueing
-- **~20 hours/month saved per brand** — redirected to strategy + paid
-- Pipeline served **12+ brands** during HAZE's active years; the architecture now runs in production at WEG with new brand onboarding ≈ 90 min (just the brief doc + Buffer auth)
+- **~20 hours/month saved per brand**, redirected to strategy and paid
+- Pipeline served **12+ brands** during HAZE's active years; the architecture now runs in production at WEG with new brand onboarding ≈ 90 min (the brief doc and Buffer auth)
 - Multiple **seven-figure-view** TikTok campaigns from the same framework
 
 ## Why this engagement matters

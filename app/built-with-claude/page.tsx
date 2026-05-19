@@ -17,7 +17,7 @@ export default function BuiltWithClaudePage() {
         How this site was built.
       </h1>
       <p className="mt-3 text-ink-300">
-        The site you're reading is itself a portfolio piece — written in collaboration with Claude Code,
+        The site you are reading is itself a portfolio piece. Written in collaboration with Claude Code,
         deployed in days, intentionally over-engineered in the places that matter and intentionally simple
         everywhere else.
       </p>
@@ -25,33 +25,33 @@ export default function BuiltWithClaudePage() {
       <div className="prose-custom mt-10">
         <h2>Stack</h2>
         <ul>
-          <li><strong>Next.js 15</strong> (App Router) — static rendering for every page, zero client-side data fetching.</li>
-          <li><strong>React 19</strong> + <strong>TypeScript</strong> — strict mode on.</li>
-          <li><strong>Tailwind CSS</strong> — design tokens defined in <code>tailwind.config.ts</code>, custom <code>ink</code> + <code>accent</code> palettes.</li>
-          <li><strong>MDX</strong> via <code>next-mdx-remote</code> — case studies are content files, not React components. Edit a paragraph, redeploy in 30 seconds.</li>
+          <li><strong>Next.js 15</strong> (App Router): static rendering for every page, zero client-side data fetching.</li>
+          <li><strong>React 19</strong> + <strong>TypeScript</strong>, strict mode on.</li>
+          <li><strong>Tailwind CSS</strong>: design tokens defined in <code>tailwind.config.ts</code>, custom <code>ink</code> + <code>accent</code> palettes.</li>
+          <li><strong>MDX</strong> via <code>next-mdx-remote</code>: case studies are content files, not React components. Edit a paragraph, redeploy in 30 seconds.</li>
           <li><strong>Gray-matter</strong> for front-matter (metrics, stack, ordering, featured flag).</li>
-          <li><strong>Vercel</strong> for hosting + preview deploys.</li>
+          <li><strong>Vercel</strong> for hosting and preview deploys.</li>
           <li><strong>Puppeteer</strong> for the résumé PDF pipeline (separate repo).</li>
         </ul>
 
         <h2>On the MCP server</h2>
         <p>
-          There are now official marketing-stack MCP servers — HubSpot just shipped one. I built my own{" "}
+          There are now official marketing-stack MCP servers; HubSpot recently shipped one. I built my own{" "}
           <a href="https://github.com/daniel54269/hubspot-mcp">hubspot-mcp</a>{" "}
-          before that, to learn the protocol from the ground up and to demonstrate the architecture I'd build
-          inside a marketing org.
+          before that, to learn the protocol from the ground up and to demonstrate the architecture I would build
+          inside a marketing organization.
         </p>
 
         <h2>The build partner: Claude Code</h2>
         <p>
-          Claude Code is Anthropic's CLI for Claude — agentic, file-system-aware, runs tools, takes a brief and
+          Claude Code is Anthropic's CLI for Claude: agentic, file-system-aware, runs tools, takes a brief and
           ships code. I drafted the spec for this site (positioning, sections, content), Claude turned that into
-          a working Next.js app, I reviewed, asked for changes, repeated. Same pattern I use professionally for
+          a working Next.js app, I reviewed, asked for changes, repeated. The same pattern I use professionally for
           marketing automation: human owns judgment, model owns mechanics.
         </p>
         <p>
-          Notable: the case study MDX system, the résumé HTML→PDF pipeline, the SEO + OG image setup, and the
-          Lighthouse-passing performance tuning were all collaborative — fast iterations, explicit decisions,
+          The case study MDX system, the résumé HTML to PDF pipeline, the SEO and OG image setup, and the
+          Lighthouse-passing performance tuning were all collaborative: fast iterations, explicit decisions,
           full version history.
         </p>
 
@@ -59,17 +59,17 @@ export default function BuiltWithClaudePage() {
 
         <h3>Static everything</h3>
         <p>
-          No <code>"use client"</code> in this codebase. Every page is server-rendered at build time. Result:
-          first contentful paint under a second on a cold cache, JS bundle close to zero. A hiring manager on
-          a flaky mobile network in an Uber sees content instantly.
+          Most of the codebase avoids <code>"use client"</code>. Pages are server-rendered at build time. The
+          result: first contentful paint under a second on a cold cache, JS bundle close to zero. Hiring
+          managers on a slow mobile connection see content immediately.
         </p>
 
         <h3>Content as front-matter</h3>
         <p>
           Case studies live in <code>content/work/*.mdx</code> with structured front-matter for the metrics,
           stack, and ordering. The home page and the work index both call <code>getAllWork()</code> from{" "}
-          <code>lib/work.ts</code>. Add a new case study, push, deploy — it shows up everywhere with no manual
-          wiring. This is the same pattern I use for client content pipelines at HAZE.
+          <code>lib/work.ts</code>. Add a new case study, push, deploy. It shows up everywhere with no manual
+          wiring. The same pattern I use for client content pipelines at HAZE.
         </p>
 
         <h3>Résumé pipeline as a separate concern</h3>
@@ -81,9 +81,9 @@ export default function BuiltWithClaudePage() {
 
         <h3>Dark mode, one accent</h3>
         <p>
-          Technical-hire audiences read dark mode more comfortably and it cuts the perceived "agency-portfolio"
-          vibe. One accent color (a desaturated violet) used sparingly — for the primary CTA and case-study
-          links — keeps the page from looking generic.
+          Technical hiring audiences read dark mode more comfortably, and it avoids the standard
+          agency-portfolio look. One accent color (a desaturated warm cream) used sparingly, applied to the
+          primary CTA and case-study links, keeps the page from looking generic.
         </p>
 
         <h2>What I'd build next</h2>
@@ -95,17 +95,17 @@ export default function BuiltWithClaudePage() {
 
         <h2>Why this page exists</h2>
         <p>
-          Because saying "I ship with AI tooling" is cheap, and showing the receipts isn't. If you're hiring for
+          Claiming "I ship with AI tooling" is easy. Demonstrating it is the harder part. If you are hiring for
           a role where the candidate needs to understand both the marketing and the systems behind it, this
-          page is the actual evidence.{" "}
-          <Link href="/contact">Let's talk</Link> if that's the role.
+          page is the evidence.{" "}
+          <Link href="/contact">Let&rsquo;s talk</Link> if that is the role.
         </p>
       </div>
 
       <div className="mt-10 rounded-xl border border-ink-800 bg-ink-900/60 p-5 text-sm text-ink-300">
         Source code:{" "}
         <span className="text-ink-100">
-          ask in the first call and I'll walk through the repo live.
+          available on request. I will walk through the repository live on a first call.
         </span>
         {" "}<a className="text-accent-soft hover:text-accent" href={`mailto:${site.email}`}>{site.email}</a>
       </div>

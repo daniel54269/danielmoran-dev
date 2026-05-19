@@ -62,18 +62,18 @@ export type ActivityEntry = {
 export const activity: ActivityEntry[] = [
   {
     when: "May 2026",
-    title: "Shipped hubspot-mcp v0.1.0 — open-source MCP server for HubSpot CRM",
+    title: "Shipped hubspot-mcp v0.1.0: open-source MCP server for HubSpot CRM",
     meta: "13 tools · TypeScript · MIT",
     href: "https://github.com/daniel54269/hubspot-mcp",
   },
   {
     when: "May 2026",
-    title: "Deployed danielmoran.dev on Vercel — Next.js portfolio, dashboard treatment",
+    title: "Deployed danielmoran.dev on Vercel: Next.js portfolio with dashboard treatment",
     meta: "Next 15 · Tailwind · MDX",
   },
   {
     when: "Q1 2026",
-    title: "Closed Director of Marketing role at Novadontics — 3 brands, 90-day HubSpot rebuild",
+    title: "Closed Director of Marketing role at Novadontics: 3 brands, 90-day HubSpot rebuild",
     meta: "May 2025 – Jan 2026",
   },
   {
@@ -83,12 +83,12 @@ export const activity: ActivityEntry[] = [
   },
   {
     when: "2024",
-    title: "Nokkomo Mints — built and managed an 8-person UCLA intern team across creative, content, and Amazon ops",
+    title: "Nokkomo Mints: built and managed an 8-person UCLA intern team across creative, content, and Amazon ops",
     meta: "CMO / Co-founder",
   },
   {
     when: "2024",
-    title: "Nokkomo Mints — Amazon ACOS 81% → 38%, 913% YoY revenue growth, 3× spend scale",
+    title: "Nokkomo Mints: Amazon ACOS 81% to 38%, 913% YoY revenue growth, 3× spend scale",
     meta: "CMO / Co-founder",
   },
 ];

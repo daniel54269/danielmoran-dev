@@ -41,7 +41,7 @@ export default async function HomePage() {
                 Marketing Engineer.
               </h1>
               <p className="mt-6 max-w-3xl text-base sm:text-lg lg:text-xl text-ink-300 leading-relaxed">
-                I help marketing teams adopt current AI tooling and automation to scale operations with less overhead — better measurement, faster output, lower per-unit cost.{" "}
+                I help marketing teams adopt current AI tooling and automation to scale operations with less overhead. The result: better measurement, faster output, lower per-unit cost.{" "}
                 <span className="text-ink-100">Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.</span>
               </p>
               <div className="mt-8 flex flex-wrap gap-2.5">
@@ -253,7 +253,7 @@ export default async function HomePage() {
           </div>
           <h2 className={`${sectionHeadline} italic`}>How I work.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
-            Most marketing functions are bottlenecked on operations, not strategy. My approach rebuilds that infrastructure so the strategy can land — measurably, repeatably, with less per-unit cost.
+            Most marketing functions are bottlenecked on operations, not strategy. My approach rebuilds that infrastructure so the strategy can land: measurably, repeatably, with less per-unit cost.
           </p>
         </Reveal>
         <Reveal delay={0.05}>
@@ -316,13 +316,13 @@ export default async function HomePage() {
             />
             <div className="space-y-4 text-ink-300 leading-relaxed">
               <p>
-                I&rsquo;m Daniel — a marketing engineer based in North County San Diego. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
+                I&rsquo;m Daniel, a marketing engineer based in North County San Diego. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
               </p>
               <p>
                 Today I lead a four-person team at <strong className="text-ink-50">Wealth Enhancement Group</strong>, recently completed a tenure as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (Amazon DTC; 913% YoY revenue growth, 10× trailing revenue, 8 UCLA interns managed).
               </p>
               <p>
-                On the side I run <strong className="text-ink-50">HAZE</strong> (registered TM) — creative brand work that keeps me sharp on the consumer side.
+                On the side I run <strong className="text-ink-50">HAZE</strong> (registered TM), creative brand work that keeps me sharp on the consumer side.
               </p>
               <p>
                 <Link href="/about" className="text-accent-soft hover:text-accent">More about how I work →</Link>

@@ -59,7 +59,7 @@ export default function AboutPage() {
           Most marketing teams I have worked with are bottlenecked not on strategy but on operations: manual
           reporting, fragmented attribution, content production that does not scale, and stacks of point tools
           that no one fully connects. My approach is to treat the marketing function the way a product team
-          treats a product surface &mdash; measure it carefully, automate what is repeatable, document what is
+          treats a product surface: measure it carefully, automate what is repeatable, document what is
           not, and review performance on a consistent operating cadence.
         </p>
         <p>
@@ -75,16 +75,16 @@ export default function AboutPage() {
         <h2>What I&rsquo;m looking for</h2>
         <ul>
           <li>Marketing engineering, senior individual contributor, or marketing-leadership roles with real autonomy and budget.</li>
-          <li>Companies that value measurement and automation as first-class parts of marketing &mdash; not afterthoughts.</li>
+          <li>Companies that value measurement and automation as first-class parts of marketing, not afterthoughts.</li>
           <li>Industries: B2B SaaS, B2C software, DTC e-commerce, and other modern, data-rich businesses.</li>
           <li>Remote, hybrid, or in person around North County San Diego, California.</li>
         </ul>
 
         <h2>How to reach me</h2>
         <p>
-          Email is fastest: <a href={`mailto:${site.email}`}>{site.email}</a>. I usually reply within 24 hours.{" "}
-          <Link href="/contact">More ways to reach me</Link> or grab the{" "}
-          <a href={site.resumeHref}>résumé</a> if you'd rather skim.
+          Email is fastest: <a href={`mailto:${site.email}`}>{site.email}</a>. I reply within 24 hours.{" "}
+          <Link href="/contact">More ways to reach me</Link>, or download the{" "}
+          <a href={site.resumeHref}>résumé</a> if you would prefer to skim.
         </p>
       </div>
     </Container>

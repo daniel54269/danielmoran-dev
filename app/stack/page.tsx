@@ -4,7 +4,7 @@ import { StackGrid } from "@/components/StackGrid";
 
 export const metadata: Metadata = {
   title: "Stack",
-  description: "What I build with — marketing tools, engineering languages, AI/agent tooling, and domain experience.",
+  description: "What I build with: marketing tools, engineering languages, AI and agent tooling, and domain experience.",
 };
 
 export default function StackPage() {
@@ -15,8 +15,7 @@ export default function StackPage() {
         What I build with.
       </h1>
       <p className="mt-3 max-w-2xl text-ink-300">
-        Tools I use weekly, not the kitchen sink. Listed here so recruiters' keyword filters and human readers
-        get the same picture.
+        Tools I use weekly, listed so recruiters&rsquo; keyword filters and human readers see the same picture.
       </p>
       <div className="mt-10">
         <StackGrid />

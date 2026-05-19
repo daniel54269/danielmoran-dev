@@ -29,7 +29,7 @@ const categories = [
     label: "Directed with the UCLA intern team",
     meta: "iPhone · CapCut · directed",
     blurb:
-      "Output from the eight-person UCLA intern team at Nokkomo — I directed the brief, framing, and edit notes.",
+      "Output from the eight-person UCLA intern team at Nokkomo. I directed the brief, framing, and edit notes.",
     badge: "Directed",
     videos: ["/videos/ucla1.mp4", "/videos/ucla2.mov", "/videos/ucla3.mp4"],
   },
@@ -40,7 +40,7 @@ export default function CreativeArchivePage() {
     <Container className="py-12 sm:py-20">
       <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">Creative archive</div>
       <h1 className="mt-2 font-serif italic font-normal text-4xl sm:text-5xl tracking-tight leading-[1.05] text-ink-50">
-        Things I&rsquo;ve made and directed.
+        Work I&rsquo;ve made and directed.
       </h1>
       <p className="mt-3 max-w-prose text-ink-300">
         Three lanes of creative output across the marketing function: AI-generated content, self-produced

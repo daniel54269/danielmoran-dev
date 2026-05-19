@@ -4,11 +4,11 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch — email, LinkedIn, résumé download.",
+  description: "Get in touch: email, LinkedIn, résumé download.",
 };
 
 const channels = [
-  { label: "Email", value: site.email, href: `mailto:${site.email}`, note: "Fastest. Usually a reply within 24 hours." },
+  { label: "Email", value: site.email, href: `mailto:${site.email}`, note: "Fastest. Reply within 24 hours." },
   { label: "LinkedIn", value: "Daniel Joseph Moran", href: site.linkedin, note: "Connect or DM." },
   { label: "GitHub", value: "daniel54269", href: site.github, note: "Open-source projects, MCP servers, this site's repo." },
 ];
@@ -21,7 +21,7 @@ export default function ContactPage() {
         Let&rsquo;s talk.
       </h1>
       <p className="mt-3 text-ink-300">
-        Head of Marketing at Series A / B B2B SaaS. Remote, or in person around North County San Diego.
+        Marketing engineering and AI automation roles. Remote, hybrid, or in person around North County San Diego.
       </p>
 
       <div className="mt-10 space-y-3">

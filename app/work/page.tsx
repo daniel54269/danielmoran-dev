@@ -5,7 +5,7 @@ import { getAllWork } from "@/lib/work";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Selected case studies — Amazon Ads turnaround, AI content automation, paid-media attribution, TikTok framework.",
+  description: "Selected case studies: Amazon Ads turnaround, AI content automation, paid-media attribution, TikTok framework.",
 };
 
 export default async function WorkIndex() {

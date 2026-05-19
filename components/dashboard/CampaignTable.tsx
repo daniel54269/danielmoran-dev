@@ -27,7 +27,7 @@ export function CampaignTable({ entries }: { entries: WorkEntry[] }) {
         {/* Body rows — use display:contents on the list elements so the grid sees the Link directly */}
         <ul className="contents">
           {entries.map((e, i) => {
-            const headline = e.metric[0]?.value ?? "—";
+            const headline = e.metric[0]?.value ?? "–";
             const headlineLabel = e.metric[0]?.label ?? "";
             return (
               <li key={e.slug} className="contents">

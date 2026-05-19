@@ -16,7 +16,7 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: site.title, template: "%s — Daniel Moran" },
+  title: { default: site.title, template: "%s | Daniel Moran" },
   description: site.positioning,
   authors: [{ name: "Daniel Moran" }],
   openGraph: {

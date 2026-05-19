@@ -4,7 +4,7 @@ import { Container } from "@/components/Container";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Approach — How I work",
+  title: "Approach | How I work",
   description:
     "My approach to marketing engineering: applying software engineering rigor and current AI tooling to marketing operations.",
 };
