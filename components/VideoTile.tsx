@@ -59,11 +59,23 @@ export function VideoTile({
     else v.pause();
   }
 
+  // Pointer events let us distinguish mouse hover from touch.
+  // Without this, iOS fires a phantom "mouseenter" on first tap then "click"
+  // on the second tap — making the user have to tap twice to play.
+  function handlePointerEnter(e: React.PointerEvent) {
+    if (e.pointerType !== "mouse") return;
+    play();
+  }
+  function handlePointerLeave(e: React.PointerEvent) {
+    if (e.pointerType !== "mouse") return;
+    pauseReset();
+  }
+
   return (
     <figure
       className="group relative overflow-hidden rounded-xl border border-ink-800 bg-ink-900 transition-[transform,border-color,box-shadow] duration-300 ease-emil hover:scale-[1.03] hover:border-ink-700 hover:shadow-[0_20px_40px_-20px_rgba(0,0,0,0.6)] active:scale-[0.97]"
-      onMouseEnter={play}
-      onMouseLeave={pauseReset}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
       onClick={toggle}
     >
       <div className={`relative ${aspect}`}>
