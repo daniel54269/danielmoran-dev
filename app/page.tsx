@@ -289,7 +289,7 @@ export default async function HomePage() {
             />
             <div className="space-y-4 text-ink-300 leading-relaxed">
               <p>
-                I&rsquo;m Daniel — a marketing engineer based in Oceanside, California. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
+                I&rsquo;m Daniel — a marketing engineer based in North County San Diego. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
               </p>
               <p>
                 Today I lead a four-person team at <strong className="text-ink-50">Wealth Enhancement Group</strong>, recently completed a tenure as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (Amazon DTC; 913% YoY revenue growth, 10× trailing revenue, 8 UCLA interns managed).
@@ -350,7 +350,7 @@ export default async function HomePage() {
           </div>
           <h2 className={`${sectionHeadline} italic`}>Let&rsquo;s talk.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
-            Marketing engineering and AI automation roles. Remote, hybrid, or in person around San Diego / Oceanside. I respond within 24 hours.
+            Marketing engineering and AI automation roles. Remote, hybrid, or in person around North County San Diego. I respond within 24 hours.
           </p>
         </Reveal>
         <Reveal delay={0.05}>

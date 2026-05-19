@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: site.name,
               url: site.url,
               email: `mailto:${site.email}`,
-              address: { "@type": "PostalAddress", addressLocality: "Oceanside", addressRegion: "CA" },
+              address: { "@type": "PostalAddress", addressLocality: "San Diego", addressRegion: "CA" },
               sameAs: [site.linkedin, site.github].filter(Boolean),
               jobTitle: "Marketing Engineer",
               description: site.positioning,

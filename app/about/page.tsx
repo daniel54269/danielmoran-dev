@@ -30,7 +30,7 @@ export default function AboutPage() {
       </div>
       <div className="prose-custom mt-8">
         <p>
-          I&rsquo;m Daniel Moran, a marketing engineer based in Oceanside, California. My background combines a
+          I&rsquo;m Daniel Moran, a marketing engineer based in North County San Diego, California. My background combines a
           Bachelor of Science in Computer Science from the University of San Diego (2018&ndash;2022) with five
           years of systems engineering at Cubic Transportation Systems, writing Java, Python, and C++ across
           transit-fare programs. I now apply that engineering background to marketing operations: building
@@ -77,7 +77,7 @@ export default function AboutPage() {
           <li>Marketing engineering, senior individual contributor, or marketing-leadership roles with real autonomy and budget.</li>
           <li>Companies that value measurement and automation as first-class parts of marketing &mdash; not afterthoughts.</li>
           <li>Industries: B2B SaaS, B2C software, DTC e-commerce, and other modern, data-rich businesses.</li>
-          <li>Remote, hybrid, or in person around San Diego / Oceanside, California.</li>
+          <li>Remote, hybrid, or in person around North County San Diego, California.</li>
         </ul>
 
         <h2>How to reach me</h2>

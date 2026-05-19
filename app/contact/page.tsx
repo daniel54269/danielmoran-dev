@@ -21,7 +21,7 @@ export default function ContactPage() {
         Let&rsquo;s talk.
       </h1>
       <p className="mt-3 text-ink-300">
-        Head of Marketing at Series A / B B2B SaaS. Remote, or in person around Oceanside / San Diego.
+        Head of Marketing at Series A / B B2B SaaS. Remote, or in person around North County San Diego.
       </p>
 
       <div className="mt-10 space-y-3">

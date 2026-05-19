@@ -6,7 +6,7 @@ export const site = {
     "I help marketing teams apply current AI tooling and automation to operate at greater scale with less overhead — better measurement, faster output, lower per-unit cost.",
   positioningShort:
     "Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.",
-  location: "Oceanside, CA",
+  location: "North County San Diego, CA",
   email: "daniel54269@gmail.com",
   linkedin: "https://www.linkedin.com/in/danieljosephmoran",
   github: "https://github.com/daniel54269",
