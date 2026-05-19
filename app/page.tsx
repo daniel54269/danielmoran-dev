@@ -6,6 +6,7 @@ import { CountUp } from "@/components/CountUp";
 import { Spotlight } from "@/components/Spotlight";
 import { StackGrid } from "@/components/StackGrid";
 import { VideoTile } from "@/components/VideoTile";
+import { PersonalizedWelcome } from "@/components/PersonalizedWelcome";
 import { KpiCard } from "@/components/dashboard/KpiCard";
 import { CampaignTable } from "@/components/dashboard/CampaignTable";
 import { ActivityFeed } from "@/components/dashboard/ActivityFeed";
@@ -29,6 +30,8 @@ export default async function HomePage() {
 
   return (
     <div>
+      <PersonalizedWelcome />
+
       {/* ─────────────────────────  OVERVIEW  ───────────────────────── */}
       <Spotlight id="overview" className={sectionWrap}>
         <Reveal>
@@ -122,7 +125,10 @@ export default async function HomePage() {
       {/* ─────────────────────────  PIPELINE  ───────────────────────── */}
       <Spotlight id="pipeline" className={sectionWrap}>
         <Reveal>
-          <div className={sectionEyebrow}>Pipeline</div>
+          <div className={sectionEyebrow}>
+            Pipeline <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">1 min</span>
+          </div>
           <h2 className={sectionHeadline}>Selected work.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
             A handful of campaigns and systems shipped across B2C wealth management, dental clinical, DTC, and open source.
@@ -138,7 +144,10 @@ export default async function HomePage() {
       {/* ─────────────────────────  CREATIVE  ───────────────────────── */}
       <Spotlight id="creative" className={sectionWrap}>
         <Reveal>
-          <div className={sectionEyebrow}>Creative</div>
+          <div className={sectionEyebrow}>
+            Creative <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">2 min</span>
+          </div>
           <h2 className={sectionHeadline}>Things I&rsquo;ve made and directed.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
             Three lanes of creative output across the marketing function: AI-generated content, self-produced video, and work I&rsquo;ve directed with my intern team.
@@ -192,7 +201,10 @@ export default async function HomePage() {
       {/* ─────────────────────────  APPROACH  ───────────────────────── */}
       <Spotlight id="approach" className={sectionWrap}>
         <Reveal>
-          <div className={sectionEyebrow}>Approach</div>
+          <div className={sectionEyebrow}>
+            Approach <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">1 min</span>
+          </div>
           <h2 className={`${sectionHeadline} italic`}>How I work.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
             Most marketing functions are bottlenecked on operations, not strategy. My approach rebuilds that infrastructure so the strategy can land — measurably, repeatably, with less per-unit cost.
@@ -241,7 +253,10 @@ export default async function HomePage() {
       {/* ─────────────────────────  STACK  ───────────────────────── */}
       <Spotlight id="stack" className={sectionWrap}>
         <Reveal>
-          <div className={sectionEyebrow}>Stack</div>
+          <div className={sectionEyebrow}>
+            Stack <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">30 sec</span>
+          </div>
           <h2 className={sectionHeadline}>What I build with.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
             Tools I use weekly. Listed for both human readers and ATS keyword scans.
@@ -257,7 +272,10 @@ export default async function HomePage() {
       {/* ─────────────────────────  ABOUT  ───────────────────────── */}
       <Spotlight id="about" className={sectionWrap}>
         <Reveal>
-          <div className={sectionEyebrow}>About</div>
+          <div className={sectionEyebrow}>
+            About <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">1 min</span>
+          </div>
           <h2 className={sectionHeadline}>Software engineering rigor, applied to modern marketing.</h2>
         </Reveal>
         <Reveal delay={0.05}>
@@ -290,7 +308,10 @@ export default async function HomePage() {
       {/* ─────────────────────────  BUILT WITH CLAUDE  ───────────────────────── */}
       <Spotlight id="built-with-claude" className={sectionWrap}>
         <Reveal>
-          <div className={sectionEyebrow}>Meta</div>
+          <div className={sectionEyebrow}>
+            Meta <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">1 min</span>
+          </div>
           <h2 className={sectionHeadline}>How this site was built.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
             The site is itself a portfolio artifact — written in collaboration with Claude Code, deployed to Vercel, intentionally engineered in the places that matter.
@@ -323,7 +344,10 @@ export default async function HomePage() {
       {/* ─────────────────────────  DOCUMENTS / CONTACT  ───────────────────────── */}
       <Spotlight id="documents" className={sectionWrap}>
         <Reveal>
-          <div className={sectionEyebrow}>Documents</div>
+          <div className={sectionEyebrow}>
+            Documents <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">10 sec</span>
+          </div>
           <h2 className={`${sectionHeadline} italic`}>Let&rsquo;s talk.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
             Marketing engineering and AI automation roles. Remote, hybrid, or in person around San Diego / Oceanside. I respond within 24 hours.
