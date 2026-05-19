@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { Sparkline } from "@/components/Sparkline";
 import { CountUp } from "@/components/CountUp";
+import { Spotlight } from "@/components/Spotlight";
 import { StackGrid } from "@/components/StackGrid";
 import { VideoTile } from "@/components/VideoTile";
 import { KpiCard } from "@/components/dashboard/KpiCard";
@@ -29,7 +30,7 @@ export default async function HomePage() {
   return (
     <div>
       {/* ─────────────────────────  OVERVIEW  ───────────────────────── */}
-      <section id="overview" className={sectionWrap}>
+      <Spotlight id="overview" className={sectionWrap}>
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10 md:p-14">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
@@ -123,10 +124,10 @@ export default async function HomePage() {
             <ActivityFeed />
           </Reveal>
         </div>
-      </section>
+      </Spotlight>
 
       {/* ─────────────────────────  PIPELINE  ───────────────────────── */}
-      <section id="pipeline" className={sectionWrap}>
+      <Spotlight id="pipeline" className={sectionWrap}>
         <Reveal>
           <div className={sectionEyebrow}>Pipeline</div>
           <h2 className={sectionHeadline}>Selected work.</h2>
@@ -139,10 +140,10 @@ export default async function HomePage() {
             <CampaignTable entries={campaigns.slice(0, 6)} />
           </div>
         </Reveal>
-      </section>
+      </Spotlight>
 
       {/* ─────────────────────────  CREATIVE  ───────────────────────── */}
-      <section id="creative" className={sectionWrap}>
+      <Spotlight id="creative" className={sectionWrap}>
         <Reveal>
           <div className={sectionEyebrow}>Creative</div>
           <h2 className={sectionHeadline}>Things I&rsquo;ve made and directed.</h2>
@@ -193,10 +194,10 @@ export default async function HomePage() {
             ))}
           </div>
         </Reveal>
-      </section>
+      </Spotlight>
 
       {/* ─────────────────────────  APPROACH  ───────────────────────── */}
-      <section id="approach" className={sectionWrap}>
+      <Spotlight id="approach" className={sectionWrap}>
         <Reveal>
           <div className={sectionEyebrow}>Approach</div>
           <h2 className={`${sectionHeadline} italic`}>How I work.</h2>
@@ -242,10 +243,10 @@ export default async function HomePage() {
             </Link>
           </div>
         </Reveal>
-      </section>
+      </Spotlight>
 
       {/* ─────────────────────────  STACK  ───────────────────────── */}
-      <section id="stack" className={sectionWrap}>
+      <Spotlight id="stack" className={sectionWrap}>
         <Reveal>
           <div className={sectionEyebrow}>Stack</div>
           <h2 className={sectionHeadline}>What I build with.</h2>
@@ -258,10 +259,10 @@ export default async function HomePage() {
             <StackGrid />
           </div>
         </Reveal>
-      </section>
+      </Spotlight>
 
       {/* ─────────────────────────  ABOUT  ───────────────────────── */}
-      <section id="about" className={sectionWrap}>
+      <Spotlight id="about" className={sectionWrap}>
         <Reveal>
           <div className={sectionEyebrow}>About</div>
           <h2 className={sectionHeadline}>Software engineering rigor, applied to modern marketing.</h2>
@@ -291,10 +292,10 @@ export default async function HomePage() {
             </div>
           </div>
         </Reveal>
-      </section>
+      </Spotlight>
 
       {/* ─────────────────────────  BUILT WITH CLAUDE  ───────────────────────── */}
-      <section id="built-with-claude" className={sectionWrap}>
+      <Spotlight id="built-with-claude" className={sectionWrap}>
         <Reveal>
           <div className={sectionEyebrow}>Meta</div>
           <h2 className={sectionHeadline}>How this site was built.</h2>
@@ -324,10 +325,10 @@ export default async function HomePage() {
             </Link>
           </div>
         </Reveal>
-      </section>
+      </Spotlight>
 
       {/* ─────────────────────────  DOCUMENTS / CONTACT  ───────────────────────── */}
-      <section id="documents" className={sectionWrap}>
+      <Spotlight id="documents" className={sectionWrap}>
         <Reveal>
           <div className={sectionEyebrow}>Documents</div>
           <h2 className={`${sectionHeadline} italic`}>Let&rsquo;s talk.</h2>
@@ -375,7 +376,7 @@ export default async function HomePage() {
             </a>
           </div>
         </Reveal>
-      </section>
+      </Spotlight>
     </div>
   );
 }
