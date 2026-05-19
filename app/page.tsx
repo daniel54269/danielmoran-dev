@@ -32,7 +32,7 @@ export default async function HomePage() {
       <PersonalizedWelcome />
 
       {/* ─────────────────────────  OVERVIEW (hero only)  ───────────────────────── */}
-      <Spotlight id="overview" className={sectionWrap}>
+      <Spotlight id="overview" className="px-4 pt-8 pb-4 sm:px-6 sm:pb-6">
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10 md:p-14">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
@@ -70,7 +70,7 @@ export default async function HomePage() {
       </Spotlight>
 
       {/* ─────────────────────────  CREATIVE (moved up — videos peek at top of scroll)  ───────────────────────── */}
-      <Spotlight id="creative" className={sectionWrap}>
+      <Spotlight id="creative" className="px-4 pt-6 pb-12 sm:px-6 sm:pt-10 sm:pb-20">
         <Reveal>
           <div className={sectionEyebrow}>
             Creative <span className="text-ink-600">·</span>{" "}
