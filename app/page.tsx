@@ -162,6 +162,13 @@ export default async function HomePage() {
               <div className="mt-4 min-h-40 flex-1">
                 <Sparkline data={nokkomoRevenue} width={800} height={200} className="h-full w-full" showDots />
               </div>
+              <div className="mt-2 flex justify-between px-1 text-[10px] uppercase tracking-widest text-ink-500">
+                <span>May &rsquo;25</span>
+                <span className="hidden sm:inline">Aug &rsquo;25</span>
+                <span>Nov &rsquo;25</span>
+                <span className="hidden sm:inline">Feb &rsquo;26</span>
+                <span>Apr &rsquo;26</span>
+              </div>
               <div className="mt-4 grid grid-cols-3 gap-3 text-xs text-ink-400">
                 <div>
                   <div className="text-ink-500 uppercase tracking-widest text-[10px]">YoY growth</div>
