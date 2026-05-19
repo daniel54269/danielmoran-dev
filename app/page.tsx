@@ -180,12 +180,10 @@ export default async function HomePage() {
               },
             ].map((cat, catIdx) => (
               <div key={cat.label}>
-                <div className="mb-3 flex items-end justify-between gap-3">
-                  <div>
-                    <div className="text-base font-medium text-ink-50">{cat.label}</div>
-                    <div className="mt-0.5 text-[11px] uppercase tracking-widest text-ink-500">{cat.meta}</div>
-                  </div>
-                  <div className="hidden max-w-md text-right text-xs text-ink-400 sm:block">{cat.blurb}</div>
+                <div className="mb-4">
+                  <div className="text-base font-medium text-ink-50">{cat.label}</div>
+                  <div className="mt-0.5 text-[11px] uppercase tracking-widest text-ink-500">{cat.meta}</div>
+                  <p className="mt-2 max-w-prose text-xs text-ink-400">{cat.blurb}</p>
                 </div>
                 <div className="mx-auto grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
                   {cat.videos.map((src) => (
