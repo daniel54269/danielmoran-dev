@@ -35,14 +35,7 @@ export default async function HomePage() {
           <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10 md:p-14">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
             <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-[11px] uppercase tracking-widest text-ink-300">
-                <span className="relative inline-flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-                </span>
-                Available for marketing engineering roles
-              </div>
-              <h1 className="mt-5 font-serif italic font-normal text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-ink-50">
+              <h1 className="font-serif italic font-normal text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-ink-50">
                 Marketing Engineer.
               </h1>
               <p className="mt-6 max-w-3xl text-base sm:text-lg lg:text-xl text-ink-300 leading-relaxed">

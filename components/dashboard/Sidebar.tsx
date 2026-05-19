@@ -140,19 +140,8 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
 
       <div className="flex-1" />
 
-      {/* Status + résumé */}
+      {/* Résumé */}
       <div className="space-y-3 px-2">
-        <div className="rounded-lg border border-ink-800 bg-ink-900 p-3">
-          <div className="flex items-center gap-2 text-[11px] uppercase tracking-widest text-ink-300">
-            <span className="relative inline-flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-            </span>
-            Available
-          </div>
-          <div className="mt-1 text-xs text-ink-200">Marketing Engineer</div>
-          <div className="mt-0.5 text-[11px] text-ink-500">Open to new roles · Remote</div>
-        </div>
         <a
           href={site.resumeHref}
           className="block rounded-md bg-accent px-3 py-2 text-center text-xs font-medium text-ink-900 hover:bg-accent-soft transition-colors"
