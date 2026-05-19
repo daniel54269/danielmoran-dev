@@ -16,7 +16,7 @@ import { site } from "@/lib/site";
 
 export const revalidate = false;
 
-const sectionWrap = "px-4 py-10 sm:px-6 sm:py-16 first:pt-8 sm:first:pt-10";
+const sectionWrap = "px-4 py-5 sm:px-6 sm:py-8 first:pt-4 sm:first:pt-5";
 const sectionEyebrow =
   "text-[10px] font-semibold uppercase tracking-widest text-ink-400";
 const sectionHeadline =
