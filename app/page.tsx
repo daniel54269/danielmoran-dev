@@ -160,7 +160,39 @@ export default async function HomePage() {
                 </div>
               </div>
               <div className="mt-4 min-h-40 flex-1">
-                <Sparkline data={nokkomoRevenue} width={800} height={200} className="h-full w-full" showDots />
+                <Sparkline
+                  data={nokkomoRevenue}
+                  width={800}
+                  height={220}
+                  className="h-full w-full"
+                  showDots
+                  yAxisTicks={[
+                    { value: 4, label: "0%" },
+                    { value: 13, label: "250%" },
+                    { value: 22, label: "500%" },
+                    { value: 31, label: "750%" },
+                    { value: 40, label: "900%" },
+                  ]}
+                  tooltipForIndex={(i, value) => {
+                    const months = [
+                      "May 2025",
+                      "Jun 2025",
+                      "Jul 2025",
+                      "Aug 2025",
+                      "Sep 2025",
+                      "Oct 2025",
+                      "Nov 2025",
+                      "Dec 2025",
+                      "Jan 2026",
+                      "Feb 2026",
+                      "Mar 2026",
+                      "Apr 2026",
+                    ];
+                    const baseline = nokkomoRevenue[0] ?? 1;
+                    const growth = Math.round(((value - baseline) / baseline) * 100);
+                    return `${months[i]} · +${growth}%`;
+                  }}
+                />
               </div>
               <div className="mt-2 flex justify-between px-1 text-[10px] uppercase tracking-widest text-ink-500">
                 <span>May &rsquo;25</span>
