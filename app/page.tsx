@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { Sparkline } from "@/components/Sparkline";
 import { CountUp } from "@/components/CountUp";
 import { StackGrid } from "@/components/StackGrid";
+import { VideoTile } from "@/components/VideoTile";
 import { KpiCard } from "@/components/dashboard/KpiCard";
 import { CampaignTable } from "@/components/dashboard/CampaignTable";
 import { ActivityFeed } from "@/components/dashboard/ActivityFeed";
@@ -148,6 +149,60 @@ export default async function HomePage() {
         <Reveal delay={0.05}>
           <div className="mt-8">
             <CampaignTable entries={campaigns.slice(0, 6)} />
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ─────────────────────────  CREATIVE  ───────────────────────── */}
+      <section id="creative" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>Creative</div>
+          <h2 className={sectionHeadline}>Things I&rsquo;ve made and directed.</h2>
+          <p className="mt-3 max-w-prose text-ink-300">
+            Three lanes of creative output across the marketing function: AI-generated content, self-produced video, and work I&rsquo;ve directed with my intern team.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.05}>
+          <div className="mt-10 space-y-10">
+            {[
+              {
+                label: "AI-generated",
+                meta: "Claude · Higgsfield · Buffer",
+                blurb: "Content produced and shipped through the AI + automation pipeline I run at WEG and HAZE.",
+                badge: "AI",
+                videos: ["/videos/ai1.mov", "/videos/ai2.mov", "/videos/ai3.mov"],
+              },
+              {
+                label: "Self-produced",
+                meta: "iPhone · CapCut",
+                blurb: "Talking-head and product video I shot and edited end-to-end.",
+                badge: "Self",
+                videos: ["/videos/daniel1.mov", "/videos/daniel2.mov", "/videos/daniel3.mov"],
+              },
+              {
+                label: "Directed with the UCLA intern team",
+                meta: "iPhone · CapCut",
+                blurb: "Output from the eight-person UCLA intern team at Nokkomo — I directed the brief, framing, and edit notes.",
+                badge: "Directed",
+                videos: ["/videos/ucla1.mp4", "/videos/ucla2.mov", "/videos/ucla3.mp4"],
+              },
+            ].map((cat) => (
+              <div key={cat.label}>
+                <div className="mb-3 flex items-end justify-between gap-3">
+                  <div>
+                    <div className="text-base font-medium text-ink-50">{cat.label}</div>
+                    <div className="mt-0.5 text-[11px] uppercase tracking-widest text-ink-500">{cat.meta}</div>
+                  </div>
+                  <div className="hidden max-w-md text-right text-xs text-ink-400 sm:block">{cat.blurb}</div>
+                </div>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                  {cat.videos.map((src) => (
+                    <VideoTile key={src} src={src} badge={cat.badge} />
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </Reveal>
       </section>

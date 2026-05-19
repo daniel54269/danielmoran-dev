@@ -57,6 +57,13 @@ export const IconPlaybook = ({ className = "" }: IconProps) => (
   </svg>
 );
 
+export const IconCreative = ({ className = "" }: IconProps) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+    <rect x="3" y="5" width="18" height="14" rx="2.2" />
+    <path d="m10.5 9 4.5 3-4.5 3z" fill="currentColor" stroke="none" />
+  </svg>
+);
+
 export const IconCode = ({ className = "" }: IconProps) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="m8 17-5-5 5-5" />

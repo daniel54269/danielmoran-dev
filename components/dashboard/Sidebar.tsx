@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import {
   IconAbout,
   IconCode,
+  IconCreative,
   IconDocuments,
   IconOverview,
   IconPipeline,
@@ -28,6 +29,7 @@ type Item = {
 const items: Item[] = [
   { href: "/#overview", label: "Overview", icon: IconOverview, section: "overview" },
   { href: "/#pipeline", label: "Pipeline", icon: IconPipeline, section: "pipeline", altHref: "/work" },
+  { href: "/#creative", label: "Creative", icon: IconCreative, section: "creative" },
   { href: "/#approach", label: "Approach", icon: IconPlaybook, section: "approach", altHref: "/playbook" },
   { href: "/#stack", label: "Stack", icon: IconStack, section: "stack", altHref: "/stack" },
   { href: "/#about", label: "About", icon: IconAbout, section: "about", altHref: "/about" },
