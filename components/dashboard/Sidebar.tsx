@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
 import {
   IconAbout,
   IconCode,
@@ -118,14 +119,20 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
               href={it.href}
               onClick={onNavigate}
               aria-current={active ? "page" : undefined}
-              className={`flex items-center gap-3 rounded-md px-2 py-1.5 text-sm transition-colors ${
-                active
-                  ? "bg-ink-800/80 text-ink-50"
-                  : "text-ink-300 hover:bg-ink-800/40 hover:text-ink-50"
+              className={`relative flex items-center gap-3 rounded-md px-2 py-1.5 text-sm transition-colors duration-200 ${
+                active ? "text-ink-50" : "text-ink-300 hover:bg-ink-800/40 hover:text-ink-50"
               }`}
             >
+              {active && (
+                <motion.span
+                  layoutId="sidebar-active-pill"
+                  className="absolute inset-0 -z-10 rounded-md bg-ink-800/80"
+                  transition={{ type: "spring", stiffness: 380, damping: 32, mass: 0.6 }}
+                  aria-hidden="true"
+                />
+              )}
               <Icon className={active ? "text-accent-soft" : "text-ink-400"} />
-              <span>{it.label}</span>
+              <span className="relative">{it.label}</span>
             </Link>
           );
         })}
