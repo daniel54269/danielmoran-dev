@@ -16,7 +16,7 @@ import { site } from "@/lib/site";
 
 export const revalidate = false;
 
-const sectionWrap = "px-4 py-12 sm:px-6 sm:py-20 first:pt-8";
+const sectionWrap = "px-4 py-10 sm:px-6 sm:py-16 first:pt-8 sm:first:pt-10";
 const sectionEyebrow =
   "text-[10px] font-semibold uppercase tracking-widest text-ink-400";
 const sectionHeadline =
@@ -32,7 +32,7 @@ export default async function HomePage() {
       <PersonalizedWelcome />
 
       {/* ─────────────────────────  OVERVIEW (hero only)  ───────────────────────── */}
-      <Spotlight id="overview" className="px-4 pt-8 pb-4 sm:px-6 sm:pb-6">
+      <Spotlight id="overview" className={sectionWrap}>
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10 md:p-14">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
@@ -69,21 +69,10 @@ export default async function HomePage() {
         </Reveal>
       </Spotlight>
 
-      {/* ─────────────────────────  CREATIVE (moved up — videos peek at top of scroll)  ───────────────────────── */}
-      <Spotlight id="creative" className="px-4 pt-6 pb-12 sm:px-6 sm:pt-10 sm:pb-20">
-        <Reveal>
-          <div className={sectionEyebrow}>
-            Creative <span className="text-ink-600">·</span>{" "}
-            <span className="text-ink-500">30 sec</span>
-          </div>
-          <h2 className={sectionHeadline}>Three lanes of creative output.</h2>
-          <p className="mt-3 max-w-prose text-ink-300">
-            One sample from each lane: AI-generated, self-produced, and work I&rsquo;ve directed with my UCLA intern team.
-          </p>
-        </Reveal>
-
+      {/* ─────────────────────────  CREATIVE (no header — flows directly from hero)  ───────────────────────── */}
+      <Spotlight id="creative" className={sectionWrap}>
         <Reveal delay={0.05}>
-          <div className="mx-auto mt-10 grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
+          <div className="mx-auto grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
             {[
               {
                 label: "AI-generated",
@@ -257,7 +246,7 @@ export default async function HomePage() {
           </p>
         </Reveal>
         <Reveal delay={0.05}>
-          <ol className="mt-10 grid gap-3 sm:grid-cols-3">
+          <ol className="mt-8 grid gap-3 sm:grid-cols-3">
             {[
               {
                 n: "01",
