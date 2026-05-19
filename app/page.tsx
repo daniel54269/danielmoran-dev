@@ -69,10 +69,21 @@ export default async function HomePage() {
         </Reveal>
       </Spotlight>
 
-      {/* ─────────────────────────  CREATIVE (no header — flows directly from hero)  ───────────────────────── */}
+      {/* ─────────────────────────  CREATIVE  ───────────────────────── */}
       <Spotlight id="creative" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>
+            Creative <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">30 sec</span>
+          </div>
+          <h2 className={sectionHeadline}>Three lanes of creative output.</h2>
+          <p className="mt-3 max-w-prose text-ink-300">
+            One sample from each lane: AI-generated, self-produced, and work I&rsquo;ve directed with my UCLA intern team.
+          </p>
+        </Reveal>
+
         <Reveal delay={0.05}>
-          <div className="mx-auto grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
+          <div className="mx-auto mt-8 grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
             {[
               {
                 label: "AI-generated",

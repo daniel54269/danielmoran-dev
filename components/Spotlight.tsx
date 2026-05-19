@@ -47,12 +47,6 @@ export function Spotlight({ id, className, children }: SpotlightProps) {
         style={{ opacity: glow }}
         className="pointer-events-none absolute inset-x-0 inset-y-4 -z-10 bg-[radial-gradient(55%_45%_at_50%_50%,rgba(232,228,220,0.08),transparent_70%)]"
       />
-      {/* Thin top accent line that brightens with the glow */}
-      <motion.div
-        aria-hidden
-        style={{ opacity: glow }}
-        className="pointer-events-none absolute inset-x-8 top-6 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent"
-      />
       {children}
     </section>
   );
