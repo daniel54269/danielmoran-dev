@@ -23,7 +23,6 @@ export const kpis: Kpi[] = [
     value: 8,
     trend: "up",
     context: "Cognitive Science · Nokkomo Mints",
-    spark: [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 8],
   },
   {
     id: "weg-budget",
@@ -40,7 +39,6 @@ export const kpis: Kpi[] = [
     suffix: "+",
     trend: "up",
     context: "Cowork pipeline · 12 brands",
-    spark: [4, 6, 8, 10, 14, 18, 22, 26, 28, 29, 30, 30],
   },
   {
     id: "mcp-tools",
@@ -48,7 +46,6 @@ export const kpis: Kpi[] = [
     value: 13,
     trend: "flat",
     context: "hubspot-mcp · open source",
-    spark: [0, 0, 1, 3, 5, 7, 9, 11, 12, 13, 13, 13],
   },
 ];
 
