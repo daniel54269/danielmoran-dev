@@ -82,10 +82,10 @@ export default async function HomePage() {
           ))}
         </div>
 
-        {/* Chart + Activity */}
+        {/* Chart + Activity — both stretch to match the taller column's height */}
         <div className="mt-8 grid gap-3 lg:grid-cols-[1.6fr_1fr]">
-          <Reveal delay={0.1}>
-            <div className="rounded-xl border border-ink-800 bg-ink-900/40 p-5">
+          <Reveal delay={0.1} className="h-full">
+            <div className="flex h-full flex-col rounded-xl border border-ink-800 bg-ink-900/40 p-5">
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <div className={sectionEyebrow}>Nokkomo Mints</div>
@@ -101,7 +101,7 @@ export default async function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="mt-4 h-40 sm:h-48">
+              <div className="mt-4 min-h-40 flex-1">
                 <Sparkline data={nokkomoRevenue} width={800} height={200} className="h-full w-full" showDots />
               </div>
               <div className="mt-4 grid grid-cols-3 gap-3 text-xs text-ink-400">
@@ -120,7 +120,7 @@ export default async function HomePage() {
               </div>
             </div>
           </Reveal>
-          <Reveal delay={0.15}>
+          <Reveal delay={0.15} className="h-full">
             <ActivityFeed />
           </Reveal>
         </div>

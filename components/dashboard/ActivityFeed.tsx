@@ -3,7 +3,7 @@ import { IconDot, IconArrowUpRight } from "./Icons";
 
 export function ActivityFeed() {
   return (
-    <div className="rounded-xl border border-ink-800 bg-ink-900/40">
+    <div className="flex h-full flex-col rounded-xl border border-ink-800 bg-ink-900/40">
       <div className="flex items-center justify-between border-b border-ink-800 px-4 py-2.5">
         <div className="text-[10px] font-semibold uppercase tracking-widest text-ink-400">Activity</div>
         <div className="text-[10px] uppercase tracking-widest text-ink-500">Last 12 months</div>
