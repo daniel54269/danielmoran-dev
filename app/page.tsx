@@ -4,7 +4,6 @@ import { Reveal } from "@/components/Reveal";
 import { Sparkline } from "@/components/Sparkline";
 import { CountUp } from "@/components/CountUp";
 import { Spotlight } from "@/components/Spotlight";
-import { StackGrid } from "@/components/StackGrid";
 import { VideoTile } from "@/components/VideoTile";
 import { PersonalizedWelcome } from "@/components/PersonalizedWelcome";
 import { KpiCard } from "@/components/dashboard/KpiCard";
@@ -146,52 +145,49 @@ export default async function HomePage() {
         <Reveal>
           <div className={sectionEyebrow}>
             Creative <span className="text-ink-600">·</span>{" "}
-            <span className="text-ink-500">2 min</span>
+            <span className="text-ink-500">30 sec</span>
           </div>
-          <h2 className={sectionHeadline}>Things I&rsquo;ve made and directed.</h2>
+          <h2 className={sectionHeadline}>Three lanes of creative output.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
-            Three lanes of creative output across the marketing function: AI-generated content, self-produced video, and work I&rsquo;ve directed with my intern team.
+            One sample from each lane: AI-generated, self-produced, and work I&rsquo;ve directed with my UCLA intern team. Full archive at the bottom.
           </p>
         </Reveal>
 
         <Reveal delay={0.05}>
-          <div className="mt-10 space-y-10">
+          <div className="mx-auto mt-10 grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
             {[
               {
                 label: "AI-generated",
                 meta: "Claude · Higgsfield · Buffer",
-                blurb: "Content produced and shipped through the AI + automation pipeline I run at WEG and HAZE.",
                 badge: "AI",
-                videos: ["/videos/ai1.mov", "/videos/ai2.mov", "/videos/ai3.mov"],
+                src: "/videos/ai1.mov",
               },
               {
                 label: "Self-produced",
                 meta: "iPhone · CapCut",
-                blurb: "Talking-head and product video I shot and edited end-to-end.",
                 badge: "Self",
-                videos: ["/videos/daniel1.mov", "/videos/daniel2.mov", "/videos/daniel3.mov"],
+                src: "/videos/daniel1.mov",
               },
               {
-                label: "Directed with the UCLA intern team",
-                meta: "iPhone · CapCut",
-                blurb: "Output from the eight-person UCLA intern team at Nokkomo — I directed the brief, framing, and edit notes.",
+                label: "UCLA intern team",
+                meta: "iPhone · CapCut · directed",
                 badge: "Directed",
-                videos: ["/videos/ucla1.mp4", "/videos/ucla2.mov", "/videos/ucla3.mp4"],
+                src: "/videos/ucla1.mp4",
               },
-            ].map((cat, catIdx) => (
-              <div key={cat.label}>
-                <div className="mb-4">
-                  <div className="text-base font-medium text-ink-50">{cat.label}</div>
-                  <div className="mt-0.5 text-[11px] uppercase tracking-widest text-ink-500">{cat.meta}</div>
-                  <p className="mt-2 max-w-prose text-xs text-ink-400">{cat.blurb}</p>
-                </div>
-                <div className="mx-auto grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
-                  {cat.videos.map((src) => (
-                    <VideoTile key={src} src={src} badge={cat.badge} priority={catIdx === 0} />
-                  ))}
+            ].map((cat, i) => (
+              <div key={cat.label} className="flex flex-col">
+                <VideoTile src={cat.src} badge={cat.badge} priority={i === 0} />
+                <div className="mt-3">
+                  <div className="text-sm font-medium text-ink-50">{cat.label}</div>
+                  <div className="mt-0.5 text-[10px] uppercase tracking-widest text-ink-500">{cat.meta}</div>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/creative" className="text-sm text-accent-soft hover:text-accent">
+              View the full archive · 9 videos →
+            </Link>
           </div>
         </Reveal>
       </Spotlight>
@@ -248,25 +244,6 @@ export default async function HomePage() {
         </Reveal>
       </Spotlight>
 
-      {/* ─────────────────────────  STACK  ───────────────────────── */}
-      <Spotlight id="stack" className={sectionWrap}>
-        <Reveal>
-          <div className={sectionEyebrow}>
-            Stack <span className="text-ink-600">·</span>{" "}
-            <span className="text-ink-500">30 sec</span>
-          </div>
-          <h2 className={sectionHeadline}>What I build with.</h2>
-          <p className="mt-3 max-w-prose text-ink-300">
-            Tools I use weekly. Listed for both human readers and ATS keyword scans.
-          </p>
-        </Reveal>
-        <Reveal delay={0.05}>
-          <div className="mt-10">
-            <StackGrid />
-          </div>
-        </Reveal>
-      </Spotlight>
-
       {/* ─────────────────────────  ABOUT  ───────────────────────── */}
       <Spotlight id="about" className={sectionWrap}>
         <Reveal>
@@ -299,42 +276,6 @@ export default async function HomePage() {
                 <Link href="/about" className="text-accent-soft hover:text-accent">More about how I work →</Link>
               </p>
             </div>
-          </div>
-        </Reveal>
-      </Spotlight>
-
-      {/* ─────────────────────────  BUILT WITH CLAUDE  ───────────────────────── */}
-      <Spotlight id="built-with-claude" className={sectionWrap}>
-        <Reveal>
-          <div className={sectionEyebrow}>
-            Meta <span className="text-ink-600">·</span>{" "}
-            <span className="text-ink-500">1 min</span>
-          </div>
-          <h2 className={sectionHeadline}>How this site was built.</h2>
-          <p className="mt-3 max-w-prose text-ink-300">
-            The site is itself a portfolio artifact — written in collaboration with Claude Code, deployed to Vercel, intentionally engineered in the places that matter.
-          </p>
-        </Reveal>
-        <Reveal delay={0.05}>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            {[
-              { label: "Framework", value: "Next.js 15 · App Router · all static" },
-              { label: "Styling", value: "Tailwind + Geist + Instrument Serif" },
-              { label: "Content", value: "MDX case studies with structured front-matter" },
-              { label: "Build partner", value: "Claude Code (Anthropic CLI)" },
-              { label: "Hosting", value: "Vercel" },
-              { label: "Open source", value: "hubspot-mcp · MCP server for HubSpot CRM" },
-            ].map((row) => (
-              <div key={row.label} className="rounded-xl border border-ink-800 bg-ink-900/40 p-4">
-                <div className="text-[10px] uppercase tracking-widest text-ink-500">{row.label}</div>
-                <div className="mt-1 text-sm text-ink-100">{row.value}</div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6">
-            <Link href="/built-with-claude" className="text-sm text-accent-soft hover:text-accent">
-              Full write-up →
-            </Link>
           </div>
         </Reveal>
       </Spotlight>

@@ -30,11 +30,11 @@ type Item = {
 const items: Item[] = [
   { href: "/#overview", label: "Overview", icon: IconOverview, section: "overview" },
   { href: "/#pipeline", label: "Pipeline", icon: IconPipeline, section: "pipeline", altHref: "/work" },
-  { href: "/#creative", label: "Creative", icon: IconCreative, section: "creative" },
+  { href: "/#creative", label: "Creative", icon: IconCreative, section: "creative", altHref: "/creative" },
   { href: "/#approach", label: "Approach", icon: IconPlaybook, section: "approach", altHref: "/playbook" },
-  { href: "/#stack", label: "Stack", icon: IconStack, section: "stack", altHref: "/stack" },
   { href: "/#about", label: "About", icon: IconAbout, section: "about", altHref: "/about" },
-  { href: "/#built-with-claude", label: "Built with Claude", icon: IconCode, section: "built-with-claude", altHref: "/built-with-claude" },
+  { href: "/stack", label: "Stack", icon: IconStack, altHref: "/stack" },
+  { href: "/built-with-claude", label: "Built with Claude", icon: IconCode, altHref: "/built-with-claude" },
   { href: "/#documents", label: "Documents", icon: IconDocuments, section: "documents", altHref: "/contact" },
 ];
 

@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const work = await getAllWork();
-  const staticRoutes = ["", "/work", "/playbook", "/about", "/stack", "/contact", "/built-with-claude"];
+  const staticRoutes = ["", "/work", "/playbook", "/creative", "/about", "/stack", "/contact", "/built-with-claude"];
   return [
     ...staticRoutes.map((r) => ({
       url: `${site.url}${r}`,
