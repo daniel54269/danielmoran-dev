@@ -28,7 +28,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-ink-900 text-ink-100">
-      <div className="md:grid md:min-h-screen md:grid-cols-[240px_1fr]">
+      <div className="md:grid md:min-h-screen md:grid-cols-[256px_1fr]">
         {/* Desktop sidebar */}
         <div className="hidden md:block md:sticky md:top-0 md:h-screen md:overflow-y-auto">
           <Sidebar />

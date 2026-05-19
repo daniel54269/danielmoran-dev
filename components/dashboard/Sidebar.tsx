@@ -89,25 +89,25 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   }
 
   return (
-    <aside className="flex h-full flex-col gap-6 border-r border-ink-800 bg-ink-900/60 px-3 py-5 sm:px-4">
+    <aside className="flex h-full flex-col gap-7 border-r border-ink-800 bg-ink-900/60 px-3 py-6 sm:px-4">
       {/* Workspace header */}
       <Link href="/#overview" onClick={onNavigate} className="flex items-center gap-3 px-2">
         <Image
           src="/headshot.png"
           alt="Daniel Moran"
-          width={80}
-          height={80}
-          className="h-10 w-10 rounded-full object-cover [filter:grayscale(100%)] border border-ink-700"
+          width={96}
+          height={96}
+          className="h-11 w-11 rounded-full object-cover [filter:grayscale(100%)] border border-ink-700"
         />
         <div className="min-w-0">
-          <div className="truncate text-sm font-semibold text-ink-50">Daniel Moran</div>
-          <div className="truncate text-[11px] text-ink-400">Marketing Engineer</div>
+          <div className="truncate text-[15px] font-semibold text-ink-50 leading-tight">Daniel Moran</div>
+          <div className="mt-0.5 truncate text-xs text-ink-400">Marketing Engineer</div>
         </div>
       </Link>
 
       {/* Nav */}
-      <nav className="flex flex-col gap-0.5">
-        <div className="px-2 pb-1 text-[10px] font-semibold uppercase tracking-widest text-ink-500">
+      <nav className="flex flex-col gap-1">
+        <div className="px-2 pb-2 text-[10px] font-semibold uppercase tracking-widest text-ink-500">
           Workspace
         </div>
         {items.map((it) => {
@@ -119,8 +119,8 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
               href={it.href}
               onClick={onNavigate}
               aria-current={active ? "page" : undefined}
-              className={`relative flex items-center gap-3 rounded-md px-2 py-1.5 text-sm transition-colors duration-200 ${
-                active ? "text-ink-50" : "text-ink-300 hover:bg-ink-800/40 hover:text-ink-50"
+              className={`relative flex items-center gap-3 rounded-md px-2.5 py-2 text-[15px] transition-colors duration-200 ${
+                active ? "text-ink-50 font-medium" : "text-ink-300 hover:bg-ink-800/40 hover:text-ink-50"
               }`}
             >
               {active && (
@@ -131,7 +131,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
                   aria-hidden="true"
                 />
               )}
-              <Icon className={active ? "text-accent-soft" : "text-ink-400"} />
+              <Icon className={`!h-[18px] !w-[18px] ${active ? "text-accent-soft" : "text-ink-400"}`} />
               <span className="relative">{it.label}</span>
             </Link>
           );
