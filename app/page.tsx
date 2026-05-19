@@ -31,7 +31,7 @@ export default async function HomePage() {
     <div>
       <PersonalizedWelcome />
 
-      {/* ─────────────────────────  OVERVIEW  ───────────────────────── */}
+      {/* ─────────────────────────  OVERVIEW (hero only)  ───────────────────────── */}
       <Spotlight id="overview" className={sectionWrap}>
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10 md:p-14">
@@ -58,7 +58,7 @@ export default async function HomePage() {
                   Download résumé
                 </a>
                 <Link
-                  href="#built-with-claude"
+                  href="/built-with-claude"
                   className="rounded-md px-4 py-2.5 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
                 >
                   How this was built →
@@ -66,6 +66,69 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
+        </Reveal>
+      </Spotlight>
+
+      {/* ─────────────────────────  CREATIVE (moved up — videos peek at top of scroll)  ───────────────────────── */}
+      <Spotlight id="creative" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>
+            Creative <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">30 sec</span>
+          </div>
+          <h2 className={sectionHeadline}>Three lanes of creative output.</h2>
+          <p className="mt-3 max-w-prose text-ink-300">
+            One sample from each lane: AI-generated, self-produced, and work I&rsquo;ve directed with my UCLA intern team.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.05}>
+          <div className="mx-auto mt-10 grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
+            {[
+              {
+                label: "AI-generated",
+                meta: "Claude · Higgsfield · Buffer",
+                badge: "AI",
+                src: "/videos/ai1.mov",
+              },
+              {
+                label: "Self-produced",
+                meta: "iPhone · CapCut",
+                badge: "Self",
+                src: "/videos/daniel1.mov",
+              },
+              {
+                label: "UCLA intern team",
+                meta: "iPhone · CapCut · directed",
+                badge: "Directed",
+                src: "/videos/ucla1.mp4",
+              },
+            ].map((cat, i) => (
+              <div key={cat.label} className="flex flex-col">
+                <VideoTile src={cat.src} badge={cat.badge} priority={i === 0} />
+                <div className="mt-3">
+                  <div className="text-sm font-medium text-ink-50">{cat.label}</div>
+                  <div className="mt-0.5 text-[10px] uppercase tracking-widest text-ink-500">{cat.meta}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/creative" className="text-sm text-accent-soft hover:text-accent">
+              View the full archive · 9 videos →
+            </Link>
+          </div>
+        </Reveal>
+      </Spotlight>
+
+      {/* ─────────────────────────  HIGHLIGHTS (KPIs + chart + activity)  ───────────────────────── */}
+      <Spotlight id="highlights" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>
+            Highlights <span className="text-ink-600">·</span>{" "}
+            <span className="text-ink-500">1 min</span>
+          </div>
+          <h2 className={sectionHeadline}>The numbers behind the work.</h2>
         </Reveal>
 
         {/* KPI row — staggered entrance, 50ms between tiles */}
@@ -136,58 +199,6 @@ export default async function HomePage() {
         <Reveal delay={0.05}>
           <div className="mt-8">
             <CampaignTable entries={campaigns.slice(0, 6)} />
-          </div>
-        </Reveal>
-      </Spotlight>
-
-      {/* ─────────────────────────  CREATIVE  ───────────────────────── */}
-      <Spotlight id="creative" className={sectionWrap}>
-        <Reveal>
-          <div className={sectionEyebrow}>
-            Creative <span className="text-ink-600">·</span>{" "}
-            <span className="text-ink-500">30 sec</span>
-          </div>
-          <h2 className={sectionHeadline}>Three lanes of creative output.</h2>
-          <p className="mt-3 max-w-prose text-ink-300">
-            One sample from each lane: AI-generated, self-produced, and work I&rsquo;ve directed with my UCLA intern team. Full archive at the bottom.
-          </p>
-        </Reveal>
-
-        <Reveal delay={0.05}>
-          <div className="mx-auto mt-10 grid w-full max-w-md grid-cols-1 gap-4 sm:max-w-[75%] sm:grid-cols-3 sm:gap-5">
-            {[
-              {
-                label: "AI-generated",
-                meta: "Claude · Higgsfield · Buffer",
-                badge: "AI",
-                src: "/videos/ai1.mov",
-              },
-              {
-                label: "Self-produced",
-                meta: "iPhone · CapCut",
-                badge: "Self",
-                src: "/videos/daniel1.mov",
-              },
-              {
-                label: "UCLA intern team",
-                meta: "iPhone · CapCut · directed",
-                badge: "Directed",
-                src: "/videos/ucla1.mp4",
-              },
-            ].map((cat, i) => (
-              <div key={cat.label} className="flex flex-col">
-                <VideoTile src={cat.src} badge={cat.badge} priority={i === 0} />
-                <div className="mt-3">
-                  <div className="text-sm font-medium text-ink-50">{cat.label}</div>
-                  <div className="mt-0.5 text-[10px] uppercase tracking-widest text-ink-500">{cat.meta}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-8 text-center">
-            <Link href="/creative" className="text-sm text-accent-soft hover:text-accent">
-              View the full archive · 9 videos →
-            </Link>
           </div>
         </Reveal>
       </Spotlight>
