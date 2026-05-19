@@ -16,6 +16,19 @@ type VideoTileProps = {
   priority?: boolean;
 };
 
+/**
+ * Convention: /videos/foo.mov → /videos/posters/foo.jpg
+ * ffmpeg-extracted first-frame thumbnails so iOS Safari has something to show
+ * before user interaction (iOS does not render preload="metadata" first frames
+ * reliably without a real poster image).
+ */
+function posterFor(src: string): string {
+  const match = src.match(/^(.*\/)([^/]+)\.(mov|mp4|webm)$/i);
+  if (!match) return "";
+  const [, dir, name] = match;
+  return `${dir}posters/${name}.jpg`;
+}
+
 export function VideoTile({
   src,
   label,
@@ -23,6 +36,7 @@ export function VideoTile({
   aspect = "aspect-[3/4]",
 }: VideoTileProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const poster = posterFor(src);
 
   function play() {
     const v = videoRef.current;
@@ -56,6 +70,7 @@ export function VideoTile({
         <video
           ref={videoRef}
           src={src}
+          poster={poster || undefined}
           className="absolute inset-0 h-full w-full object-cover"
           preload="metadata"
           muted
