@@ -4,6 +4,19 @@
 
 :root {
   color-scheme: dark;
+  --shell-topbar-h: 56px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--shell-topbar-h) + 12px);
 }
 
 html, body {

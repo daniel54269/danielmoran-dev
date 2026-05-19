@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { Sparkline } from "@/components/Sparkline";
 import { CountUp } from "@/components/CountUp";
+import { StackGrid } from "@/components/StackGrid";
 import { KpiCard } from "@/components/dashboard/KpiCard";
 import { CampaignTable } from "@/components/dashboard/CampaignTable";
 import { ActivityFeed } from "@/components/dashboard/ActivityFeed";
@@ -13,163 +14,325 @@ import { site } from "@/lib/site";
 
 export const revalidate = false;
 
-export default async function OverviewPage() {
+const sectionWrap = "px-4 py-12 sm:px-6 sm:py-20 first:pt-8";
+const sectionEyebrow =
+  "text-[10px] font-semibold uppercase tracking-widest text-ink-400";
+const sectionHeadline =
+  "mt-2 font-serif font-normal text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.05] text-ink-50";
+
+export default async function HomePage() {
   const featured = await getFeaturedWork();
   const all = await getAllWork();
   const campaigns = featured.length ? featured : all;
 
   return (
-    <div className="space-y-12 sm:space-y-16 px-4 py-8 sm:px-6 sm:py-12">
-      {/* Top hero strip */}
-      <Reveal>
-        <section className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-8">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
-          <div className="grid items-center gap-8 md:grid-cols-[1.5fr_auto]">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-[11px] uppercase tracking-widest text-ink-300">
-                <span className="relative inline-flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-                </span>
-                Available for marketing engineering roles
+    <div>
+      {/* ─────────────────────────  OVERVIEW  ───────────────────────── */}
+      <section id="overview" className={sectionWrap}>
+        <Reveal>
+          <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10">
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
+            <div className="grid items-center gap-8 md:grid-cols-[1.5fr_auto]">
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-[11px] uppercase tracking-widest text-ink-300">
+                  <span className="relative inline-flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+                  </span>
+                  Available for marketing engineering roles
+                </div>
+                <h1 className="mt-4 font-serif italic font-normal text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1] text-ink-50">
+                  Marketing Engineer.
+                </h1>
+                <p className="mt-5 max-w-2xl text-base sm:text-lg text-ink-300 leading-relaxed">
+                  I help marketing teams adopt current AI tooling and automation to scale operations with less overhead — better measurement, faster output, lower per-unit cost.{" "}
+                  <span className="text-ink-100">Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.</span>
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2.5">
+                  <Link
+                    href="#pipeline"
+                    className="inline-flex items-center gap-1.5 rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-ink-900 hover:bg-accent-soft transition-colors"
+                  >
+                    See pipeline <IconArrowUpRight className="h-3.5 w-3.5" />
+                  </Link>
+                  <a
+                    href={site.resumeHref}
+                    className="rounded-md border border-ink-700 px-3.5 py-2 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
+                  >
+                    Download résumé
+                  </a>
+                  <Link
+                    href="#built-with-claude"
+                    className="rounded-md px-3.5 py-2 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
+                  >
+                    How this was built →
+                  </Link>
+                </div>
               </div>
-              <h1 className="mt-4 font-serif italic font-normal text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1] text-ink-50">
-                Marketing Engineer.
-              </h1>
-              <p className="mt-4 max-w-2xl text-base sm:text-lg text-ink-300 leading-relaxed">
-                I help marketing teams adopt current AI tooling and automation to scale operations with less overhead — better measurement, faster output, lower per-unit cost.{" "}
-                <span className="text-ink-100">Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.</span>
-              </p>
-              <div className="mt-6 flex flex-wrap gap-2.5">
-                <Link
-                  href="/work"
-                  className="inline-flex items-center gap-1.5 rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-ink-900 hover:bg-accent-soft transition-colors"
-                >
-                  See pipeline <IconArrowUpRight className="h-3.5 w-3.5" />
-                </Link>
-                <a
-                  href={site.resumeHref}
-                  className="rounded-md border border-ink-700 px-3.5 py-2 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
-                >
-                  Download résumé
-                </a>
-                <Link
-                  href="/built-with-claude"
-                  className="rounded-md px-3.5 py-2 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
-                >
-                  How this was built →
-                </Link>
+              <div className="relative justify-self-center md:justify-self-end">
+                <Image
+                  src="/headshot.png"
+                  alt="Daniel Moran"
+                  width={240}
+                  height={240}
+                  priority
+                  className="h-32 w-32 sm:h-40 sm:w-40 rounded-2xl object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-700 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
+                />
               </div>
-            </div>
-            <div className="relative justify-self-center md:justify-self-end">
-              <Image
-                src="/headshot.png"
-                alt="Daniel Moran"
-                width={240}
-                height={240}
-                priority
-                className="h-32 w-32 sm:h-40 sm:w-40 rounded-2xl object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-700 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
-              />
             </div>
           </div>
-        </section>
-      </Reveal>
-
-      {/* KPI row */}
-      <Reveal delay={0.05}>
-        <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {kpis.map((k) => (
-            <KpiCard key={k.id} kpi={k} />
-          ))}
-        </section>
-      </Reveal>
-
-      {/* Chart + Activity row */}
-      <div className="grid gap-3 lg:grid-cols-[1.6fr_1fr]">
-        <Reveal delay={0.1}>
-          <section className="rounded-xl border border-ink-800 bg-ink-900/40 p-5">
-            <div className="flex items-center justify-between gap-3">
-              <div>
-                <div className="text-[10px] font-semibold uppercase tracking-widest text-ink-400">
-                  Nokkomo Mints
-                </div>
-                <div className="mt-0.5 text-sm text-ink-100">Trailing revenue · indexed · last 12 months</div>
-              </div>
-              <div className="text-right">
-                <div className="text-2xl font-semibold tabular-nums text-ink-50">
-                  <CountUp to={913} suffix="% YoY" />
-                </div>
-                <div className="inline-flex items-center gap-1 text-xs text-emerald-400">
-                  <IconTrendUp className="h-3 w-3" />
-                  10× trailing revenue
-                </div>
-              </div>
-            </div>
-            <div className="mt-4 h-40 sm:h-48">
-              <Sparkline data={nokkomoRevenue} width={800} height={200} className="h-full w-full" showDots />
-            </div>
-            <div className="mt-4 grid grid-cols-3 gap-3 text-center text-xs text-ink-400 sm:text-left">
-              <div>
-                <div className="text-ink-500 uppercase tracking-widest text-[10px]">YoY growth</div>
-                <div className="mt-0.5 text-ink-100 tabular-nums">913%</div>
-              </div>
-              <div>
-                <div className="text-ink-500 uppercase tracking-widest text-[10px]">ACOS</div>
-                <div className="mt-0.5 text-ink-100 tabular-nums">81% → 38%</div>
-              </div>
-              <div>
-                <div className="text-ink-500 uppercase tracking-widest text-[10px]">Spend scale</div>
-                <div className="mt-0.5 text-ink-100 tabular-nums">3×</div>
-              </div>
-            </div>
-          </section>
         </Reveal>
-        <Reveal delay={0.15}>
-          <ActivityFeed />
-        </Reveal>
-      </div>
 
-      {/* Campaigns / Pipeline */}
-      <Reveal delay={0.1}>
-        <section>
-          <div className="mb-3 flex items-end justify-between px-1">
-            <div>
-              <div className="text-[10px] font-semibold uppercase tracking-widest text-ink-400">Pipeline</div>
-              <h2 className="text-lg font-semibold tracking-tight text-ink-50">Top campaigns</h2>
+        {/* KPI row */}
+        <Reveal delay={0.05}>
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {kpis.map((k) => (
+              <KpiCard key={k.id} kpi={k} />
+            ))}
+          </div>
+        </Reveal>
+
+        {/* Chart + Activity */}
+        <div className="mt-8 grid gap-3 lg:grid-cols-[1.6fr_1fr]">
+          <Reveal delay={0.1}>
+            <div className="rounded-xl border border-ink-800 bg-ink-900/40 p-5">
+              <div className="flex items-center justify-between gap-3">
+                <div>
+                  <div className={sectionEyebrow}>Nokkomo Mints</div>
+                  <div className="mt-0.5 text-sm text-ink-100">Trailing revenue · indexed · last 12 months</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-semibold tabular-nums text-ink-50">
+                    <CountUp to={913} suffix="% YoY" />
+                  </div>
+                  <div className="inline-flex items-center gap-1 text-xs text-emerald-400">
+                    <IconTrendUp className="h-3 w-3" />
+                    10× trailing revenue
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4 h-40 sm:h-48">
+                <Sparkline data={nokkomoRevenue} width={800} height={200} className="h-full w-full" showDots />
+              </div>
+              <div className="mt-4 grid grid-cols-3 gap-3 text-xs text-ink-400">
+                <div>
+                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">YoY growth</div>
+                  <div className="mt-0.5 text-ink-100 tabular-nums">913%</div>
+                </div>
+                <div>
+                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">ACOS</div>
+                  <div className="mt-0.5 text-ink-100 tabular-nums">81% → 38%</div>
+                </div>
+                <div>
+                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">Spend scale</div>
+                  <div className="mt-0.5 text-ink-100 tabular-nums">3×</div>
+                </div>
+              </div>
             </div>
-            <Link href="/work" className="text-xs text-ink-300 hover:text-accent-soft">
-              View all →
+          </Reveal>
+          <Reveal delay={0.15}>
+            <ActivityFeed />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─────────────────────────  PIPELINE  ───────────────────────── */}
+      <section id="pipeline" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>Pipeline</div>
+          <h2 className={sectionHeadline}>Selected work.</h2>
+          <p className="mt-3 max-w-prose text-ink-300">
+            A handful of campaigns and systems shipped across B2C wealth management, dental clinical, DTC, and open source.
+          </p>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <div className="mt-8">
+            <CampaignTable entries={campaigns.slice(0, 6)} />
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ─────────────────────────  APPROACH  ───────────────────────── */}
+      <section id="approach" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>Approach</div>
+          <h2 className={`${sectionHeadline} italic`}>How I work.</h2>
+          <p className="mt-3 max-w-prose text-ink-300">
+            Most marketing functions are bottlenecked on operations, not strategy. My approach rebuilds that infrastructure so the strategy can land — measurably, repeatably, with less per-unit cost.
+          </p>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <ol className="mt-10 grid gap-3 sm:grid-cols-3">
+            {[
+              {
+                n: "01",
+                phase: "Discovery",
+                weeks: "Weeks 1–2",
+                body: "Interview sales, customer success, and recent customers. Map every paid channel, lifecycle stage, and report. Identify the single highest-leverage bottleneck.",
+              },
+              {
+                n: "02",
+                phase: "Rebuild",
+                weeks: "Weeks 3–6",
+                body: "Unified attribution, reconciled lifecycle stages, automation in place of manual handoff. The executive team begins receiving a consistent weekly report.",
+              },
+              {
+                n: "03",
+                phase: "Operating cadence",
+                weeks: "Weeks 7–12",
+                body: "Weekly leadership review installed, AI-assisted content pipeline live, paid media reorganized against the new attribution model, first hire on board.",
+              },
+            ].map((step) => (
+              <li key={step.n} className="rounded-xl border border-ink-800 bg-ink-900/40 p-5 flex flex-col gap-3">
+                <div className="flex items-baseline justify-between gap-2">
+                  <span className="font-serif italic text-3xl text-accent">{step.n}</span>
+                  <span className="text-[10px] uppercase tracking-widest text-ink-500">{step.weeks}</span>
+                </div>
+                <div className="text-base font-medium text-ink-50">{step.phase}</div>
+                <p className="text-sm text-ink-300 leading-relaxed">{step.body}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-6">
+            <Link href="/playbook" className="text-sm text-accent-soft hover:text-accent">
+              Read the full approach →
             </Link>
           </div>
-          <CampaignTable entries={campaigns.slice(0, 5)} />
-        </section>
-      </Reveal>
+        </Reveal>
+      </section>
 
-      {/* CTA strip */}
-      <Reveal delay={0.05}>
-        <section className="flex flex-col items-start gap-4 rounded-xl border border-ink-800 bg-ink-900/40 p-5 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 className="text-base sm:text-lg font-semibold text-ink-50">
-              Building a modern marketing team?
-            </h2>
-            <p className="mt-1 text-sm text-ink-400">Marketing engineering and AI automation roles. Remote-friendly. I respond within 24 hours.</p>
+      {/* ─────────────────────────  STACK  ───────────────────────── */}
+      <section id="stack" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>Stack</div>
+          <h2 className={sectionHeadline}>What I build with.</h2>
+          <p className="mt-3 max-w-prose text-ink-300">
+            Tools I use weekly. Listed for both human readers and ATS keyword scans.
+          </p>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <div className="mt-10">
+            <StackGrid />
           </div>
-          <div className="flex gap-2">
+        </Reveal>
+      </section>
+
+      {/* ─────────────────────────  ABOUT  ───────────────────────── */}
+      <section id="about" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>About</div>
+          <h2 className={sectionHeadline}>Software engineering rigor, applied to modern marketing.</h2>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <div className="mt-8 grid gap-10 md:grid-cols-[1fr_2fr]">
+            <Image
+              src="/headshot.png"
+              alt="Daniel Moran"
+              width={400}
+              height={400}
+              className="h-48 w-48 sm:h-56 sm:w-56 rounded-2xl object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-700"
+            />
+            <div className="space-y-4 text-ink-300 leading-relaxed">
+              <p>
+                I&rsquo;m Daniel — a marketing engineer based in Oceanside, California. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
+              </p>
+              <p>
+                Today I lead a four-person team at <strong className="text-ink-50">Wealth Enhancement Group</strong>, recently completed a tenure as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (Amazon DTC; 913% YoY revenue growth, 10× trailing revenue, 8 UCLA interns managed).
+              </p>
+              <p>
+                On the side I run <strong className="text-ink-50">HAZE</strong> (registered TM) — creative brand work that keeps me sharp on the consumer side.
+              </p>
+              <p>
+                <Link href="/about" className="text-accent-soft hover:text-accent">More about how I work →</Link>
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ─────────────────────────  BUILT WITH CLAUDE  ───────────────────────── */}
+      <section id="built-with-claude" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>Meta</div>
+          <h2 className={sectionHeadline}>How this site was built.</h2>
+          <p className="mt-3 max-w-prose text-ink-300">
+            The site is itself a portfolio artifact — written in collaboration with Claude Code, deployed to Vercel, intentionally engineered in the places that matter.
+          </p>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {[
+              { label: "Framework", value: "Next.js 15 · App Router · all static" },
+              { label: "Styling", value: "Tailwind + Geist + Instrument Serif" },
+              { label: "Content", value: "MDX case studies with structured front-matter" },
+              { label: "Build partner", value: "Claude Code (Anthropic CLI)" },
+              { label: "Hosting", value: "Vercel" },
+              { label: "Open source", value: "hubspot-mcp · MCP server for HubSpot CRM" },
+            ].map((row) => (
+              <div key={row.label} className="rounded-xl border border-ink-800 bg-ink-900/40 p-4">
+                <div className="text-[10px] uppercase tracking-widest text-ink-500">{row.label}</div>
+                <div className="mt-1 text-sm text-ink-100">{row.value}</div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-6">
+            <Link href="/built-with-claude" className="text-sm text-accent-soft hover:text-accent">
+              Full write-up →
+            </Link>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* ─────────────────────────  DOCUMENTS / CONTACT  ───────────────────────── */}
+      <section id="documents" className={sectionWrap}>
+        <Reveal>
+          <div className={sectionEyebrow}>Documents</div>
+          <h2 className={`${sectionHeadline} italic`}>Let&rsquo;s talk.</h2>
+          <p className="mt-3 max-w-prose text-ink-300">
+            Marketing engineering and AI automation roles. Remote, hybrid, or in person around San Diego / Oceanside. I respond within 24 hours.
+          </p>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <div className="mt-8 grid gap-3 sm:grid-cols-3">
             <a
               href={`mailto:${site.email}`}
-              className="rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-ink-900 hover:bg-accent-soft"
+              className="rounded-xl border border-ink-800 bg-ink-900/40 p-5 transition-colors hover:border-accent/60"
             >
-              {site.email}
+              <div className="text-[10px] uppercase tracking-widest text-ink-400">Email</div>
+              <div className="mt-1 text-base font-medium text-ink-50">{site.email}</div>
+              <div className="mt-1 text-xs text-ink-400">Fastest. Reply within 24 hours.</div>
             </a>
-            <Link
-              href="/contact"
-              className="rounded-md border border-ink-700 px-3.5 py-2 text-sm font-medium text-ink-100 hover:border-accent"
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl border border-ink-800 bg-ink-900/40 p-5 transition-colors hover:border-accent/60"
             >
-              Contact
-            </Link>
+              <div className="text-[10px] uppercase tracking-widest text-ink-400">LinkedIn</div>
+              <div className="mt-1 text-base font-medium text-ink-50">Daniel Joseph Moran</div>
+              <div className="mt-1 text-xs text-ink-400">Connect or DM.</div>
+            </a>
+            <a
+              href={site.github}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl border border-ink-800 bg-ink-900/40 p-5 transition-colors hover:border-accent/60"
+            >
+              <div className="text-[10px] uppercase tracking-widest text-ink-400">GitHub</div>
+              <div className="mt-1 text-base font-medium text-ink-50">daniel54269</div>
+              <div className="mt-1 text-xs text-ink-400">Open-source projects · hubspot-mcp.</div>
+            </a>
           </div>
-        </section>
-      </Reveal>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={site.resumeHref}
+              className="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-ink-900 hover:bg-accent-soft"
+            >
+              Download résumé
+            </a>
+          </div>
+        </Reveal>
+      </section>
     </div>
   );
 }

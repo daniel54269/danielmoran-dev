@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,28 +15,80 @@ import {
 } from "./Icons";
 import { site } from "@/lib/site";
 
-const items = [
-  { href: "/", label: "Overview", icon: IconOverview, exact: true },
-  { href: "/work", label: "Pipeline", icon: IconPipeline },
-  { href: "/playbook", label: "Approach", icon: IconPlaybook },
-  { href: "/stack", label: "Stack", icon: IconStack },
-  { href: "/about", label: "About", icon: IconAbout },
-  { href: "/built-with-claude", label: "Built with Claude", icon: IconCode },
-  { href: "/contact", label: "Documents", icon: IconDocuments },
+type Item = {
+  href: string;
+  label: string;
+  icon: typeof IconOverview;
+  /** When on home, this section's id determines active highlight */
+  section?: string;
+  /** When set, also treat <href> as an active match (deep link to standalone page) */
+  altHref?: string;
+};
+
+const items: Item[] = [
+  { href: "/#overview", label: "Overview", icon: IconOverview, section: "overview" },
+  { href: "/#pipeline", label: "Pipeline", icon: IconPipeline, section: "pipeline", altHref: "/work" },
+  { href: "/#approach", label: "Approach", icon: IconPlaybook, section: "approach", altHref: "/playbook" },
+  { href: "/#stack", label: "Stack", icon: IconStack, section: "stack", altHref: "/stack" },
+  { href: "/#about", label: "About", icon: IconAbout, section: "about", altHref: "/about" },
+  { href: "/#built-with-claude", label: "Built with Claude", icon: IconCode, section: "built-with-claude", altHref: "/built-with-claude" },
+  { href: "/#documents", label: "Documents", icon: IconDocuments, section: "documents", altHref: "/contact" },
 ];
 
-function isActive(pathname: string, href: string, exact?: boolean) {
-  if (exact) return pathname === href;
-  return pathname === href || pathname.startsWith(`${href}/`);
+/** Tracks which section id is most prominent on screen. Only meaningful on the home page. */
+function useActiveSection(): string | null {
+  const [active, setActive] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.location.pathname !== "/") return;
+
+    const sections = items
+      .map((i) => i.section && document.getElementById(i.section))
+      .filter(Boolean) as HTMLElement[];
+
+    if (sections.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the most-visible entry that is intersecting.
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]?.target?.id) setActive(visible[0].target.id);
+      },
+      { rootMargin: "-30% 0px -55% 0px", threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
+  return active;
 }
 
 export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
+  const activeSection = useActiveSection();
+  const onHome = pathname === "/";
+
+  function isActive(item: Item): boolean {
+    if (onHome) {
+      // On home, the active section determines highlight. Default to Overview.
+      const section = activeSection ?? "overview";
+      return item.section === section;
+    }
+    // On a standalone page (e.g. /work, /about), match by altHref.
+    if (item.altHref && (pathname === item.altHref || pathname.startsWith(`${item.altHref}/`))) {
+      return true;
+    }
+    return false;
+  }
 
   return (
     <aside className="flex h-full flex-col gap-6 border-r border-ink-800 bg-ink-900/60 px-3 py-5 sm:px-4">
       {/* Workspace header */}
-      <Link href="/" onClick={onNavigate} className="flex items-center gap-3 px-2">
+      <Link href="/#overview" onClick={onNavigate} className="flex items-center gap-3 px-2">
         <Image
           src="/headshot.png"
           alt="Daniel Moran"
@@ -55,7 +108,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           Workspace
         </div>
         {items.map((it) => {
-          const active = isActive(pathname, it.href, it.exact);
+          const active = isActive(it);
           const Icon = it.icon;
           return (
             <Link
