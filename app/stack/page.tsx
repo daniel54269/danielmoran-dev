@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function StackPage() {
   return (
-    <Container className="py-10 sm:py-14">
+    <Container className="py-12 sm:py-20">
       <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">Stack</div>
-      <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50">
+      <h1 className="mt-2 font-serif font-normal text-4xl sm:text-5xl tracking-tight leading-[1.05] text-ink-50">
         What I build with.
       </h1>
       <p className="mt-3 max-w-2xl text-ink-300">

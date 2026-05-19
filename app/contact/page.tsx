@@ -15,10 +15,10 @@ const channels = [
 
 export default function ContactPage() {
   return (
-    <Container size="prose" className="py-10 sm:py-14">
+    <Container size="prose" className="py-12 sm:py-20">
       <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">Contact</div>
-      <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50">
-        Let's talk.
+      <h1 className="mt-2 font-serif italic font-normal text-4xl sm:text-5xl tracking-tight leading-[1.05] text-ink-50">
+        Let&rsquo;s talk.
       </h1>
       <p className="mt-3 text-ink-300">
         Head of Marketing at Series A / B B2B SaaS. Remote, or in person around Oceanside / San Diego.

@@ -34,7 +34,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
     <article>
       {/* Hero strip */}
       <section className="border-b border-ink-800 bg-ink-900/40">
-        <Container className="py-10 sm:py-14">
+        <Container className="py-12 sm:py-20">
           <Link href="/work" className="text-sm text-ink-400 hover:text-accent-soft">
             ← All work
           </Link>
@@ -47,7 +47,7 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
             <span className="h-1 w-1 rounded-full bg-ink-700" />
             <span>{entry.year}</span>
           </div>
-          <h1 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50 max-w-3xl leading-tight">
+          <h1 className="mt-4 font-serif font-normal text-4xl sm:text-5xl tracking-tight text-ink-50 max-w-3xl leading-[1.05]">
             {entry.headline}
           </h1>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 md:grid-cols-4">

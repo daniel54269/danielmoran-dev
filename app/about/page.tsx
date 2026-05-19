@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <Container size="prose" className="py-10 sm:py-14">
+    <Container size="prose" className="py-12 sm:py-20">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:gap-8">
         <Image
           src="/headshot.png"
@@ -23,7 +23,7 @@ export default function AboutPage() {
         />
         <div>
           <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">About</div>
-          <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50">
+          <h1 className="mt-2 font-serif font-normal text-4xl sm:text-5xl tracking-tight leading-[1.05] text-ink-50">
             Software engineering rigor, applied to modern marketing.
           </h1>
         </div>

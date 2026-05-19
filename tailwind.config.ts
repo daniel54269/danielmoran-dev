@@ -31,6 +31,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
         mono: ["var(--font-geist-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        serif: ["var(--font-instrument-serif)", "Newsreader", "Iowan Old Style", "Georgia", "serif"],
       },
       maxWidth: { content: "68rem", prose: "44rem" },
     },

@@ -19,7 +19,7 @@ export default async function OverviewPage() {
   const campaigns = featured.length ? featured : all;
 
   return (
-    <div className="space-y-8 px-4 py-6 sm:px-6 sm:py-8">
+    <div className="space-y-12 sm:space-y-16 px-4 py-8 sm:px-6 sm:py-12">
       {/* Top hero strip */}
       <Reveal>
         <section className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-8">
@@ -33,7 +33,7 @@ export default async function OverviewPage() {
                 </span>
                 Available for marketing engineering roles
               </div>
-              <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.05] text-ink-50">
+              <h1 className="mt-4 font-serif italic font-normal text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1] text-ink-50">
                 Marketing Engineer.
               </h1>
               <p className="mt-4 max-w-2xl text-base sm:text-lg text-ink-300 leading-relaxed">

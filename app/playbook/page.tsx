@@ -11,16 +11,52 @@ export const metadata: Metadata = {
 
 export default function PlaybookPage() {
   return (
-    <Container size="prose" className="py-10 sm:py-14">
+    <Container size="prose" className="py-12 sm:py-20">
       <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">Approach</div>
-      <h1 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-ink-50 leading-tight">
+      <h1 className="mt-2 font-serif italic font-normal text-4xl sm:text-5xl tracking-tight leading-[1.05] text-ink-50">
         How I work.
       </h1>
-      <p className="mt-3 text-ink-300">
+      <p className="mt-3 text-ink-300 max-w-prose">
         A short overview of the approach I bring to marketing engineering engagements.
       </p>
 
-      <div className="prose-custom mt-10">
+      {/* Numbered process cards */}
+      <ol className="mt-12 grid gap-3 sm:grid-cols-3">
+        {[
+          {
+            n: "01",
+            phase: "Discovery",
+            weeks: "Weeks 1–2",
+            body: "Interview sales, customer success, and recent customers. Map every paid channel, lifecycle stage, and report. Identify the single highest-leverage bottleneck.",
+          },
+          {
+            n: "02",
+            phase: "Rebuild",
+            weeks: "Weeks 3–6",
+            body: "Unified attribution, reconciled lifecycle stages, automation in place of manual handoff. By end of phase the executive team receives a consistent weekly report.",
+          },
+          {
+            n: "03",
+            phase: "Operating cadence",
+            weeks: "Weeks 7–12",
+            body: "Weekly leadership review installed, AI-assisted content pipeline live, paid media reorganized against the new attribution model, first hire or contractor on board.",
+          },
+        ].map((step) => (
+          <li
+            key={step.n}
+            className="rounded-xl border border-ink-800 bg-ink-900/40 p-5 flex flex-col gap-3"
+          >
+            <div className="flex items-baseline justify-between gap-2">
+              <span className="font-serif italic text-3xl text-accent">{step.n}</span>
+              <span className="text-[10px] uppercase tracking-widest text-ink-500">{step.weeks}</span>
+            </div>
+            <div className="text-base font-medium text-ink-50">{step.phase}</div>
+            <p className="text-sm text-ink-300 leading-relaxed">{step.body}</p>
+          </li>
+        ))}
+      </ol>
+
+      <div className="prose-custom mt-16">
         <h2>The thesis</h2>
         <p>
           Most marketing functions are not bottlenecked on strategy. They are bottlenecked on the operational
@@ -62,28 +98,6 @@ export default function PlaybookPage() {
           attribution stack. Channels I have managed at scale include Meta Ads, Google Ads, Amazon Advertising,
           and TikTok Ads.
         </p>
-
-        <h2>How I structure an engagement</h2>
-        <p>
-          My typical first ninety days in a new role follow a consistent pattern:
-        </p>
-        <ul>
-          <li>
-            <strong>Weeks 1&ndash;2 &mdash; discovery.</strong> I conduct interviews with sales, customer
-            success, and recent customers; map every paid channel, lifecycle stage, and report; identify the
-            single highest-leverage bottleneck.
-          </li>
-          <li>
-            <strong>Weeks 3&ndash;6 &mdash; infrastructure rebuild.</strong> Unified attribution, reconciled
-            lifecycle stages, automation in place of manual handoff. By the end of this phase the executive
-            team receives a consistent weekly report.
-          </li>
-          <li>
-            <strong>Weeks 7&ndash;12 &mdash; operating cadence and content.</strong> Weekly leadership review
-            installed, AI-assisted content pipeline brought online, paid media reorganized against the new
-            attribution model, and the first hire or contractor brought on to extend the operating capacity.
-          </li>
-        </ul>
 
         <h2>Specific deliverables I commit to</h2>
         <ul>
