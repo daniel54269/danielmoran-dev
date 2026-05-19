@@ -11,7 +11,7 @@ import type { WorkEntry } from "@/lib/work";
 export function CampaignTable({ entries }: { entries: WorkEntry[] }) {
   return (
     <div className="overflow-hidden rounded-xl border border-ink-800 bg-ink-900/40">
-      <div className="grid grid-cols-[1.5fr_1fr_1.4fr_auto] sm:grid-cols-[1.5fr_1fr_1.4fr_max-content_auto]">
+      <div className="grid grid-cols-[1.5fr_1.4fr_auto] sm:grid-cols-[1.5fr_1fr_1.4fr_max-content_auto]">
         {/* Header */}
         <div
           className="col-span-full grid grid-cols-subgrid items-center gap-3 border-b border-ink-800 bg-ink-900/80 px-4 py-2.5 text-[10px] font-semibold uppercase tracking-widest text-ink-400"
