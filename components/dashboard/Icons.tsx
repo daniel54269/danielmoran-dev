@@ -5,7 +5,7 @@ type IconProps = { className?: string };
 const base = "h-4 w-4";
 
 export const IconOverview = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <rect x="3" y="3" width="7" height="9" rx="1.5" />
     <rect x="14" y="3" width="7" height="5" rx="1.5" />
     <rect x="14" y="12" width="7" height="9" rx="1.5" />
@@ -14,7 +14,7 @@ export const IconOverview = ({ className = "" }: IconProps) => (
 );
 
 export const IconPipeline = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="M3 6h13" />
     <path d="M3 12h9" />
     <path d="M3 18h13" />
@@ -25,7 +25,7 @@ export const IconPipeline = ({ className = "" }: IconProps) => (
 );
 
 export const IconStack = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z" />
     <path d="M3 12.5l9 4.5 9-4.5" />
     <path d="M3 17l9 4.5 9-4.5" />
@@ -33,7 +33,7 @@ export const IconStack = ({ className = "" }: IconProps) => (
 );
 
 export const IconDocuments = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
     <path d="M14 3v5h5" />
     <path d="M9 13h6" />
@@ -42,14 +42,14 @@ export const IconDocuments = ({ className = "" }: IconProps) => (
 );
 
 export const IconAbout = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <circle cx="12" cy="8" r="3.5" />
     <path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5" />
   </svg>
 );
 
 export const IconPlaybook = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="M4 4h11a3 3 0 0 1 3 3v13" />
     <path d="M4 4v15a2 2 0 0 0 2 2h12" />
     <path d="M8 8h7" />
@@ -58,7 +58,7 @@ export const IconPlaybook = ({ className = "" }: IconProps) => (
 );
 
 export const IconCode = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="m8 17-5-5 5-5" />
     <path d="m16 7 5 5-5 5" />
     <path d="m14 4-4 16" />
@@ -66,7 +66,7 @@ export const IconCode = ({ className = "" }: IconProps) => (
 );
 
 export const IconSearch = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <circle cx="11" cy="11" r="7" />
     <path d="m20 20-3.5-3.5" />
   </svg>
@@ -85,32 +85,32 @@ export const IconLinkedIn = ({ className = "" }: IconProps) => (
 );
 
 export const IconMenu = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="M4 6h16M4 12h16M4 18h16" />
   </svg>
 );
 
 export const IconClose = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="M6 6l12 12M18 6 6 18" />
   </svg>
 );
 
 export const IconChevronRight = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="m9 6 6 6-6 6" />
   </svg>
 );
 
 export const IconArrowUpRight = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="M7 17 17 7" />
     <path d="M8 7h9v9" />
   </svg>
 );
 
 export const IconTrendUp = ({ className = "" }: IconProps) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className={`${base} ${className}`}>
     <path d="m3 17 6-6 4 4 8-8" />
     <path d="M14 7h7v7" />
   </svg>

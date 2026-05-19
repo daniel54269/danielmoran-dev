@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { site } from "@/lib/site";
 import { Shell } from "@/components/dashboard/Shell";
@@ -27,7 +29,7 @@ export const viewport = { themeColor: "#0a0a0a" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={`dark ${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="font-sans antialiased">
         <Shell>{children}</Shell>
         <script

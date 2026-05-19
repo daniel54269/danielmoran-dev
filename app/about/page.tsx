@@ -19,7 +19,7 @@ export default function AboutPage() {
           width={160}
           height={160}
           priority
-          className="h-32 w-32 sm:h-36 sm:w-36 rounded-2xl border border-ink-800 object-cover shadow-[0_0_0_4px_rgba(124,92,255,0.08)]"
+          className="h-32 w-32 sm:h-36 sm:w-36 rounded-2xl border border-ink-700 object-cover shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
         />
         <div>
           <div className="text-xs font-semibold uppercase tracking-widest text-ink-400">About</div>

@@ -93,7 +93,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         </div>
         <a
           href={site.resumeHref}
-          className="block rounded-md bg-accent px-3 py-2 text-center text-xs font-medium text-white hover:bg-accent-soft transition-colors"
+          className="block rounded-md bg-accent px-3 py-2 text-center text-xs font-medium text-ink-900 hover:bg-accent-soft transition-colors"
         >
           Download résumé
         </a>

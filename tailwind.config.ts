@@ -23,13 +23,14 @@ const config: Config = {
           900: "#0a0a0a",
         },
         accent: {
-          DEFAULT: "#7c5cff",
-          soft: "#a594ff",
+          DEFAULT: "#e8e4dc",
+          soft: "#f4f1ec",
+          ink: "#1a1815",
         },
       },
       fontFamily: {
-        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
-        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        sans: ["var(--font-geist-sans)", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       maxWidth: { content: "68rem", prose: "44rem" },
     },

@@ -22,8 +22,8 @@ export default async function OverviewPage() {
     <div className="space-y-8 px-4 py-6 sm:px-6 sm:py-8">
       {/* Top hero strip */}
       <Reveal>
-        <section className="relative overflow-hidden rounded-2xl border border-ink-800 bg-gradient-to-br from-ink-900 to-ink-900/40 p-6 sm:p-8">
-          <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-accent/20 blur-3xl" />
+        <section className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-8">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
           <div className="grid items-center gap-8 md:grid-cols-[1.5fr_auto]">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-900/60 px-3 py-1 text-[11px] uppercase tracking-widest text-ink-300">
@@ -43,7 +43,7 @@ export default async function OverviewPage() {
               <div className="mt-6 flex flex-wrap gap-2.5">
                 <Link
                   href="/work"
-                  className="inline-flex items-center gap-1.5 rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-white hover:bg-accent-soft transition-colors"
+                  className="inline-flex items-center gap-1.5 rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-ink-900 hover:bg-accent-soft transition-colors"
                 >
                   See pipeline <IconArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
@@ -62,14 +62,13 @@ export default async function OverviewPage() {
               </div>
             </div>
             <div className="relative justify-self-center md:justify-self-end">
-              <div className="absolute -inset-4 -z-10 rounded-full bg-[radial-gradient(closest-side,rgba(124,92,255,0.35),transparent_75%)] blur-2xl" />
               <Image
                 src="/headshot.png"
                 alt="Daniel Moran"
                 width={240}
                 height={240}
                 priority
-                className="h-32 w-32 sm:h-40 sm:w-40 rounded-2xl object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-700 shadow-[0_20px_40px_-15px_rgba(124,92,255,0.45)]"
+                className="h-32 w-32 sm:h-40 sm:w-40 rounded-2xl object-cover [filter:grayscale(100%)_contrast(1.05)] border border-ink-700 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)]"
               />
             </div>
           </div>
@@ -158,7 +157,7 @@ export default async function OverviewPage() {
           <div className="flex gap-2">
             <a
               href={`mailto:${site.email}`}
-              className="rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-white hover:bg-accent-soft"
+              className="rounded-md bg-accent px-3.5 py-2 text-sm font-medium text-ink-900 hover:bg-accent-soft"
             >
               {site.email}
             </a>

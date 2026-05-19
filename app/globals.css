@@ -13,7 +13,16 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
-::selection { background: #7c5cff; color: white; }
+::selection { background: #e8e4dc; color: #0a0a0a; }
+
+h1, h2, h3 {
+  text-wrap: balance;
+  font-feature-settings: "ss01", "ss02", "cv11";
+}
+
+p {
+  text-wrap: pretty;
+}
 
 a { text-underline-offset: 3px; }
 
@@ -61,11 +70,11 @@ a { text-underline-offset: 3px; }
   font-size: inherit;
 }
 .prose-custom blockquote {
-  border-left: 2px solid #7c5cff;
+  border-left: 2px solid #e8e4dc;
   padding: 0.25rem 0 0.25rem 1rem;
   color: #e4e4e7;
   margin: 1.25rem 0;
 }
 .prose-custom hr { border: 0; border-top: 1px solid #27272a; margin: 2rem 0; }
-.prose-custom a { color: #a594ff; text-decoration: underline; }
-.prose-custom a:hover { color: #c4b6ff; }
+.prose-custom a { color: #f4f1ec; text-decoration: underline; text-decoration-color: #6a6660; text-underline-offset: 3px; }
+.prose-custom a:hover { color: #ffffff; text-decoration-color: #e8e4dc; }
