@@ -5,6 +5,8 @@ export type Kpi = {
   id: string;
   label: string;
   value: number;
+  /** Literal big-number text override. When set, skips CountUp animation. Useful for non-numeric KPIs like "Six figures". */
+  display?: string;
   prefix?: string;
   suffix?: string;
   format?: "number" | "compact";
@@ -16,21 +18,20 @@ export type Kpi = {
 
 export const kpis: Kpi[] = [
   {
-    id: "nokkomo-yoy",
-    label: "Nokkomo YoY growth",
-    value: 913,
-    suffix: "%",
+    id: "nokkomo-interns",
+    label: "UCLA interns managed",
+    value: 8,
     trend: "up",
-    context: "Amazon revenue · 10× trailing",
-    spark: [4, 6, 7, 10, 14, 18, 22, 28, 33, 36, 39, 40],
+    context: "Cognitive Science · Nokkomo Mints",
+    spark: [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 8],
   },
   {
-    id: "weg-team",
-    label: "Direct reports",
-    value: 4,
+    id: "weg-budget",
+    label: "Monthly ad budget",
+    value: 0,
+    display: "Six figures",
     trend: "flat",
-    context: "WEG · paid + lifecycle + webinars",
-    spark: [1, 2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4],
+    context: "WEG · Meta + Google",
   },
   {
     id: "posts-automated",

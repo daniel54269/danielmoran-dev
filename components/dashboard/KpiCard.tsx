@@ -17,13 +17,17 @@ export function KpiCard({ kpi }: { kpi: Kpi }) {
         </span>
       </div>
       <div className="text-3xl font-semibold tabular-nums tracking-tight text-ink-50">
-        <CountUp
-          to={kpi.value}
-          prefix={kpi.prefix}
-          suffix={kpi.suffix}
-          decimals={kpi.decimals ?? 0}
-          format={kpi.format}
-        />
+        {kpi.display ? (
+          <span className="font-serif italic font-normal tracking-tight">{kpi.display}</span>
+        ) : (
+          <CountUp
+            to={kpi.value}
+            prefix={kpi.prefix}
+            suffix={kpi.suffix}
+            decimals={kpi.decimals ?? 0}
+            format={kpi.format}
+          />
+        )}
       </div>
       {kpi.context && <div className="text-xs text-ink-400">{kpi.context}</div>}
       {kpi.spark && (
