@@ -61,6 +61,11 @@ export type ActivityEntry = {
 
 export const activity: ActivityEntry[] = [
   {
+    when: "2026",
+    title: "WEG: AI marketing-automation platform live, 85+ recurring tasks automated with compliance-gated GenAI content",
+    meta: "90+ jobs · 600+ tests",
+  },
+  {
     when: "May 2026",
     title: "Shipped hubspot-mcp v0.1.0: open-source MCP server for HubSpot CRM",
     meta: "13 tools · TypeScript · MIT",

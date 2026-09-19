@@ -38,10 +38,10 @@ export default async function HomePage() {
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
             <div className="max-w-4xl">
               <h1 className="font-serif italic font-normal text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-ink-50">
-                Marketing Engineer.
+                AI marketing, engineered.
               </h1>
               <p className="mt-6 max-w-3xl text-base sm:text-lg lg:text-xl text-ink-300 leading-relaxed">
-                I help marketing teams adopt current AI tooling and automation to scale operations with less overhead. The result: better measurement, faster output, lower per-unit cost.{" "}
+                I build the AI systems behind modern marketing: generative-AI content with built-in compliance review, multi-channel attribution, and automation that takes recurring work off the team.{" "}
                 <span className="text-ink-100">Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.</span>
               </p>
               <div className="mt-8 flex flex-wrap gap-2.5">
@@ -319,7 +319,7 @@ export default async function HomePage() {
                 I&rsquo;m Daniel, a marketing engineer based in North County San Diego. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
               </p>
               <p>
-                Today I lead a four-person team at <strong className="text-ink-50">Wealth Enhancement Group</strong>, recently completed a tenure as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (Amazon DTC; 913% YoY revenue growth, 10× trailing revenue, 8 UCLA interns managed).
+                Today I run AI marketing automation, GenAI content, and attribution at <strong className="text-ink-50">Wealth Enhancement Group</strong>, recently completed a tenure as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (Amazon DTC; 913% YoY revenue growth, 10× trailing revenue, 8 UCLA interns managed).
               </p>
               <p>
                 On the side I run <strong className="text-ink-50">HAZE</strong> (registered TM), creative brand work that keeps me sharp on the consumer side.
@@ -341,7 +341,7 @@ export default async function HomePage() {
           </div>
           <h2 className={`${sectionHeadline} italic`}>Let&rsquo;s talk.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
-            Marketing engineering and AI automation roles. Remote, hybrid, or in person around North County San Diego. I respond within 24 hours.
+            AI marketing, product marketing, and AI automation roles. Remote, hybrid, or in person around North County San Diego. I respond within 24 hours.
           </p>
         </Reveal>
         <Reveal delay={0.05}>

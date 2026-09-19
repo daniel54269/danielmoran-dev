@@ -1,9 +1,9 @@
 export const site = {
   name: "Daniel Moran",
-  title: "Daniel Moran | Marketing Engineer",
-  headline: "Marketing Engineer · AI Automation & Marketing Systems",
+  title: "Daniel Moran | AI Marketing & Marketing Engineering",
+  headline: "AI Marketing Manager · Automation, GenAI Content & Attribution",
   positioning:
-    "I help marketing teams apply current AI tooling and automation to operate at greater scale with less overhead. The result: better measurement, faster output, lower per-unit cost.",
+    "I build the AI systems behind modern marketing: generative-AI content with built-in compliance review, multi-channel attribution, and automation that takes recurring work off the team.",
   positioningShort:
     "Computer Science background and five years of software engineering at Cubic Transportation, applied across marketing leadership at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.",
   location: "North County San Diego, CA",
@@ -12,6 +12,7 @@ export const site = {
   github: "https://github.com/daniel54269",
   url: "https://danielmoran.dev",
   resumeHref: "/resume/Daniel-Moran-Resume.pdf",
+  resumeEngineerHref: "/resume/Daniel-Moran-Resume-AI-Engineer.pdf",
 };
 
 export type SkillGroup = { label: string; items: string[] };
@@ -34,6 +35,9 @@ export const skillGroups: SkillGroup[] = [
       "Hotjar",
       "Triple Whale",
       "Google Tag Manager",
+      "Search Console",
+      "LinkedIn Ads",
+      "ClickMeeting",
     ],
   },
   {
@@ -55,6 +59,8 @@ export const skillGroups: SkillGroup[] = [
   {
     label: "AI & Agents",
     items: [
+      "Generative AI",
+      "AI content governance",
       "Claude",
       "Cowork",
       "MCP servers",

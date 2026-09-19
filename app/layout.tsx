@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               email: `mailto:${site.email}`,
               address: { "@type": "PostalAddress", addressLocality: "San Diego", addressRegion: "CA" },
               sameAs: [site.linkedin, site.github].filter(Boolean),
-              jobTitle: "Marketing Engineer",
+              jobTitle: "AI Marketing Manager",
               description: site.positioning,
             }),
           }}

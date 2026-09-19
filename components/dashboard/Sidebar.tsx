@@ -101,7 +101,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         />
         <div className="min-w-0">
           <div className="truncate text-[15px] font-semibold text-ink-50 leading-tight">Daniel Moran</div>
-          <div className="mt-0.5 truncate text-xs text-ink-400">Marketing Engineer</div>
+          <div className="mt-0.5 truncate text-xs text-ink-400">AI Marketing</div>
         </div>
       </Link>
 

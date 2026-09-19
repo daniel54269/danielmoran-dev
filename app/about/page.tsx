@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Engineer-turned-marketing-leader. How I think, what I build, what I'm looking for next.",
+  description: "Engineer-turned-AI-marketing-leader. How I think, what I build, what I'm looking for next.",
 };
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
       </div>
       <div className="prose-custom mt-8">
         <p>
-          I&rsquo;m Daniel Moran, a marketing engineer based in North County San Diego, California. My background combines a
+          I&rsquo;m Daniel Moran, an AI marketing leader and marketing engineer based in North County San Diego, California. My background combines a
           Bachelor of Science in Computer Science from the University of San Diego (2018&ndash;2022) with five
           years of systems engineering at Cubic Transportation Systems, writing Java, Python, and C++ across
           transit-fare programs. I now apply that engineering background to marketing operations: building
@@ -40,9 +40,10 @@ export default function AboutPage() {
 
         <h2>Current and recent roles</h2>
         <p>
-          At <strong>Wealth Enhancement Group</strong> I lead a four-person team across paid media, lifecycle
-          email, and webinars, and I built the attribution and weekly reporting system the executive team uses
-          to allocate budget. I recently completed a tenure as <strong>Director of Marketing at Novadontics</strong>{" "}
+          At <strong>Wealth Enhancement Group</strong> I designed and run an AI marketing-automation platform
+          of 90+ scheduled jobs that took 85+ recurring tasks off the marketing team, built generative-AI content
+          pipelines where every prospect-facing asset passes a compliance screen and human sign-off, and
+          architected the multi-channel attribution model leadership uses for budget decisions. I recently completed a tenure as <strong>Director of Marketing at Novadontics</strong>{" "}
           (May 2025 &ndash; January 2026), where I owned marketing across three brands, reported into the CEO,
           and rebuilt the HubSpot lifecycle and Google Tag Manager attribution in ninety days. I am also
           co-founder and CMO of <strong>Nokkomo Mints</strong>, where I built the marketing function from
@@ -74,9 +75,9 @@ export default function AboutPage() {
 
         <h2>What I&rsquo;m looking for</h2>
         <ul>
-          <li>Marketing engineering, senior individual contributor, or marketing-leadership roles with real autonomy and budget.</li>
+          <li>AI marketing, product marketing for AI products, and marketing engineering roles, as a senior individual contributor or marketing leader.</li>
           <li>Companies that value measurement and automation as first-class parts of marketing, not afterthoughts.</li>
-          <li>Industries: B2B SaaS, B2C software, DTC e-commerce, and other modern, data-rich businesses.</li>
+          <li>Industries: AI platforms and developer tools, B2B SaaS, B2C software, DTC e-commerce, and other modern, data-rich businesses.</li>
           <li>Remote, hybrid, or in person around North County San Diego, California.</li>
         </ul>
 
@@ -84,7 +85,8 @@ export default function AboutPage() {
         <p>
           Email is fastest: <a href={`mailto:${site.email}`}>{site.email}</a>. I reply within 24 hours.{" "}
           <Link href="/contact">More ways to reach me</Link>, or download the{" "}
-          <a href={site.resumeHref}>résumé</a> if you would prefer to skim.
+          <a href={site.resumeHref}>résumé</a> (or the{" "}
+          <a href={site.resumeEngineerHref}>AI engineering version</a>) if you would prefer to skim.
         </p>
       </div>
     </Container>

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { site } from "@/lib/site";
 
 export const runtime = "edge";
-export const alt = "Daniel Moran | Marketing Engineer";
+export const alt = "Daniel Moran | AI Marketing";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -24,7 +24,7 @@ export default function OG() {
         }}
       >
         <div style={{ fontSize: 26, color: "#a1a1aa", letterSpacing: 6, textTransform: "uppercase" }}>
-          Marketing Engineer
+          AI Marketing, engineered
         </div>
         <div style={{ fontSize: 104, fontWeight: 600, marginTop: 22, letterSpacing: -2 }}>
           Daniel Moran

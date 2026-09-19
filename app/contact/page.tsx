@@ -21,7 +21,7 @@ export default function ContactPage() {
         Let&rsquo;s talk.
       </h1>
       <p className="mt-3 text-ink-300">
-        Marketing engineering and AI automation roles. Remote, hybrid, or in person around North County San Diego.
+        AI marketing, product marketing, and AI automation roles. Remote, hybrid, or in person around North County San Diego.
       </p>
 
       <div className="mt-10 space-y-3">
