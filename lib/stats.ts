@@ -27,10 +27,10 @@ export const kpis: Kpi[] = [
   },
   {
     id: "nokkomo-interns",
-    label: "UCLA interns managed",
-    value: 8,
+    label: "Interns managed",
+    value: 24,
     trend: "up",
-    context: "Cognitive Science · Nokkomo Mints",
+    context: "8 universities · Nokkomo Mints",
   },
   {
     id: "posts-automated",

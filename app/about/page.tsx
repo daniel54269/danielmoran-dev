@@ -47,7 +47,7 @@ export default function AboutPage() {
           (May 2025 &ndash; January 2026), where I owned marketing across three brands, reported into the CEO,
           and rebuilt the HubSpot lifecycle and Google Tag Manager attribution in ninety days. I am also
           co-founder and CMO of <strong>Nokkomo Mints</strong>, where I built the marketing function from
-          inception, managed a team of eight UCLA interns across creative, content, and Amazon operations, and
+          inception, built an intern program now 24 strong across eight universities, covering creative, content, and Amazon operations, and
           reduced Amazon Advertising ACOS from 81% to 38% in 2024 while delivering 913% year-over-year revenue growth that year. The brand now sells across four channels (Shopify, Amazon FBA, Walmart, TikTok Shop), and B2B wholesale is the current growth motion.
         </p>
         <p>

@@ -147,7 +147,7 @@ export default async function HomePage() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <div className={sectionEyebrow}>Nokkomo Mints</div>
-                  <div className="mt-0.5 text-sm text-ink-100">Shopify DTC revenue · indexed to Feb = 100 · Feb–Aug 2026</div>
+                  <div className="mt-0.5 text-sm text-ink-100">Revenue (Shopify-recorded) · indexed to Feb = 100 · Feb–Aug 2026</div>
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-semibold tabular-nums text-ink-50">
@@ -313,7 +313,7 @@ export default async function HomePage() {
                 I&rsquo;m Daniel, an AI marketing leader and marketing engineer based in North County San Diego. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
               </p>
               <p>
-                Today I run AI marketing automation, GenAI content, and attribution at <strong className="text-ink-50">Wealth Enhancement Group</strong>, previously served as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (May 2025 – Jan 2026; 3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (four-channel DTC; 913% YoY growth and ACOS 81%&rarr;38% in 2024, eight UCLA interns managed, B2B wholesale today).
+                Today I run AI marketing automation, GenAI content, and attribution at <strong className="text-ink-50">Wealth Enhancement Group</strong>, previously served as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (May 2025 – Jan 2026; 3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (four-channel DTC; 913% YoY growth and ACOS 81%&rarr;38% in 2024, 24 interns across 8 universities, B2B wholesale today).
               </p>
               <p>
                 On the side I run <strong className="text-ink-50">HAZE</strong> (registered TM), creative brand work that keeps me sharp on the consumer side.
