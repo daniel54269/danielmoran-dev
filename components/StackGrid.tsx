@@ -4,7 +4,7 @@ export function StackGrid() {
   return (
     <div className="grid gap-6 sm:grid-cols-2">
       {skillGroups.map((g) => (
-        <div key={g.label} className="rounded-xl border border-ink-800 p-5">
+        <div key={g.label} className="card-lift rounded-xl border border-ink-800 p-5">
           <div className="text-xs font-semibold uppercase tracking-widest text-ink-400 mb-3">
             {g.label}
           </div>

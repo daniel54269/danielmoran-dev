@@ -6,7 +6,7 @@ import { VideoTile } from "@/components/VideoTile";
 export const metadata: Metadata = {
   title: "Creative archive",
   description:
-    "Full archive of creative output: AI-generated content, self-produced video, and work directed with the UCLA intern team at Nokkomo Mints.",
+    "Full archive of creative output: AI-generated content, self-produced video, and work directed with the Nokkomo intern team at Nokkomo Mints.",
 };
 
 const categories = [
@@ -26,10 +26,10 @@ const categories = [
     videos: ["/videos/daniel1.mov", "/videos/daniel2.mov", "/videos/daniel3.mov"],
   },
   {
-    label: "Directed with the UCLA intern team",
+    label: "Directed with the intern team",
     meta: "iPhone · CapCut · directed",
     blurb:
-      "Output from the eight-person UCLA intern team at Nokkomo. I directed the brief, framing, and edit notes.",
+      "Output from the Nokkomo intern team, now 24 across eight universities. I directed the brief, framing, and edit notes.",
     badge: "Directed",
     videos: ["/videos/ucla1.mp4", "/videos/ucla2.mov", "/videos/ucla3.mp4"],
   },
@@ -44,7 +44,7 @@ export default function CreativeArchivePage() {
       </h1>
       <p className="mt-3 max-w-prose text-ink-300">
         Three lanes of creative output across the marketing function: AI-generated content, self-produced
-        video, and work I&rsquo;ve directed with my UCLA intern team.
+        video, and work I&rsquo;ve directed with the Nokkomo intern team.
       </p>
 
       <div className="mt-12 space-y-12">

@@ -5,7 +5,7 @@ import type { Kpi } from "@/lib/stats";
 
 export function KpiCard({ kpi }: { kpi: Kpi }) {
   return (
-    <div className="group relative flex flex-col gap-3 overflow-hidden rounded-xl border border-ink-800 bg-ink-900/60 p-4 transition-colors hover:border-ink-700">
+    <div className="group relative flex flex-col gap-3 overflow-hidden card-lift rounded-xl border border-ink-800 bg-ink-900/60 p-4 transition-colors hover:border-ink-700">
       <div className="flex items-center justify-between text-[11px] uppercase tracking-widest text-ink-400">
         <span>{kpi.label}</span>
         <span

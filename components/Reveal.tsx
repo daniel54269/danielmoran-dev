@@ -1,37 +1,30 @@
-"use client";
-
-import { motion, useReducedMotion, type MotionProps } from "motion/react";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
+import { cn } from "@/lib/cn";
 
 type RevealProps = {
   children: ReactNode;
   className?: string;
+  /** Seconds of stagger. Only used by the no-scroll-timeline fallback. */
   delay?: number;
-  y?: number;
   as?: "div" | "section" | "article" | "header";
-} & Omit<MotionProps, "initial" | "whileInView" | "transition" | "viewport">;
+};
 
-export function Reveal({
-  children,
-  className,
-  delay = 0,
-  y = 12,
-  as = "div",
-  ...rest
-}: RevealProps) {
-  const reduce = useReducedMotion();
-  const MotionTag = motion[as];
-
+/**
+ * Entrance reveal, CSS-only.
+ *
+ * Browsers with scroll-driven animations (Chromium, Safari) tie the fade to the element's
+ * own position in the viewport via `animation-timeline: view()` — off the main thread, no
+ * JS, no observer. Firefox has not shipped it, so `@supports not` falls back to a plain
+ * timed entrance with the stagger delay. Both paths are disabled under reduced motion.
+ * Replaced the motion/react version: same effect, no client bundle, no hydration.
+ */
+export function Reveal({ children, className, delay = 0, as: Tag = "div" }: RevealProps) {
   return (
-    <MotionTag
-      className={className}
-      initial={reduce ? { opacity: 0 } : { opacity: 0, y }}
-      whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1], delay }}
-      {...rest}
+    <Tag
+      className={cn("reveal", className)}
+      style={delay ? ({ "--reveal-delay": `${delay}s` } as CSSProperties) : undefined}
     >
       {children}
-    </MotionTag>
+    </Tag>
   );
 }

@@ -87,7 +87,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="flex min-h-screen flex-col">
           <TopBar onOpenMenu={() => setOpen(true)} />
           <ScrollProgress />
-          <main className="flex-1">{children}</main>
+          <main id="main" className="flex-1">{children}</main>
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@ export default async function HomePage() {
           <div className="relative overflow-hidden rounded-2xl border border-ink-800 bg-ink-900/60 p-6 sm:p-10 md:p-14">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
             <div className="max-w-4xl">
-              <h1 className="font-serif italic font-normal text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.95] text-ink-50">
+              <h1 className="fluid-display font-serif italic font-normal tracking-tight leading-[0.95] text-ink-50">
                 AI marketing, engineered.
               </h1>
               <p className="mt-6 max-w-3xl text-base sm:text-lg lg:text-xl text-ink-300 leading-relaxed">
@@ -78,7 +78,7 @@ export default async function HomePage() {
           </div>
           <h2 className={sectionHeadline}>Three lanes of creative output.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
-            One sample from each lane: AI-generated, self-produced, and work I&rsquo;ve directed with my UCLA intern team.
+            One sample from each lane: AI-generated, self-produced, and work I&rsquo;ve directed with the Nokkomo intern team.
           </p>
         </Reveal>
 
@@ -98,7 +98,7 @@ export default async function HomePage() {
                 src: "/videos/daniel1.mov",
               },
               {
-                label: "UCLA intern team",
+                label: "Intern team",
                 meta: "iPhone · CapCut · directed",
                 badge: "Directed",
                 src: "/videos/ucla1.mp4",
