@@ -38,7 +38,7 @@ export default function OG() {
             maxWidth: 980,
           }}
         >
-          I help marketing teams adopt current AI tooling and automation to operate at greater scale with less overhead.
+          {site.positioning}
         </div>
         <div
           style={{
