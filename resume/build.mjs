@@ -25,7 +25,7 @@ const roles = [
   {
     title: "Digital Marketing Specialist",
     org: "Wealth Enhancement Group",
-    when: "Aug 2025 – Present · Remote",
+    when: "Aug 2025 – Present · San Diego, CA",
     bullets: [
       { v: "m", t: "Designed and run an <b>AI marketing-automation platform (90+ scheduled jobs)</b> that took <b>85+ recurring tasks</b> off the marketing team across seminars, webinars, paid social, and reporting." },
       { v: "e", t: "Built and operate an <b>AI automation platform of 90+ scheduled jobs</b> (Python, REST APIs, LLMs) that automates <b>85+ recurring marketing operations</b> across seminars, webinars, paid social, CRM, and reporting." },
