@@ -18,19 +18,19 @@ export type Kpi = {
 
 export const kpis: Kpi[] = [
   {
+    id: "weg-tasks-automated",
+    label: "Recurring tasks automated",
+    value: 85,
+    suffix: "+",
+    trend: "up",
+    context: "WEG · 90+ scheduled jobs",
+  },
+  {
     id: "nokkomo-interns",
     label: "UCLA interns managed",
     value: 8,
     trend: "up",
     context: "Cognitive Science · Nokkomo Mints",
-  },
-  {
-    id: "weg-budget",
-    label: "Monthly ad budget",
-    value: 0,
-    display: "Six figures",
-    trend: "flat",
-    context: "WEG · Meta + Google",
   },
   {
     id: "posts-automated",

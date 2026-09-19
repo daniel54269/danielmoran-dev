@@ -39,7 +39,15 @@ function detectSource(): WelcomeMessage | null {
       ctaHref: "#approach",
     };
   }
-  if (role === "engineer" || role === "marketing-engineer") {
+  if (role === "ai-marketing" || role === "pmm" || role === "product-marketing") {
+    return {
+      eyebrow: "For: AI Marketing search",
+      greeting: "Start with the Wealth Enhancement Group case study: AI automation, governed GenAI content, attribution.",
+      ctaLabel: "Case study",
+      ctaHref: "/work/weg-paid-media",
+    };
+  }
+  if (role === "engineer" || role === "marketing-engineer" || role === "ai-engineer") {
     return {
       eyebrow: "For: Marketing Engineer search",
       greeting: "The open-source MCP server is the fastest proof.",

@@ -38,12 +38,12 @@ export default function AboutPage() {
           faster and spend less.
         </p>
 
-        <h2>Current and recent roles</h2>
+        <h2>Roles</h2>
         <p>
           At <strong>Wealth Enhancement Group</strong> I designed and run an AI marketing-automation platform
           of 90+ scheduled jobs that took 85+ recurring tasks off the marketing team, built generative-AI content
           pipelines where every prospect-facing asset passes a compliance screen and human sign-off, and
-          architected the multi-channel attribution model leadership uses for budget decisions. I recently completed a tenure as <strong>Director of Marketing at Novadontics</strong>{" "}
+          architected the multi-channel attribution model leadership uses for budget decisions. Before that I was <strong>Director of Marketing at Novadontics</strong>{" "}
           (May 2025 &ndash; January 2026), where I owned marketing across three brands, reported into the CEO,
           and rebuilt the HubSpot lifecycle and Google Tag Manager attribution in ninety days. I am also
           co-founder and CMO of <strong>Nokkomo Mints</strong>, where I built the marketing function from

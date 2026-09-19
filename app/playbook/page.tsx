@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Approach | How I work",
   description:
-    "My approach to marketing engineering: applying software engineering rigor and current AI tooling to marketing operations.",
+    "My approach to AI marketing: applying software engineering rigor and current AI tooling to marketing operations.",
 };
 
 export default function PlaybookPage() {
@@ -17,7 +17,7 @@ export default function PlaybookPage() {
         How I work.
       </h1>
       <p className="mt-3 text-ink-300 max-w-prose">
-        A short overview of the approach I bring to marketing engineering engagements.
+        A short overview of the approach I bring to AI marketing and marketing engineering work.
       </p>
 
       {/* Numbered process cards */}
@@ -127,7 +127,7 @@ export default function PlaybookPage() {
         <hr />
 
         <p>
-          If you are evaluating marketing engineering hires or considering a project, I&rsquo;d be glad to
+          If you are hiring for AI marketing or marketing engineering, or considering a project, I&rsquo;d be glad to
           discuss your specific situation. <Link href="/contact">Get in touch</Link> or{" "}
           <a href={`mailto:${site.email}`}>email me directly</a>.
         </p>
