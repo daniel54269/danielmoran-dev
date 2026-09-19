@@ -147,15 +147,15 @@ export default async function HomePage() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <div className={sectionEyebrow}>Nokkomo Mints</div>
-                  <div className="mt-0.5 text-sm text-ink-100">Trailing revenue · indexed · May 2025 – Apr 2026</div>
+                  <div className="mt-0.5 text-sm text-ink-100">Shopify DTC revenue · indexed to Feb = 100 · Feb–Aug 2026</div>
                 </div>
                 <div className="text-right">
                   <div className="text-2xl font-semibold tabular-nums text-ink-50">
-                    <CountUp to={913} suffix="% YoY" />
+                    <CountUp to={4} suffix=" channels" />
                   </div>
                   <div className="inline-flex items-center gap-1 text-xs text-emerald-400">
                     <IconTrendUp className="h-3 w-3" />
-                    10× trailing revenue
+                    Shopify · Amazon · Walmart · TikTok Shop
                   </div>
                 </div>
               </div>
@@ -167,26 +167,20 @@ export default async function HomePage() {
                   className="h-full w-full"
                   showDots
                   yAxisTicks={[
-                    { value: 4, label: "0%" },
-                    { value: 13, label: "250%" },
-                    { value: 22, label: "500%" },
-                    { value: 31, label: "750%" },
-                    { value: 40, label: "900%" },
+                    { value: 100, label: "1.0×" },
+                    { value: 120, label: "1.2×" },
+                    { value: 140, label: "1.4×" },
+                    { value: 160, label: "1.6×" },
                   ]}
                   tooltips={(() => {
                     const months = [
-                      "May 2025",
-                      "Jun 2025",
-                      "Jul 2025",
-                      "Aug 2025",
-                      "Sep 2025",
-                      "Oct 2025",
-                      "Nov 2025",
-                      "Dec 2025",
-                      "Jan 2026",
                       "Feb 2026",
                       "Mar 2026",
                       "Apr 2026",
+                      "May 2026",
+                      "Jun 2026",
+                      "Jul 2026",
+                      "Aug 2026",
                     ];
                     const baseline = nokkomoRevenue[0] ?? 1;
                     return nokkomoRevenue.map((value, i) => {
@@ -197,24 +191,24 @@ export default async function HomePage() {
                 />
               </div>
               <div className="mt-2 flex justify-between px-1 text-[10px] uppercase tracking-widest text-ink-500">
-                <span>May &rsquo;25</span>
-                <span className="hidden sm:inline">Aug &rsquo;25</span>
-                <span>Nov &rsquo;25</span>
-                <span className="hidden sm:inline">Feb &rsquo;26</span>
-                <span>Apr &rsquo;26</span>
+                <span>Feb &rsquo;26</span>
+                <span className="hidden sm:inline">Apr &rsquo;26</span>
+                <span>Jun &rsquo;26</span>
+                <span className="hidden sm:inline">Jul &rsquo;26</span>
+                <span>Aug &rsquo;26</span>
               </div>
               <div className="mt-4 grid grid-cols-3 gap-3 text-xs text-ink-400">
                 <div>
-                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">YoY growth</div>
-                  <div className="mt-0.5 text-ink-100 tabular-nums">913%</div>
+                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">2024 turnaround</div>
+                  <div className="mt-0.5 text-ink-100 tabular-nums">ACOS 81% → 38%</div>
                 </div>
                 <div>
-                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">ACOS</div>
-                  <div className="mt-0.5 text-ink-100 tabular-nums">81% → 38%</div>
+                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">Now leading with</div>
+                  <div className="mt-0.5 text-ink-100">B2B wholesale</div>
                 </div>
                 <div>
-                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">Spend scale</div>
-                  <div className="mt-0.5 text-ink-100 tabular-nums">3×</div>
+                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">Trademarks</div>
+                  <div className="mt-0.5 text-ink-100 tabular-nums">2 USPTO</div>
                 </div>
               </div>
             </div>
@@ -319,7 +313,7 @@ export default async function HomePage() {
                 I&rsquo;m Daniel, an AI marketing leader and marketing engineer based in North County San Diego. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
               </p>
               <p>
-                Today I run AI marketing automation, GenAI content, and attribution at <strong className="text-ink-50">Wealth Enhancement Group</strong>, previously served as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (May 2025 – Jan 2026; 3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (Amazon DTC; 913% YoY revenue growth, 10× trailing revenue, 8 UCLA interns managed).
+                Today I run AI marketing automation, GenAI content, and attribution at <strong className="text-ink-50">Wealth Enhancement Group</strong>, previously served as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (May 2025 – Jan 2026; 3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (four-channel DTC; 913% YoY growth and ACOS 81%&rarr;38% in 2024, eight UCLA interns managed, B2B wholesale today).
               </p>
               <p>
                 On the side I run <strong className="text-ink-50">HAZE</strong> (registered TM), creative brand work that keeps me sharp on the consumer side.

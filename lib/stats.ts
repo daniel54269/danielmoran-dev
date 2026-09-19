@@ -49,8 +49,10 @@ export const kpis: Kpi[] = [
   },
 ];
 
-// Hero chart — Nokkomo trailing revenue, in $K, 12 months
-export const nokkomoRevenue = [4, 5, 6, 8, 12, 16, 20, 26, 31, 35, 38, 40];
+// Hero chart — Nokkomo Shopify DTC revenue by month, Feb–Aug 2026, indexed to Feb = 100.
+// Source: nokkomo/data/snapshots/dtc-daily-history.json (pulled 2026-09-17). Deliberately
+// indexed: the dollar figures are the company's, not the portfolio's, to publish.
+export const nokkomoRevenue = [100, 101, 158, 148, 126, 153, 136];
 
 export type ActivityEntry = {
   when: string; // human label, e.g. "2 hours ago" or "May 2026"
@@ -60,6 +62,11 @@ export type ActivityEntry = {
 };
 
 export const activity: ActivityEntry[] = [
+  {
+    when: "Sep 2026",
+    title: "Nokkomo Mints: four channels live (Shopify, Amazon FBA, Walmart, TikTok Shop); B2B wholesale is the growth motion",
+    meta: "CMO / Co-founder",
+  },
   {
     when: "2026",
     title: "WEG: AI marketing-automation platform live, 85+ recurring tasks automated with compliance-gated GenAI content",
