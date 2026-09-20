@@ -1,0 +1,61 @@
+---
+title: "Aqua: listing data to a live booking page in 23 minutes"
+client: "Aqua · La Madera Beach, Zihuatanejo"
+domain: "Hospitality / Short-term rental"
+role: "Build"
+year: "Sep 2026"
+headline: "Three Airbnb listings became one booking page, with the copy, photos, and ratings pulled straight from the listings rather than retyped."
+description: "A property owner asked for a simple landing page. Rather than collect assets by text, I read his three listings and built from the real data."
+metric:
+  - { label: "Request to live", value: "23 min" }
+  - { label: "Bungalows", value: "3" }
+  - { label: "Assets collected by hand", value: "0" }
+  - { label: "Page weight", value: "Static HTML" }
+stack: ["HTML", "CSS", "Node.js", "GitHub Pages"]
+order: 6
+featured: false
+---
+
+## The request
+
+An owner of three beachfront bungalows in Zihuatanejo wanted "a simple landing page and 3 url links."
+He had the property on Airbnb and no website. Asked what the business was, who the page was for, and
+whether he had a logo, he replied: "All yes."
+
+That answer is the actual constraint. A busy owner will not write you a creative brief. The job is to
+need as little from him as possible.
+
+## What I did instead of asking again
+
+He sent three Airbnb links. Everything the page needed was already inside them.
+
+- **Fetched each listing** with a mobile user-agent. Airbnb server-renders a JSON blob into the HTML,
+  so the title, description, capacity, rating, review count, and every photo URL come back from a
+  plain request. No browser automation, no login, no scraping behind a wall.
+- **Pulled the real copy.** "Oasis Bungalow is the largest of 3 completely private units at Aqua" is
+  his sentence, not mine. Owners recognise their own words, which makes approval faster.
+- **Downloaded six photos per unit** and reviewed them as a contact sheet rather than guessing from
+  filenames. The hero I picked is the aerial where AQUA is painted on the building.
+- **Built one static page**: a hero, three unit cards with honest ratings, an amenity row, and a
+  swipeable gallery. Mobile first, since it would be opened in a text thread.
+- **Deployed to GitHub Pages** because it needed no interactive login, and the page was live minutes
+  after the links arrived.
+
+## Why it is built this way
+
+**No framework.** A one-page site with three outbound links does not need a build step, a CMS, or a
+JavaScript bundle. It is one HTML file and a folder of images, which means it will still work in five
+years and can move to any host in a minute.
+
+**Honest ratings.** Two units show 5.0, one shows 4.63. Hiding the lowest number would have been easy
+and would have cost the page its credibility with the exact guest who checks Airbnb next.
+
+**It points at Airbnb rather than competing with it.** The page exists so the owner has something to
+put on a business card and in an Instagram bio. Bookings still run through the platform that handles
+payment, messaging, and cancellation.
+
+## What it demonstrates
+
+The useful skill here is not HTML. It is recognising that a client's "I don't have assets" usually
+means the assets exist somewhere already, in a form a script can read, and that the fastest path to
+approval is showing someone their own property rather than a template with their name dropped in.
