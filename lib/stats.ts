@@ -49,10 +49,8 @@ export const kpis: Kpi[] = [
   },
 ];
 
-// Hero chart — Nokkomo Shopify DTC revenue by month, Feb–Aug 2026, indexed to Feb = 100.
-// Source: nokkomo/data/snapshots/dtc-daily-history.json (pulled 2026-09-17). Deliberately
-// indexed: the dollar figures are the company's, not the portfolio's, to publish.
-export const nokkomoRevenue = [100, 101, 158, 148, 126, 153, 136];
+// Nokkomo revenue is deliberately NOT published: it is the company's figure, and Daniel
+// co-founded it with someone else. The overview shows systems shipped instead.
 
 export type ActivityEntry = {
   when: string; // human label, e.g. "2 hours ago" or "May 2026"
@@ -100,7 +98,7 @@ export const activity: ActivityEntry[] = [
   },
   {
     when: "2024",
-    title: "Nokkomo Mints: Amazon ACOS 81% to 38%, 913% YoY revenue growth, 3× spend scale",
+    title: "Nokkomo Mints: Amazon ACOS 81% to 38% in 90 days, 3× spend scale",
     meta: "CMO / Co-founder",
   },
 ];

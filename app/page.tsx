@@ -1,17 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
-import { Sparkline } from "@/components/Sparkline";
-import { CountUp } from "@/components/CountUp";
 import { Spotlight } from "@/components/Spotlight";
 import { VideoTile } from "@/components/VideoTile";
 import { PersonalizedWelcome } from "@/components/PersonalizedWelcome";
 import { KpiCard } from "@/components/dashboard/KpiCard";
 import { CampaignTable } from "@/components/dashboard/CampaignTable";
 import { ActivityFeed } from "@/components/dashboard/ActivityFeed";
-import { IconArrowUpRight, IconTrendUp } from "@/components/dashboard/Icons";
+import { IconArrowUpRight } from "@/components/dashboard/Icons";
 import { getAllWork, getFeaturedWork } from "@/lib/work";
-import { kpis, nokkomoRevenue } from "@/lib/stats";
+import { kpis } from "@/lib/stats";
 import { site } from "@/lib/site";
 
 export const revalidate = false;
@@ -144,73 +142,38 @@ export default async function HomePage() {
         <div className="mt-8 grid gap-3 lg:grid-cols-[1.6fr_1fr]">
           <Reveal delay={0.1} className="h-full">
             <div className="flex h-full flex-col rounded-xl border border-ink-800 bg-ink-900/40 p-5">
-              <div className="flex items-center justify-between gap-3">
-                <div>
-                  <div className={sectionEyebrow}>Nokkomo Mints</div>
-                  <div className="mt-0.5 text-sm text-ink-100">Revenue (Shopify-recorded) · indexed to Feb = 100 · Feb–Aug 2026</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-2xl font-semibold tabular-nums text-ink-50">
-                    <CountUp to={4} suffix=" channels" />
+              <div className={sectionEyebrow}>Systems in production</div>
+              <div className="mt-0.5 text-sm text-ink-100">What is running right now, and where</div>
+              <dl className="mt-5 flex flex-1 flex-col gap-4">
+                {[
+                  {
+                    k: "AI marketing automation",
+                    v: "90+ scheduled jobs, 85+ recurring tasks off the team",
+                    w: "Wealth Enhancement Group",
+                  },
+                  {
+                    k: "Compliance-gated GenAI content",
+                    v: "Automated screen, human sign-off, audit log on every asset",
+                    w: "FINRA-regulated environment",
+                  },
+                  {
+                    k: "Multi-channel attribution",
+                    v: "8 sources unified; leadership allocates budget from it",
+                    w: "GA4 · HubSpot · Salesforce · paid",
+                  },
+                  {
+                    k: "hubspot-mcp",
+                    v: "13 tools, TypeScript, MIT — Claude reads and writes CRM",
+                    w: "Open source",
+                  },
+                ].map((row) => (
+                  <div key={row.k} className="border-l border-ink-700 pl-4">
+                    <dt className="text-sm font-medium text-ink-50">{row.k}</dt>
+                    <dd className="mt-0.5 text-sm text-ink-300">{row.v}</dd>
+                    <dd className="mt-0.5 text-[11px] uppercase tracking-widest text-ink-500">{row.w}</dd>
                   </div>
-                  <div className="inline-flex items-center gap-1 text-xs text-emerald-400">
-                    <IconTrendUp className="h-3 w-3" />
-                    Shopify · Amazon · Walmart · TikTok Shop
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4 min-h-40 flex-1">
-                <Sparkline
-                  data={nokkomoRevenue}
-                  width={800}
-                  height={220}
-                  className="h-full w-full"
-                  showDots
-                  yAxisTicks={[
-                    { value: 100, label: "1.0×" },
-                    { value: 120, label: "1.2×" },
-                    { value: 140, label: "1.4×" },
-                    { value: 160, label: "1.6×" },
-                  ]}
-                  tooltips={(() => {
-                    const months = [
-                      "Feb 2026",
-                      "Mar 2026",
-                      "Apr 2026",
-                      "May 2026",
-                      "Jun 2026",
-                      "Jul 2026",
-                      "Aug 2026",
-                    ];
-                    const baseline = nokkomoRevenue[0] ?? 1;
-                    return nokkomoRevenue.map((value, i) => {
-                      const growth = Math.round(((value - baseline) / baseline) * 100);
-                      return `${months[i]} · +${growth}%`;
-                    });
-                  })()}
-                />
-              </div>
-              <div className="mt-2 flex justify-between px-1 text-[10px] uppercase tracking-widest text-ink-500">
-                <span>Feb &rsquo;26</span>
-                <span className="hidden sm:inline">Apr &rsquo;26</span>
-                <span>Jun &rsquo;26</span>
-                <span className="hidden sm:inline">Jul &rsquo;26</span>
-                <span>Aug &rsquo;26</span>
-              </div>
-              <div className="mt-4 grid grid-cols-3 gap-3 text-xs text-ink-400">
-                <div>
-                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">2024 turnaround</div>
-                  <div className="mt-0.5 text-ink-100 tabular-nums">ACOS 81% → 38%</div>
-                </div>
-                <div>
-                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">Now leading with</div>
-                  <div className="mt-0.5 text-ink-100">B2B wholesale</div>
-                </div>
-                <div>
-                  <div className="text-ink-500 uppercase tracking-widest text-[10px]">Trademarks</div>
-                  <div className="mt-0.5 text-ink-100 tabular-nums">2 USPTO</div>
-                </div>
-              </div>
+                ))}
+              </dl>
             </div>
           </Reveal>
           <Reveal delay={0.15} className="h-full">
@@ -313,7 +276,7 @@ export default async function HomePage() {
                 I&rsquo;m Daniel, an AI marketing leader and marketing engineer based in North County San Diego. CS from the University of San Diego (2018–2022), then five years of systems engineering at <strong className="text-ink-50">Cubic Transportation</strong> in Java, Python, and C++. I now apply that engineering background to marketing operations: building AI-augmented systems for attribution, content production, and CRM automation.
               </p>
               <p>
-                Today I run AI marketing automation, GenAI content, and attribution at <strong className="text-ink-50">Wealth Enhancement Group</strong>, previously served as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (May 2025 – Jan 2026; 3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (four-channel DTC; 913% YoY growth and ACOS 81%&rarr;38% in 2024, 24 interns across 8 universities, B2B wholesale today).
+                Today I run AI marketing automation, GenAI content, and attribution at <strong className="text-ink-50">Wealth Enhancement Group</strong>, previously served as <strong className="text-ink-50">Director of Marketing at Novadontics</strong> (May 2025 – Jan 2026; 3 brands, reporting to CEO), and serve as <strong className="text-ink-50">co-founder/CMO at Nokkomo Mints</strong> (four-channel DTC; ACOS 81%&rarr;38% in 2024, 24 interns across 8 universities, B2B wholesale today).
               </p>
               <p>
                 On the side I run <strong className="text-ink-50">HAZE</strong> (registered TM), creative brand work that keeps me sharp on the consumer side.

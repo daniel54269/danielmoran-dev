@@ -54,7 +54,7 @@ const roles = [
     org: "Nokkomo Mints",
     when: "Sep 2023 – Present · North County San Diego",
     bullets: [
-      { v: "me", t: "Cut Amazon Advertising ACOS from 81% to 38% in 90 days while scaling daily spend 3×; delivered <b>913% YoY revenue growth</b> (2024). Brand now sells across Shopify, Amazon FBA, Walmart, and TikTok Shop." },
+      { v: "me", t: "Cut Amazon Advertising ACOS from <b>81% to 38% in 90 days</b> (2024) while scaling daily spend 3×; brand now sells across Shopify, Amazon FBA, Walmart, and TikTok Shop." },
       { v: "m", t: "Built an intern program now <b>24 active interns across 8 universities</b> spanning creative, content production, and Amazon operations; co-led product positioning, pack design, and go-to-market narrative." },
       { v: "e", t: "Built an intern program now <b>24 active across 8 universities</b>; built weekly negative-keyword harvesting and creative-rotation systems for Amazon Ads." },
     ],

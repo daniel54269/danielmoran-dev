@@ -48,7 +48,7 @@ export default function AboutPage() {
           and rebuilt the HubSpot lifecycle and Google Tag Manager attribution in ninety days. I am also
           co-founder and CMO of <strong>Nokkomo Mints</strong>, where I built the marketing function from
           inception, built an intern program now 24 strong across eight universities, covering creative, content, and Amazon operations, and
-          reduced Amazon Advertising ACOS from 81% to 38% in 2024 while delivering 913% year-over-year revenue growth that year. The brand now sells across four channels (Shopify, Amazon FBA, Walmart, TikTok Shop), and B2B wholesale is the current growth motion.
+          reduced Amazon Advertising ACOS from 81% to 38% in 2024 while scaling daily ad spend 3×. The brand now sells across four channels (Shopify, Amazon FBA, Walmart, TikTok Shop), and B2B wholesale is the current growth motion.
         </p>
         <p>
           Separately I run <strong>HAZE</strong>, a registered trademark covering creative brand work in art,
