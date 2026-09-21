@@ -11,12 +11,12 @@
 <meta property="og:image" content="https://www.danielmoran.dev/aqua/img/aqua-sunrise.jpg">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
-<meta property="og:url" content="https://www.danielmoran.dev/aqua/">
+<meta property="og:url" content="https://www.danielmoran.dev/aqua">
 <meta property="og:site_name" content="Aqua Residence">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232f3830'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' fill='%23f7f5f1' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="img/aqua-sunrise.jpg">
+<link rel="apple-touch-icon" href="/aqua/img/aqua-sunrise.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
@@ -198,7 +198,7 @@
 </header>
 
 <section class="hero" id="top">
-  <div class="shot"><img src="img/aqua-sunrise.jpg" alt="Aqua Residence at first light above the bay of Zihuatanejo" fetchpriority="high"></div>
+  <div class="shot"><img src="/aqua/img/aqua-sunrise.jpg" alt="Aqua Residence at first light above the bay of Zihuatanejo" fetchpriority="high"></div>
   <div class="inner">
     <h1 class="display">Aqua</h1>
     <div class="under">
@@ -218,7 +218,7 @@
 
   <div class="wrap" id="bungalows">
     <article class="chapter rise">
-      <div class="media"><img src="img/oasis-2.jpg" alt="Oasis: open living room with a hammock and the sea beyond" loading="lazy"></div>
+      <div class="media"><img src="/aqua/img/oasis-2.jpg" alt="Oasis: open living room with a hammock and the sea beyond" loading="lazy"></div>
       <div>
         <div class="no">01</div>
         <h3 class="display">Oasis</h3>
@@ -229,7 +229,7 @@
     </article>
 
     <article class="chapter flip rise">
-      <div class="media"><img src="img/brisas-2.jpg" alt="Brisas: terrace looking out across the bay" loading="lazy"></div>
+      <div class="media"><img src="/aqua/img/brisas-2.jpg" alt="Brisas: terrace looking out across the bay" loading="lazy"></div>
       <div>
         <div class="no">02</div>
         <h3 class="display">Brisas</h3>
@@ -240,7 +240,7 @@
     </article>
 
     <article class="chapter rise">
-      <div class="media"><img src="img/olas-0.jpg" alt="Olas: dining terrace with an ocean view" loading="lazy"></div>
+      <div class="media"><img src="/aqua/img/olas-0.jpg" alt="Olas: dining terrace with an ocean view" loading="lazy"></div>
       <div>
         <div class="no">03</div>
         <h3 class="display">Olas</h3>
@@ -252,7 +252,7 @@
   </div>
 
   <section class="bleed">
-    <div class="shot"><img src="img/aqua-terrace.jpg" alt="The terrace at Aqua, a few steps above the water" loading="lazy"></div>
+    <div class="shot"><img src="/aqua/img/aqua-terrace.jpg" alt="The terrace at Aqua, a few steps above the water" loading="lazy"></div>
     <q>A few steps above the water, in the middle of everything.</q>
   </section>
 
@@ -306,12 +306,12 @@
       <div class="eyebrow">Zihuatanejo, Guerrero</div>
     </div>
     <div class="gallery">
-      <figure><img src="img/aqua-front.jpg" alt="Aqua Residence above the sand at La Madera Beach" loading="lazy"></figure>
-      <figure><img src="img/oasis-0.jpg" alt="A bedroom opening onto the water" loading="lazy"></figure>
-      <figure><img src="img/brisas-0.jpg" alt="A table set with the ocean behind" loading="lazy"></figure>
-      <figure><img src="img/olas-2.jpg" alt="The beach below the bungalows" loading="lazy"></figure>
-      <figure><img src="img/oasis-1.jpg" alt="Open living space at Oasis" loading="lazy"></figure>
-      <figure><img src="img/aqua-front2.jpg" alt="The residence seen from the beach path" loading="lazy"></figure>
+      <figure><img src="/aqua/img/aqua-front.jpg" alt="Aqua Residence above the sand at La Madera Beach" loading="lazy"></figure>
+      <figure><img src="/aqua/img/oasis-0.jpg" alt="A bedroom opening onto the water" loading="lazy"></figure>
+      <figure><img src="/aqua/img/brisas-0.jpg" alt="A table set with the ocean behind" loading="lazy"></figure>
+      <figure><img src="/aqua/img/olas-2.jpg" alt="The beach below the bungalows" loading="lazy"></figure>
+      <figure><img src="/aqua/img/oasis-1.jpg" alt="Open living space at Oasis" loading="lazy"></figure>
+      <figure><img src="/aqua/img/aqua-front2.jpg" alt="The residence seen from the beach path" loading="lazy"></figure>
     </div>
   </section>
 </main>
@@ -341,6 +341,6 @@
   const hero = document.querySelector(".hero");
   new IntersectionObserver(([e]) => bar.classList.toggle("solid", !e.isIntersecting), { rootMargin: "-70px 0px 0px 0px" }).observe(hero);
 </script>
-<script src="chat.js?v=6" defer></script>
+<script src="/aqua/chat.js?v=6" defer></script>
 </body>
 </html>
