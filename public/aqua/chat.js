@@ -136,8 +136,9 @@
 
   panel.querySelector(".chatbox-x").addEventListener("click", () => panel.classList.remove("open"));
 
-  // Both the floating button and the footer "Enquiries" link open the panel.
-  document.querySelectorAll(".chat, .ask").forEach((launcher) => {
+  // The floating button goes straight to WhatsApp (client's call). The assistant opens from the
+  // footer link only, so the two never compete for the same tap.
+  document.querySelectorAll(".ask").forEach((launcher) => {
     launcher.addEventListener("click", (e) => {
       e.preventDefault();
       panel.classList.add("open");
