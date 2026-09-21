@@ -1,19 +1,19 @@
 ---
-title: "Aqua: listing data to a live booking page in 23 minutes"
+title: "Aqua Residence: three Airbnb links to a live site on the client's domain"
 client: "Aqua · La Madera Beach, Zihuatanejo"
 domain: "Hospitality / Short-term rental"
 role: "Build"
 year: "Sep 2026"
-headline: "Three Airbnb listings became one booking page, with the copy, photos, and ratings pulled straight from the listings rather than retyped."
+headline: "Three Airbnb listings became one booking page at aqua.mx, with the copy, photos and ratings read straight from the listings rather than retyped."
 description: "A property owner asked for a simple landing page. Rather than collect assets by text, I read his three listings and built from the real data."
 metric:
-  - { label: "Request to live", value: "23 min" }
+  - { label: "Request to live domain", value: "Same day" }
   - { label: "Bungalows", value: "3" }
-  - { label: "Assets collected by hand", value: "0" }
+  - { label: "Assets I had to chase", value: "0" }
   - { label: "Page weight", value: "Static HTML" }
-stack: ["HTML", "CSS", "Node.js", "GitHub Pages"]
+stack: ["HTML", "CSS", "Node.js", "GitHub Pages", "DNS"]
 order: 6
-featured: false
+featured: true
 ---
 
 ## The request
@@ -40,6 +40,14 @@ He sent three Airbnb links. Everything the page needed was already inside them.
   swipeable gallery. Mobile first, since it would be opened in a text thread.
 - **Deployed to GitHub Pages** because it needed no interactive login, and the page was live minutes
   after the links arrived.
+
+## Live at aqua.mx
+
+The client's domain was registered at GoDaddy, its DNS pointed at an unfinished Squarespace site, and
+his company email ran on the same domain through Google Workspace. Moving the site meant changing five
+records and touching none of the other thirteen: the MX records that carry his mail, and the TXT
+records that prove he owns the domain. The site went live on HTTPS the same evening. His email never
+dropped a message.
 
 ## Why it is built this way
 
