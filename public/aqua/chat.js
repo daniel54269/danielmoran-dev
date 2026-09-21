@@ -8,7 +8,7 @@
  * To add an answer: append to KB. `k` is the keywords that trigger it, `a` is the reply (HTML).
  */
 (function () {
-  const WHATSAPP = "https://wa.me/527551044400?text=Hola%2C%20I%27d%20like%20to%20ask%20about%20Aqua";
+  const WHATSAPP = "https://wa.me/5217551044400?text=Hola%2C%20I%27d%20like%20to%20ask%20about%20Aqua";
   const LINKS = {
     brisas: "https://www.airbnb.com/rooms/1482157264577134834",
     oasis: "https://www.airbnb.com/rooms/1482174106685324417",
