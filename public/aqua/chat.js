@@ -8,7 +8,15 @@
  * To add an answer: append to KB. `k` is the keywords that trigger it, `a` is the reply (HTML).
  */
 (function () {
-  const WHATSAPP = "https://wa.me/5217551044400?text=Hola%2C%20I%27d%20like%20to%20ask%20about%20Aqua";
+  // NUMBER SWITCHED 2026-09-20. Diego changed eSIM, so the Mexican line is not registered on
+  // WhatsApp right now (he confirmed: "+527551044400 isn't on WhatsApp ... might be cause I
+  // changed eSIM, should be good by Wednesday"). This is his US line so the button is not dead
+  // over the weekend on a rental site.
+  // SWITCH BACK once he confirms the Mexican line is live: 5217551044400
+  // (Note: the "+011527551044400" he also sent is NOT a second number. 011 is the US
+  //  international exit code, not part of the number - strip it and you get 527551044400,
+  //  the one that is already failing. Only the US line below can work today.)
+  const WHATSAPP = "https://wa.me/13057661122?text=Hola%2C%20I%27d%20like%20to%20ask%20about%20Aqua";
   const LINKS = {
     brisas: "https://www.airbnb.com/rooms/1482157264577134834",
     oasis: "https://www.airbnb.com/rooms/1482174106685324417",
