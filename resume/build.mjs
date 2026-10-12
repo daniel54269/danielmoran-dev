@@ -131,13 +131,13 @@ function render(v) {
   return `<!doctype html><html><head><meta charset="utf-8"><title>${contact.name} Résumé</title><style>
 @page { size: Letter; margin: 0.45in 0.5in; }
 * { box-sizing: border-box; }
-body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 9.4pt; line-height: 1.28; color: #111; margin: 0; }
+body { font-variant-ligatures: none; font-feature-settings: "liga" 0, "clig" 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 9.4pt; line-height: 1.28; color: #111; margin: 0; }
 header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1.5px solid #111; padding-bottom: 5px; }
 h1 { font-size: 23pt; margin: 0; letter-spacing: -0.3px; }
 .headline { color: #444; font-size: 10.5pt; margin-top: 1px; }
 .contact { text-align: right; white-space: nowrap; font-size: 8.6pt; color: #333; line-height: 1.4; }
 .summary { margin: 7px 0 2px; }
-h2 { font-size: 9pt; letter-spacing: 2px; text-transform: uppercase; margin: 8px 0 3px; padding-bottom: 2px; border-bottom: 0.75px solid #bbb; }
+h2 { font-size: 9pt; letter-spacing: 0; text-transform: uppercase; margin: 8px 0 3px; padding-bottom: 2px; border-bottom: 0.75px solid #bbb; }
 .role { margin-bottom: 4px; }
 .role-head { display: flex; justify-content: space-between; }
 .role-head i { color: #444; }
