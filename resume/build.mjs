@@ -35,7 +35,7 @@ const roles = [
       { v: "e", t: "Designed a multi-channel attribution data model with deterministic matching, deduplication, and reconciliation across 8 sources (GA4, Search Console, Meta, LinkedIn, YouTube, HubSpot, Salesforce, ClickMeeting)." },
       { v: "m", t: "Unified GA4, Search Console, Meta, LinkedIn, YouTube, HubSpot, Salesforce, and ClickMeeting into weekly cross-channel reporting and a QoQ executive dashboard, replacing ~6 analyst hours/week of spreadsheets." },
       { v: "e", t: "Built Salesforce and HubSpot integrations with gated, canary-verified write pipelines and <b>600+ automated tests</b> protecting production CRM data; AI lead-quality scoring over <b>5,000+ records/week</b>." },
-      { v: "m", t: "Run competitive ad research and benchmarking; coordinate delivery across the marketing team, an outside contractor, and compliance; manage six-figure monthly paid media across Meta and Google." },
+      { v: "m", t: "Run competitive ad research and benchmarking; coordinate cross-functional delivery across marketing, an outside contractor, and compliance; manage six-figure monthly paid media across Meta and Google." },
     ],
   },
   {
@@ -85,8 +85,8 @@ const openSource =
 
 const skills = {
   m: [
-    ["AI Marketing", "Generative AI · prompt engineering · AI content pipelines · AI governance &amp; compliance review · LLM agents · MCP · Claude · Hugging Face"],
-    ["Marketing", "Product &amp; campaign strategy · multi-channel attribution · competitive analysis · lifecycle email · webinars &amp; events · A/B and cohort analysis"],
+    ["AI Marketing", "Generative AI · prompt engineering · AI content pipelines · AI lead scoring · AI governance &amp; compliance review · LLM agents · MCP · Claude · Hugging Face"],
+    ["Marketing", "Demand generation · ABM · customer journey &amp; funnel · segmentation &amp; personalization · lifecycle email &amp; retention · attribution · cohort analysis · SEO · webinars &amp; events · program management"],
     ["Platforms", "HubSpot · Salesforce · GA4 · Search Console · GTM · Meta Ads · Google Ads · LinkedIn · YouTube · Amazon Ads · Klaviyo · Shopify"],
     ["Engineering", "Python · Java · C/C++ · SQL · TypeScript · Node.js · Next.js · REST APIs · Make.com · n8n · Git"],
   ],
