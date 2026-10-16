@@ -28,13 +28,13 @@ const roles = [
     when: "Aug 2025 – Present · San Diego, CA",
     // 10/16 Daniel's own breakdown ("Here are the details on the automation work for my resume. Use whatever helps").
     bullets: [
-      { v: "m", t: "Designed, built, and run an in-house marketing-operations automation platform that took over <b>110 of 116 recurring team tasks (95%)</b>: <b>110+ automations</b> on 120+ scheduled jobs, built in about three months." },
+      { v: "m", t: "Designed, built, and run an in-house marketing operations automation platform that took over <b>110 of 116 recurring team tasks (95%)</b>: <b>110+ automations</b> on 120+ scheduled jobs, built in about three months." },
       { v: "m", t: "Turn <b>1,800+ leads a week</b> into verified CRM records, with data-quality and duplicate audits and reconciled reporting across two Salesforce orgs and HubSpot." },
       { v: "m", t: "Run email and paid media on schedule: weekly webinar invite rounds, paced daily enrollment of tens of thousands of contacts, and dozens of compliance-checked event ads a week with wasted-spend and creative-fatigue alerts." },
       { v: "m", t: "Every AI-generated draft and creative is scanned against FINRA-style rules and logged; every production write is dry-run, read-back checked, and rollback-logged, guarded by <b>4,800+ automated tests</b>." },
-      { v: "m", t: "Built prospect-to-client attribution (rules engine, cost per client, ROI) and daily and weekly dashboards across ~20 connected platforms; manage <b>six-figure monthly paid media</b> across Meta and Google." },
+      { v: "m", t: "Built prospect-to-client attribution (rules engine, cost per client, ROI) and daily and weekly dashboards across ~20 connected platforms; manage <b>six-figure monthly paid media budgets</b> across Meta and Google with server-side conversion tracking." },
       { v: "m", t: "Automated webinars and seminars end to end: rooms, registrant imports, attendance reconciliation, recording uploads, live-stream checks within minutes of start, plus landing pages, sign-ups, and attendee lists." },
-      { v: "m", t: "Ship AI-drafted blog posts, social event posts, and rendered ad and event creative, with SEO and search-demand reports and content-gap analysis." },
+      { v: "m", t: "Ship AI-drafted blog posts, social posts, and ad creative, with SEO search-demand and content-gap reports." },
       { v: "m", t: "A watchdog checks the system four times a day and retries failed runs; an AI fixer ships code only after the full test suite passes." },
       { v: "e", t: "Designed and built an in-house marketing-operations platform: <b>110+ automations</b> on 120+ scheduled jobs that took over <b>110 of 116 recurring team tasks (95%)</b>, built in about three months." },
       { v: "e", t: "Integrated <b>~20 platforms</b> through REST APIs and OAuth (two Salesforce orgs, HubSpot, Meta Marketing API, Google Ads, LinkedIn, YouTube, Google Workspace, GA4, Microsoft 365) processing <b>1,800+ leads a week</b>." },
@@ -48,8 +48,8 @@ const roles = [
     org: "Novadontics",
     when: "May 2025 – Jan 2026 · Remote",
     bullets: [
-      { v: "me", t: "Ran marketing for <b>three brands</b> (Novadontics, Care Pulse, California Implant Institute), reporting directly to the CEO." },
       { v: "me", t: "Rebuilt HubSpot lifecycle and GTM attribution in 90 days; consolidated three siloed tracking setups into one reporting model used in weekly executive reviews." },
+      { v: "me", t: "Ran marketing for <b>three brands</b> (Novadontics, Care Pulse, California Implant Institute), reporting directly to the CEO." },
       { v: "e", t: "Built Make.com automations replacing manual lead routing across brands, supporting retirement of fragmented external agency engagements." },
     ],
   },
@@ -68,7 +68,7 @@ const roles = [
     org: "HAZE Media Agency",
     when: "2019 – 2024 · San Diego, CA",
     bullets: [
-      { v: "me", t: "Built an AI content pipeline (Claude → Drive → Make.com → Buffer → IG/TikTok) producing 30+ posts a month per brand." },
+      { v: "me", t: "Built an AI content pipeline (Claude, Drive, Make.com, Buffer, Instagram, TikTok) producing 30+ posts a month per brand." },
       { v: "m", t: "Built a repeatable TikTok creative framework for DTC, hospitality, and B2B clients; several seven-figure-view campaigns." },
     ],
   },
@@ -90,9 +90,9 @@ const openSource =
 const skills = {
   m: [
     ["AI Marketing", "Generative AI · prompt engineering · AI content pipelines · AI lead scoring · AI compliance review · LLM agents · MCP · Claude"],
-    ["Marketing", "Demand generation · ABM · customer journey · segmentation · lifecycle email &amp; retention · attribution · SEO · program management"],
-    ["Platforms", "HubSpot · Salesforce · GA4 · Search Console · Meta Ads · Google Ads · LinkedIn · YouTube · Amazon Ads · Shopify"],
-    ["Engineering", "Python · Java · C/C++ · SQL · TypeScript · Node.js · Next.js · REST APIs · Make.com · n8n · Git"],
+    ["Marketing", "Marketing automation · marketing operations · demand generation · ABM · customer journey &amp; funnel · segmentation &amp; personalization · lifecycle email &amp; retention · product marketing &amp; messaging · webinars &amp; events · SEO · project management"],
+    ["Platforms", "HubSpot · Salesforce · GA4 analytics · Search Console · Meta Ads · Google Ads · LinkedIn Ads · YouTube · Amazon Ads · Shopify"],
+    ["Engineering", "Python · SQL · TypeScript · Java · REST API integrations · Make.com · n8n · Git"],
   ],
   e: [
     ["Languages", "Python · TypeScript · Java · C/C++ · SQL · JavaScript/Node.js · PowerShell"],
@@ -107,12 +107,12 @@ const variants = {
     file: "Daniel-Moran-Resume.pdf",
     headline: "AI Marketing Manager · Automation, GenAI Content &amp; Attribution",
     summary:
-      "AI marketing leader who automated 95% of a marketing team's recurring work (110 of 116 tasks) with generative-AI content, built-in compliance review, and multi-channel attribution. B.S. Computer Science and five years of software engineering at Cubic Transportation, applied to marketing at Wealth Enhancement Group, Novadontics, and Nokkomo Mints.",
+      "AI marketing leader who automated 95% of a marketing team's recurring work (110 of 116 tasks) with generative-AI content, built-in compliance review, multi-channel attribution, and analytics that cross-functional stakeholders act on. B.S. Computer Science, with five years of software engineering before marketing.",
     key: "m",
     openSourceFirst: false,
     // 10/16 Daniel tapped "Yes, both changes" (a resume coach: open with branding and highlights). Facts already on the resume only.
     highlights: [
-      "Automated <b>95% of a marketing team's recurring work</b> (110 of 116 tasks) with 110+ automations built in three months.",
+      "Automated <b>110+ recurring tasks for a full marketing team</b> at Wealth Enhancement Group: 95% of its recurring work, built in three months.",
       "Cut Amazon Ads ACOS from <b>81% to 38% in 90 days</b> while scaling daily spend 3×.",
       "Moved <b>1,800+ leads a week</b> into the CRM with <b>4,800+ automated tests</b> guarding every production write.",
     ],
