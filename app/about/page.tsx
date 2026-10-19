@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Engineer-turned-AI-marketing-leader. How I think, what I build, what I'm looking for next.",
+  description: "Engineer-turned-AI-marketing-leader. How I think and what I build.",
 };
 
 export default function AboutPage() {
@@ -73,12 +73,12 @@ export default function AboutPage() {
           improving measurement.
         </p>
 
-        <h2>What I&rsquo;m looking for</h2>
+        <h2>What I work on</h2>
         <ul>
-          <li>AI marketing, product marketing for AI products, and marketing engineering roles, as a senior individual contributor or marketing leader.</li>
+          <li>AI marketing, product marketing for AI products, and marketing engineering.</li>
           <li>Companies that value measurement and automation as first-class parts of marketing, not afterthoughts.</li>
           <li>Industries: AI platforms and developer tools, B2B SaaS, B2C software, DTC e-commerce, and other modern, data-rich businesses.</li>
-          <li>Remote, hybrid, or in person around North County San Diego, California.</li>
+          <li>Based in North County San Diego, California. Remote or in person.</li>
         </ul>
 
         <h2>How to reach me</h2>

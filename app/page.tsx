@@ -298,7 +298,7 @@ export default async function HomePage() {
           </div>
           <h2 className={`${sectionHeadline} italic`}>Let&rsquo;s talk.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
-            AI marketing, product marketing, and AI automation roles. Remote, hybrid, or in person around North County San Diego. I respond within 24 hours.
+            Open to conversations about AI marketing, product marketing and AI automation work. Based in North County San Diego, remote or in person. I respond within 24 hours.
           </p>
         </Reveal>
         <Reveal delay={0.05}>

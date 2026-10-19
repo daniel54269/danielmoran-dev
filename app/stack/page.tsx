@@ -15,7 +15,7 @@ export default function StackPage() {
         What I build with.
       </h1>
       <p className="mt-3 max-w-2xl text-ink-300">
-        Tools I use weekly, listed so recruiters&rsquo; keyword filters and human readers see the same picture.
+        Tools I use weekly, listed so readers see the same picture as the work.
       </p>
       <div className="mt-10">
         <StackGrid />
