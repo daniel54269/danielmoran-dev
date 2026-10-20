@@ -172,7 +172,7 @@ ${v.highlights ? `<h2>Career Highlights</h2><ul>${v.highlights.map((h) => `<li>$
 ${v.openSourceFirst ? os : ""}
 <h2>Experience</h2>${roleHtml}
 ${v.openSourceFirst ? "" : os}
-<h2>Education</h2><div class="edu"><span><b>University of San Diego</b> · B.S. Computer Science</span><span class="when">2018 – 2022</span></div>
+<h2>Education</h2><div class="edu"><span><b>University of San Diego</b> · B.S. Computer Science</span></div>
 </body></html>`;
 }
 
