@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch: email, LinkedIn, résumé download.",
+  description: "Get in touch: email and LinkedIn.",
 };
 
 const channels = [
@@ -21,7 +21,7 @@ export default function ContactPage() {
         Let&rsquo;s talk.
       </h1>
       <p className="mt-3 text-ink-300">
-        Open to conversations about AI marketing, product marketing and AI automation work. Based in North County San Diego, remote or in person.
+        Building AI marketing systems for local businesses in North County San Diego.
       </p>
 
       <div className="mt-10 space-y-3">
@@ -38,20 +38,6 @@ export default function ContactPage() {
         ))}
       </div>
 
-      <div className="mt-10 flex flex-wrap gap-3">
-        <a
-          href={site.resumeHref}
-          className="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-ink-900 hover:bg-accent-soft"
-        >
-          Download résumé
-        </a>
-        <a
-          href={site.resumeEngineerHref}
-          className="rounded-md border border-ink-700 px-4 py-2.5 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
-        >
-          AI engineering version
-        </a>
-      </div>
     </Container>
   );
 }

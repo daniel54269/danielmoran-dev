@@ -26,7 +26,7 @@ function detectSource(): WelcomeMessage | null {
   if (name) {
     return {
       eyebrow: "Personal invite",
-      greeting: `Hi ${name}, selected work below. The résumé is one click away.`,
+      greeting: `Hi ${name}, selected work below.`,
       ctaLabel: "Pipeline",
       ctaHref: "#pipeline",
     };
@@ -60,7 +60,7 @@ function detectSource(): WelcomeMessage | null {
   if (ref.includes("linkedin.com") || utmSource.includes("linkedin")) {
     return {
       eyebrow: "From LinkedIn",
-      greeting: "Welcome. Start with the Pipeline; résumé download in the sidebar.",
+      greeting: "Welcome. Start with the Pipeline.",
       ctaLabel: "Pipeline",
       ctaHref: "#pipeline",
     };

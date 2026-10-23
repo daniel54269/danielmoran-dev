@@ -49,12 +49,6 @@ export default async function HomePage() {
                 >
                   See pipeline <IconArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
-                <a
-                  href={site.resumeHref}
-                  className="rounded-md border border-ink-700 px-4 py-2.5 text-sm font-medium text-ink-100 hover:border-accent hover:text-accent-soft transition-colors"
-                >
-                  Download résumé
-                </a>
                 <Link
                   href="/built-with-claude"
                   className="rounded-md px-4 py-2.5 text-sm font-medium text-ink-300 hover:text-ink-50 transition-colors"
@@ -298,7 +292,7 @@ export default async function HomePage() {
           </div>
           <h2 className={`${sectionHeadline} italic`}>Let&rsquo;s talk.</h2>
           <p className="mt-3 max-w-prose text-ink-300">
-            Open to conversations about AI marketing, product marketing and AI automation work. Based in North County San Diego, remote or in person. I respond within 24 hours.
+            Building AI marketing systems for local businesses in North County San Diego. I respond within 24 hours.
           </p>
         </Reveal>
         <Reveal delay={0.05}>
@@ -330,14 +324,6 @@ export default async function HomePage() {
               <div className="text-[10px] uppercase tracking-widest text-ink-400">GitHub</div>
               <div className="mt-1 text-base font-medium text-ink-50">daniel54269</div>
               <div className="mt-1 text-xs text-ink-400">Open-source projects · hubspot-mcp.</div>
-            </a>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href={site.resumeHref}
-              className="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-ink-900 hover:bg-accent-soft"
-            >
-              Download résumé
             </a>
           </div>
         </Reveal>

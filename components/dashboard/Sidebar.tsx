@@ -140,14 +140,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
 
       <div className="flex-1" />
 
-      {/* Résumé */}
       <div className="space-y-3 px-2">
-        <a
-          href={site.resumeHref}
-          className="block rounded-md bg-accent px-3 py-2 text-center text-xs font-medium text-ink-900 hover:bg-accent-soft transition-colors"
-        >
-          Download résumé
-        </a>
         <div className="text-[11px] text-ink-500 text-center">
           {site.location}
         </div>

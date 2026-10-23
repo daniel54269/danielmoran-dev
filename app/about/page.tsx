@@ -84,9 +84,7 @@ export default function AboutPage() {
         <h2>How to reach me</h2>
         <p>
           Email is fastest: <a href={`mailto:${site.email}`}>{site.email}</a>. I reply within 24 hours.{" "}
-          <Link href="/contact">More ways to reach me</Link>, or download the{" "}
-          <a href={site.resumeHref}>résumé</a> (or the{" "}
-          <a href={site.resumeEngineerHref}>AI engineering version</a>) if you would prefer to skim.
+          <Link href="/contact">More ways to reach me</Link>.
         </p>
       </div>
     </Container>
