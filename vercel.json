@@ -12,5 +12,8 @@
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/work/:path*", "destination": "https://hz-view-4k8.vercel.app/:path*" }
   ]
 }
