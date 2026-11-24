@@ -84,7 +84,7 @@ export const activity: ActivityEntry[] = [
   {
     when: "Q1 2026",
     title: "Closed Director of Marketing role at Novadontics: 3 brands, 90-day HubSpot rebuild",
-    meta: "May 2025 – Jan 2026",
+    meta: "May 2025 – Aug 2025",
   },
   {
     when: "Q4 2025",

@@ -46,7 +46,7 @@ const roles = [
   {
     title: "Director of Marketing",
     org: "Novadontics",
-    when: "May 2025 – Jan 2026 · Remote",
+    when: "May 2025 – Aug 2025 · Remote",
     bullets: [
       { v: "me", t: "Rebuilt HubSpot lifecycle and GTM attribution in 90 days; consolidated three siloed tracking setups into one reporting model used in weekly executive reviews." },
       { v: "me", t: "Ran marketing for <b>three brands</b> (Novadontics, Care Pulse, California Implant Institute), reporting directly to the CEO." },
